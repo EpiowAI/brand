@@ -1,0 +1,971 @@
+{
+  "summary": {
+    "ok": 147,
+    "skip_or_reuse": 0,
+    "fail": 0,
+    "recraft_svg_count_approx": 168
+  },
+  "repo_results": [
+    {
+      "src": "/home/codex/src/github.com/EpiowAI/brand/logo/current/icon-512.png",
+      "out": "/home/codex/src/github.com/EpiowAI/brand/logo/current/icon-512.recraft.svg",
+      "status": "ok",
+      "bytes": 4702,
+      "n": 1,
+      "hash": "393cf544cabe"
+    },
+    {
+      "src": "/home/codex/src/github.com/EpiowAI/brand/logo/construction/epiow-construction.png",
+      "out": "/home/codex/src/github.com/EpiowAI/brand/logo/construction/epiow-construction.recraft.svg",
+      "status": "ok",
+      "bytes": 281312,
+      "n": 1,
+      "hash": "e698787e57fb"
+    },
+    {
+      "src": "/home/codex/src/github.com/EpiowAI/brand/logo/current/wordmark.png",
+      "out": "/home/codex/src/github.com/EpiowAI/brand/logo/current/wordmark.recraft.svg",
+      "status": "ok",
+      "bytes": 6603,
+      "n": 1,
+      "hash": "60bba0561928"
+    },
+    {
+      "src": "/home/codex/src/github.com/EpiowAI/brand/logo/options/0-current-e-orbit.png",
+      "out": "/home/codex/src/github.com/EpiowAI/brand/logo/options/0-current-e-orbit.recraft.svg",
+      "status": "ok",
+      "bytes": 4711,
+      "n": 1,
+      "hash": "2b5c739785fb"
+    },
+    {
+      "src": "/home/codex/src/github.com/EpiowAI/brand/logo/options/A-portal-E.png",
+      "out": "/home/codex/src/github.com/EpiowAI/brand/logo/options/A-portal-E.recraft.svg",
+      "status": "ok",
+      "bytes": 5287,
+      "n": 1,
+      "hash": "47a9aaec621b"
+    },
+    {
+      "src": "/home/codex/src/github.com/EpiowAI/brand/logo/options/B-gateway-e.png",
+      "out": "/home/codex/src/github.com/EpiowAI/brand/logo/options/B-gateway-e.recraft.svg",
+      "status": "ok",
+      "bytes": 10730,
+      "n": 1,
+      "hash": "39639290a0ae"
+    },
+    {
+      "src": "/home/codex/src/github.com/EpiowAI/brand/logo/options/C-bars-node.png",
+      "out": "/home/codex/src/github.com/EpiowAI/brand/logo/options/C-bars-node.recraft.svg",
+      "status": "ok",
+      "bytes": 6051,
+      "n": 1,
+      "hash": "be5ea7269465"
+    },
+    {
+      "src": "/home/codex/src/github.com/EpiowAI/brand/logo/options/D-hex-E.png",
+      "out": "/home/codex/src/github.com/EpiowAI/brand/logo/options/D-hex-E.recraft.svg",
+      "status": "ok",
+      "bytes": 15368,
+      "n": 1,
+      "hash": "cb42290404c6"
+    },
+    {
+      "src": "/home/codex/src/github.com/EpiowAI/brand/logo/options/E-orbit-dot.png",
+      "out": "/home/codex/src/github.com/EpiowAI/brand/logo/options/E-orbit-dot.recraft.svg",
+      "status": "ok",
+      "bytes": 6334,
+      "n": 1,
+      "hash": "e7fb60bf873e"
+    },
+    {
+      "src": "/home/codex/src/github.com/EpiowAI/brand/logo/options-v2/F1-e-ring.png",
+      "out": "/home/codex/src/github.com/EpiowAI/brand/logo/options-v2/F1-e-ring.recraft.svg",
+      "status": "ok",
+      "bytes": 3205,
+      "n": 1,
+      "hash": "0c8ad0837483"
+    },
+    {
+      "src": "/home/codex/src/github.com/EpiowAI/brand/logo/options-v2/F2-bars.png",
+      "out": "/home/codex/src/github.com/EpiowAI/brand/logo/options-v2/F2-bars.recraft.svg",
+      "status": "ok",
+      "bytes": 2785,
+      "n": 1,
+      "hash": "bca767beb74d"
+    },
+    {
+      "src": "/home/codex/src/github.com/EpiowAI/brand/logo/options-v2/F3-window.png",
+      "out": "/home/codex/src/github.com/EpiowAI/brand/logo/options-v2/F3-window.recraft.svg",
+      "status": "ok",
+      "bytes": 3326,
+      "n": 1,
+      "hash": "9e8cda7fcb94"
+    },
+    {
+      "src": "/home/codex/src/github.com/EpiowAI/brand/logo/options-v2/F4-solid-e.png",
+      "out": "/home/codex/src/github.com/EpiowAI/brand/logo/options-v2/F4-solid-e.recraft.svg",
+      "status": "ok",
+      "bytes": 3092,
+      "n": 1,
+      "hash": "f7a3e7917bc9"
+    },
+    {
+      "src": "/home/codex/src/github.com/EpiowAI/brand/logo/options-v2/F5-core-E.png",
+      "out": "/home/codex/src/github.com/EpiowAI/brand/logo/options-v2/F5-core-E.recraft.svg",
+      "status": "ok",
+      "bytes": 3048,
+      "n": 1,
+      "hash": "18186f8f3883"
+    },
+    {
+      "src": "/home/codex/src/github.com/EpiowAI/brand/logo/options-v2/F6-eo-badge.png",
+      "out": "/home/codex/src/github.com/EpiowAI/brand/logo/options-v2/F6-eo-badge.recraft.svg",
+      "status": "ok",
+      "bytes": 4209,
+      "n": 1,
+      "hash": "7fd2c4f05751"
+    },
+    {
+      "src": "/home/codex/src/github.com/EpiowAI/brand/logo/options-v2/ai-inspired/AI1-e-ring-flat.png",
+      "out": "/home/codex/src/github.com/EpiowAI/brand/logo/options-v2/ai-inspired/AI1-e-ring-flat.recraft.svg",
+      "status": "ok",
+      "bytes": 3360,
+      "n": 1,
+      "hash": "ea5c62d9273a"
+    },
+    {
+      "src": "/home/codex/src/github.com/EpiowAI/brand/logo/options-v2/ai-inspired/AI2-bars.png",
+      "out": "/home/codex/src/github.com/EpiowAI/brand/logo/options-v2/ai-inspired/AI2-bars.recraft.svg",
+      "status": "ok",
+      "bytes": 3707,
+      "n": 1,
+      "hash": "69572144cf77"
+    },
+    {
+      "src": "/home/codex/src/github.com/EpiowAI/brand/logo/options-v2/ai-inspired/AI3-window-E.png",
+      "out": "/home/codex/src/github.com/EpiowAI/brand/logo/options-v2/ai-inspired/AI3-window-E.recraft.svg",
+      "status": "ok",
+      "bytes": 3806,
+      "n": 1,
+      "hash": "ced39bc31eb6"
+    },
+    {
+      "src": "/home/codex/src/github.com/EpiowAI/brand/logo/options-v2/ai-inspired/AI4-solid-e.png",
+      "out": "/home/codex/src/github.com/EpiowAI/brand/logo/options-v2/ai-inspired/AI4-solid-e.recraft.svg",
+      "status": "ok",
+      "bytes": 2893,
+      "n": 1,
+      "hash": "ac3a52290b2c"
+    },
+    {
+      "src": "/home/codex/src/github.com/EpiowAI/brand/logo/options-v3/G1-optical-E.png",
+      "out": "/home/codex/src/github.com/EpiowAI/brand/logo/options-v3/G1-optical-E.recraft.svg",
+      "status": "ok",
+      "bytes": 2665,
+      "n": 1,
+      "hash": "fae650db97aa"
+    },
+    {
+      "src": "/home/codex/src/github.com/EpiowAI/brand/logo/options-v3/G10-block-E.png",
+      "out": "/home/codex/src/github.com/EpiowAI/brand/logo/options-v3/G10-block-E.recraft.svg",
+      "status": "ok",
+      "bytes": 1654,
+      "n": 1,
+      "hash": "2567705f170e"
+    },
+    {
+      "src": "/home/codex/src/github.com/EpiowAI/brand/logo/options-v3/G11-letter-E.png",
+      "out": "/home/codex/src/github.com/EpiowAI/brand/logo/options-v3/G11-letter-E.recraft.svg",
+      "status": "ok",
+      "bytes": 2627,
+      "n": 1,
+      "hash": "b148b2b7dd0f"
+    },
+    {
+      "src": "/home/codex/src/github.com/EpiowAI/brand/logo/options-v3/G12-e-arc.png",
+      "out": "/home/codex/src/github.com/EpiowAI/brand/logo/options-v3/G12-e-arc.recraft.svg",
+      "status": "ok",
+      "bytes": 3722,
+      "n": 1,
+      "hash": "60dd89abbaac"
+    },
+    {
+      "src": "/home/codex/src/github.com/EpiowAI/brand/logo/options-v3/G13-nested-E.png",
+      "out": "/home/codex/src/github.com/EpiowAI/brand/logo/options-v3/G13-nested-E.recraft.svg",
+      "status": "ok",
+      "bytes": 1966,
+      "n": 1,
+      "hash": "7fc035902d10"
+    },
+    {
+      "src": "/home/codex/src/github.com/EpiowAI/brand/logo/options-v3/G14-custom-E.png",
+      "out": "/home/codex/src/github.com/EpiowAI/brand/logo/options-v3/G14-custom-E.recraft.svg",
+      "status": "ok",
+      "bytes": 2177,
+      "n": 1,
+      "hash": "7c5a9572d402"
+    },
+    {
+      "src": "/home/codex/src/github.com/EpiowAI/brand/logo/options-v3/G15-eo-stroke.png",
+      "out": "/home/codex/src/github.com/EpiowAI/brand/logo/options-v3/G15-eo-stroke.recraft.svg",
+      "status": "ok",
+      "bytes": 5468,
+      "n": 1,
+      "hash": "e57d73f68aaf"
+    },
+    {
+      "src": "/home/codex/src/github.com/EpiowAI/brand/logo/options-v3/G2-eo-ligature.png",
+      "out": "/home/codex/src/github.com/EpiowAI/brand/logo/options-v3/G2-eo-ligature.recraft.svg",
+      "status": "ok",
+      "bytes": 4407,
+      "n": 1,
+      "hash": "61fcbbddbbb5"
+    },
+    {
+      "src": "/home/codex/src/github.com/EpiowAI/brand/logo/options-v3/G3-negative-E.png",
+      "out": "/home/codex/src/github.com/EpiowAI/brand/logo/options-v3/G3-negative-E.recraft.svg",
+      "status": "ok",
+      "bytes": 2982,
+      "n": 1,
+      "hash": "a07ed91081fd"
+    },
+    {
+      "src": "/home/codex/src/github.com/EpiowAI/brand/logo/options-v3/G4-modular-E.png",
+      "out": "/home/codex/src/github.com/EpiowAI/brand/logo/options-v3/G4-modular-E.recraft.svg",
+      "status": "ok",
+      "bytes": 3517,
+      "n": 1,
+      "hash": "4bc38a1097e6"
+    },
+    {
+      "src": "/home/codex/src/github.com/EpiowAI/brand/logo/options-v3/G5-ripple-E.png",
+      "out": "/home/codex/src/github.com/EpiowAI/brand/logo/options-v3/G5-ripple-E.recraft.svg",
+      "status": "ok",
+      "bytes": 3260,
+      "n": 1,
+      "hash": "4b90255f5c03"
+    },
+    {
+      "src": "/home/codex/src/github.com/EpiowAI/brand/logo/options-v3/G6-portal.png",
+      "out": "/home/codex/src/github.com/EpiowAI/brand/logo/options-v3/G6-portal.recraft.svg",
+      "status": "ok",
+      "bytes": 2094,
+      "n": 1,
+      "hash": "c7e4d29c146a"
+    },
+    {
+      "src": "/home/codex/src/github.com/EpiowAI/brand/logo/options-v3/G7-precision-mark.png",
+      "out": "/home/codex/src/github.com/EpiowAI/brand/logo/options-v3/G7-precision-mark.recraft.svg",
+      "status": "ok",
+      "bytes": 6236,
+      "n": 1,
+      "hash": "1bd9fbdd0a29"
+    },
+    {
+      "src": "/home/codex/src/github.com/EpiowAI/brand/logo/options-v3/G8-geo-e.png",
+      "out": "/home/codex/src/github.com/EpiowAI/brand/logo/options-v3/G8-geo-e.recraft.svg",
+      "status": "ok",
+      "bytes": 2344,
+      "n": 1,
+      "hash": "086e8aa2d662"
+    },
+    {
+      "src": "/home/codex/src/github.com/EpiowAI/brand/logo/options-v3/G9-chevron-E.png",
+      "out": "/home/codex/src/github.com/EpiowAI/brand/logo/options-v3/G9-chevron-E.recraft.svg",
+      "status": "ok",
+      "bytes": 2903,
+      "n": 1,
+      "hash": "4ec45a131f52"
+    },
+    {
+      "src": "/home/codex/src/github.com/EpiowAI/brand/logo/options-v3/_sheet-ai.png",
+      "out": "/home/codex/src/github.com/EpiowAI/brand/logo/options-v3/_sheet-ai.recraft.svg",
+      "status": "ok",
+      "bytes": 116139,
+      "n": 1,
+      "hash": "a9c53db6949b"
+    },
+    {
+      "src": "/home/codex/src/github.com/EpiowAI/brand/logo/options-v3/_sheet-vector.png",
+      "out": "/home/codex/src/github.com/EpiowAI/brand/logo/options-v3/_sheet-vector.recraft.svg",
+      "status": "ok",
+      "bytes": 101682,
+      "n": 1,
+      "hash": "dde3ecd644e1"
+    },
+    {
+      "src": "/home/codex/src/github.com/EpiowAI/brand/logo/options-v3/ai-refs/AI1-bold-E-gemini.png",
+      "out": "/home/codex/src/github.com/EpiowAI/brand/logo/options-v3/ai-refs/AI1-bold-E-gemini.recraft.svg",
+      "status": "ok",
+      "bytes": 2246,
+      "n": 1,
+      "hash": "7bf23783617c"
+    },
+    {
+      "src": "/home/codex/src/github.com/EpiowAI/brand/logo/options-v3/ai-refs/AI2-eo-ligature-gemini.png",
+      "out": "/home/codex/src/github.com/EpiowAI/brand/logo/options-v3/ai-refs/AI2-eo-ligature-gemini.recraft.svg",
+      "status": "ok",
+      "bytes": 4161,
+      "n": 1,
+      "hash": "f80cb1e748d2"
+    },
+    {
+      "src": "/home/codex/src/github.com/EpiowAI/brand/logo/options-v3/ai-refs/AI3-abstract-os-gemini.png",
+      "out": "/home/codex/src/github.com/EpiowAI/brand/logo/options-v3/ai-refs/AI3-abstract-os-gemini.recraft.svg",
+      "status": "ok",
+      "bytes": 4838,
+      "n": 1,
+      "hash": "c1f632d4d3be"
+    },
+    {
+      "src": "/home/codex/src/github.com/EpiowAI/brand/logo/options-v3/ai-refs/AI4-portal-gemini.jpg",
+      "out": "/home/codex/src/github.com/EpiowAI/brand/logo/options-v3/ai-refs/AI4-portal-gemini.recraft.svg",
+      "status": "ok",
+      "bytes": 2523,
+      "n": 1,
+      "hash": "5b3e2b9d8250"
+    },
+    {
+      "src": "/home/codex/src/github.com/EpiowAI/brand/logo/options-v3/ai-refs/AI5-modular-gemini.png",
+      "out": "/home/codex/src/github.com/EpiowAI/brand/logo/options-v3/ai-refs/AI5-modular-gemini.recraft.svg",
+      "status": "ok",
+      "bytes": 3787,
+      "n": 1,
+      "hash": "2f693edeb71b"
+    },
+    {
+      "src": "/home/codex/src/github.com/EpiowAI/brand/logo/options-v3/ai-refs/AI6-geo-e-gpt.png",
+      "out": "/home/codex/src/github.com/EpiowAI/brand/logo/options-v3/ai-refs/AI6-geo-e-gpt.recraft.svg",
+      "status": "ok",
+      "bytes": 2748,
+      "n": 1,
+      "hash": "ee0fffefc6a4"
+    },
+    {
+      "src": "/home/codex/src/github.com/EpiowAI/brand/logo/options-v3/ai-refs/AI7-wordmark-ready-gpt.png",
+      "out": "/home/codex/src/github.com/EpiowAI/brand/logo/options-v3/ai-refs/AI7-wordmark-ready-gpt.recraft.svg",
+      "status": "ok",
+      "bytes": 2823,
+      "n": 1,
+      "hash": "a9ebc85dc90f"
+    },
+    {
+      "src": "/home/codex/src/github.com/EpiowAI/brand/logo/options-v3/ai-refs/AI8-feishu-adjacent-gemini.png",
+      "out": "/home/codex/src/github.com/EpiowAI/brand/logo/options-v3/ai-refs/AI8-feishu-adjacent-gemini.recraft.svg",
+      "status": "ok",
+      "bytes": 11078,
+      "n": 1,
+      "hash": "bf5073cfc775"
+    },
+    {
+      "src": "/home/codex/src/github.com/EpiowAI/brand/logo/options-w/W1-modular-dark.png",
+      "out": "/home/codex/src/github.com/EpiowAI/brand/logo/options-w/W1-modular-dark.recraft.svg",
+      "status": "ok",
+      "bytes": 5107,
+      "n": 1,
+      "hash": "af7471b66bfb"
+    },
+    {
+      "src": "/home/codex/src/github.com/EpiowAI/brand/logo/options-w/W1-modular-light.png",
+      "out": "/home/codex/src/github.com/EpiowAI/brand/logo/options-w/W1-modular-light.recraft.svg",
+      "status": "ok",
+      "bytes": 5387,
+      "n": 1,
+      "hash": "bfdcd3046ddb"
+    },
+    {
+      "src": "/home/codex/src/github.com/EpiowAI/brand/logo/options-w/W2-optical-dark.png",
+      "out": "/home/codex/src/github.com/EpiowAI/brand/logo/options-w/W2-optical-dark.recraft.svg",
+      "status": "ok",
+      "bytes": 5360,
+      "n": 1,
+      "hash": "8a23b649de10"
+    },
+    {
+      "src": "/home/codex/src/github.com/EpiowAI/brand/logo/options-w/W2-optical-light.png",
+      "out": "/home/codex/src/github.com/EpiowAI/brand/logo/options-w/W2-optical-light.recraft.svg",
+      "status": "ok",
+      "bytes": 5095,
+      "n": 1,
+      "hash": "ce70f81257fa"
+    },
+    {
+      "src": "/home/codex/src/github.com/EpiowAI/brand/logo/options-w/W3-block-dark.png",
+      "out": "/home/codex/src/github.com/EpiowAI/brand/logo/options-w/W3-block-dark.recraft.svg",
+      "status": "ok",
+      "bytes": 5631,
+      "n": 1,
+      "hash": "3aa97a1947d5"
+    },
+    {
+      "src": "/home/codex/src/github.com/EpiowAI/brand/logo/options-w/W3-block-light.png",
+      "out": "/home/codex/src/github.com/EpiowAI/brand/logo/options-w/W3-block-light.recraft.svg",
+      "status": "ok",
+      "bytes": 5641,
+      "n": 1,
+      "hash": "531ba8cb8a27"
+    },
+    {
+      "src": "/home/codex/src/github.com/EpiowAI/brand/logo/options-w/W4-open-dark.png",
+      "out": "/home/codex/src/github.com/EpiowAI/brand/logo/options-w/W4-open-dark.recraft.svg",
+      "status": "ok",
+      "bytes": 5187,
+      "n": 1,
+      "hash": "5028db262255"
+    },
+    {
+      "src": "/home/codex/src/github.com/EpiowAI/brand/logo/options-w/W4-open-light.png",
+      "out": "/home/codex/src/github.com/EpiowAI/brand/logo/options-w/W4-open-light.recraft.svg",
+      "status": "ok",
+      "bytes": 5082,
+      "n": 1,
+      "hash": "a516d9b6987c"
+    },
+    {
+      "src": "/home/codex/src/github.com/EpiowAI/brand/logo/options-w/W5-soft-dark.png",
+      "out": "/home/codex/src/github.com/EpiowAI/brand/logo/options-w/W5-soft-dark.recraft.svg",
+      "status": "ok",
+      "bytes": 5316,
+      "n": 1,
+      "hash": "10a4bae845ab"
+    },
+    {
+      "src": "/home/codex/src/github.com/EpiowAI/brand/logo/options-w/W5-soft-light.png",
+      "out": "/home/codex/src/github.com/EpiowAI/brand/logo/options-w/W5-soft-light.recraft.svg",
+      "status": "ok",
+      "bytes": 5202,
+      "n": 1,
+      "hash": "6341173aa4bc"
+    },
+    {
+      "src": "/home/codex/src/github.com/EpiowAI/brand/logo/options-w/W6-lockup-dark.png",
+      "out": "/home/codex/src/github.com/EpiowAI/brand/logo/options-w/W6-lockup-dark.recraft.svg",
+      "status": "ok",
+      "bytes": 7378,
+      "n": 1,
+      "hash": "8ad77c88922d"
+    },
+    {
+      "src": "/home/codex/src/github.com/EpiowAI/brand/logo/options-w/W6-lockup-light.png",
+      "out": "/home/codex/src/github.com/EpiowAI/brand/logo/options-w/W6-lockup-light.recraft.svg",
+      "status": "ok",
+      "bytes": 7812,
+      "n": 1,
+      "hash": "e4f40cc10766"
+    },
+    {
+      "src": "/home/codex/src/github.com/EpiowAI/brand/logo/options-w/_sheet-icons.png",
+      "out": "/home/codex/src/github.com/EpiowAI/brand/logo/options-w/_sheet-icons.recraft.svg",
+      "status": "ok",
+      "bytes": 77054,
+      "n": 1,
+      "hash": "d16b9b55a2df"
+    },
+    {
+      "src": "/home/codex/src/github.com/EpiowAI/brand/logo/options-w/_sheet-navbar-light.png",
+      "out": "/home/codex/src/github.com/EpiowAI/brand/logo/options-w/_sheet-navbar-light.recraft.svg",
+      "status": "ok",
+      "bytes": 85569,
+      "n": 1,
+      "hash": "21e9b80ae665"
+    },
+    {
+      "src": "/home/codex/src/github.com/EpiowAI/brand/logo/options-w/_sheet-wordmarks-light.png",
+      "out": "/home/codex/src/github.com/EpiowAI/brand/logo/options-w/_sheet-wordmarks-light.recraft.svg",
+      "status": "ok",
+      "bytes": 103667,
+      "n": 1,
+      "hash": "5d0f0ab8e46a"
+    },
+    {
+      "src": "/home/codex/src/github.com/EpiowAI/brand/logo/options-w/app/W1-modular-icon-brand.png",
+      "out": "/home/codex/src/github.com/EpiowAI/brand/logo/options-w/app/W1-modular-icon-brand.recraft.svg",
+      "status": "ok",
+      "bytes": 2678,
+      "n": 2,
+      "hash": "156f2fff9b28"
+    },
+    {
+      "src": "/home/codex/src/github.com/EpiowAI/brand/logo/options-w/app/W1-modular-icon-ink.png",
+      "out": "/home/codex/src/github.com/EpiowAI/brand/logo/options-w/app/W1-modular-icon-ink.recraft.svg",
+      "status": "ok",
+      "bytes": 2697,
+      "n": 2,
+      "hash": "75d8a18035fe"
+    },
+    {
+      "src": "/home/codex/src/github.com/EpiowAI/brand/logo/options-w/app/W1-modular-icon-paper.png",
+      "out": "/home/codex/src/github.com/EpiowAI/brand/logo/options-w/app/W1-modular-icon-paper.recraft.svg",
+      "status": "ok",
+      "bytes": 2476,
+      "n": 2,
+      "hash": "cee44bfcf51d"
+    },
+    {
+      "src": "/home/codex/src/github.com/EpiowAI/brand/logo/options-w/app/W2-optical-icon-brand.png",
+      "out": "/home/codex/src/github.com/EpiowAI/brand/logo/options-w/app/W2-optical-icon-brand.recraft.svg",
+      "status": "ok",
+      "bytes": 2597,
+      "n": 2,
+      "hash": "7b0793b62ba5"
+    },
+    {
+      "src": "/home/codex/src/github.com/EpiowAI/brand/logo/options-w/app/W2-optical-icon-ink.png",
+      "out": "/home/codex/src/github.com/EpiowAI/brand/logo/options-w/app/W2-optical-icon-ink.recraft.svg",
+      "status": "ok",
+      "bytes": 2347,
+      "n": 2,
+      "hash": "cf1b04915da7"
+    },
+    {
+      "src": "/home/codex/src/github.com/EpiowAI/brand/logo/options-w/app/W2-optical-icon-paper.png",
+      "out": "/home/codex/src/github.com/EpiowAI/brand/logo/options-w/app/W2-optical-icon-paper.recraft.svg",
+      "status": "ok",
+      "bytes": 2507,
+      "n": 2,
+      "hash": "25d4766fb3d5"
+    },
+    {
+      "src": "/home/codex/src/github.com/EpiowAI/brand/logo/options-w/app/W3-block-icon-brand.png",
+      "out": "/home/codex/src/github.com/EpiowAI/brand/logo/options-w/app/W3-block-icon-brand.recraft.svg",
+      "status": "ok",
+      "bytes": 1555,
+      "n": 1,
+      "hash": "f4e0729e7301"
+    },
+    {
+      "src": "/home/codex/src/github.com/EpiowAI/brand/logo/options-w/app/W3-block-icon-ink.png",
+      "out": "/home/codex/src/github.com/EpiowAI/brand/logo/options-w/app/W3-block-icon-ink.recraft.svg",
+      "status": "ok",
+      "bytes": 1489,
+      "n": 1,
+      "hash": "f19936377148"
+    },
+    {
+      "src": "/home/codex/src/github.com/EpiowAI/brand/logo/options-w/app/W3-block-icon-paper.png",
+      "out": "/home/codex/src/github.com/EpiowAI/brand/logo/options-w/app/W3-block-icon-paper.recraft.svg",
+      "status": "ok",
+      "bytes": 1560,
+      "n": 1,
+      "hash": "81ae1f0d9e12"
+    },
+    {
+      "src": "/home/codex/src/github.com/EpiowAI/brand/logo/options-w/mock/W1-modular-navbar-dark.png",
+      "out": "/home/codex/src/github.com/EpiowAI/brand/logo/options-w/mock/W1-modular-navbar-dark.recraft.svg",
+      "status": "ok",
+      "bytes": 35832,
+      "n": 1,
+      "hash": "e659ae432a4a"
+    },
+    {
+      "src": "/home/codex/src/github.com/EpiowAI/brand/logo/options-w/mock/W1-modular-navbar-light.png",
+      "out": "/home/codex/src/github.com/EpiowAI/brand/logo/options-w/mock/W1-modular-navbar-light.recraft.svg",
+      "status": "ok",
+      "bytes": 24241,
+      "n": 1,
+      "hash": "39013aa3a84b"
+    },
+    {
+      "src": "/home/codex/src/github.com/EpiowAI/brand/logo/options-w/mock/W2-optical-navbar-dark.png",
+      "out": "/home/codex/src/github.com/EpiowAI/brand/logo/options-w/mock/W2-optical-navbar-dark.recraft.svg",
+      "status": "ok",
+      "bytes": 33322,
+      "n": 1,
+      "hash": "c59fd1bef8c3"
+    },
+    {
+      "src": "/home/codex/src/github.com/EpiowAI/brand/logo/options-w/mock/W2-optical-navbar-light.png",
+      "out": "/home/codex/src/github.com/EpiowAI/brand/logo/options-w/mock/W2-optical-navbar-light.recraft.svg",
+      "status": "ok",
+      "bytes": 24134,
+      "n": 1,
+      "hash": "e64d1c376bfa"
+    },
+    {
+      "src": "/home/codex/src/github.com/EpiowAI/brand/logo/options-w/mock/W5-soft-navbar-dark.png",
+      "out": "/home/codex/src/github.com/EpiowAI/brand/logo/options-w/mock/W5-soft-navbar-dark.recraft.svg",
+      "status": "ok",
+      "bytes": 34624,
+      "n": 1,
+      "hash": "4b10f2ae78e7"
+    },
+    {
+      "src": "/home/codex/src/github.com/EpiowAI/brand/logo/options-w/mock/W5-soft-navbar-light.png",
+      "out": "/home/codex/src/github.com/EpiowAI/brand/logo/options-w/mock/W5-soft-navbar-light.recraft.svg",
+      "status": "ok",
+      "bytes": 23595,
+      "n": 1,
+      "hash": "7fc97f2ae0e8"
+    },
+    {
+      "src": "/home/codex/src/github.com/EpiowAI/brand/logo/options-w/mock/W6-lockup-navbar-dark.png",
+      "out": "/home/codex/src/github.com/EpiowAI/brand/logo/options-w/mock/W6-lockup-navbar-dark.recraft.svg",
+      "status": "ok",
+      "bytes": 36382,
+      "n": 1,
+      "hash": "36a2ceafb586"
+    },
+    {
+      "src": "/home/codex/src/github.com/EpiowAI/brand/logo/options-w/mock/W6-lockup-navbar-light.png",
+      "out": "/home/codex/src/github.com/EpiowAI/brand/logo/options-w/mock/W6-lockup-navbar-light.recraft.svg",
+      "status": "ok",
+      "bytes": 25277,
+      "n": 1,
+      "hash": "dbd2f80097bf"
+    },
+    {
+      "src": "/home/codex/src/github.com/EpiowAI/brand/logo/options-w3/C1-heavy-dark.png",
+      "out": "/home/codex/src/github.com/EpiowAI/brand/logo/options-w3/C1-heavy-dark.recraft.svg",
+      "status": "ok",
+      "bytes": 4201,
+      "n": 1,
+      "hash": "35870d1403c5"
+    },
+    {
+      "src": "/home/codex/src/github.com/EpiowAI/brand/logo/options-w3/C1-heavy-light.png",
+      "out": "/home/codex/src/github.com/EpiowAI/brand/logo/options-w3/C1-heavy-light.recraft.svg",
+      "status": "ok",
+      "bytes": 4111,
+      "n": 1,
+      "hash": "9a85bc028532"
+    },
+    {
+      "src": "/home/codex/src/github.com/EpiowAI/brand/logo/options-w3/C2-heavier-dark.png",
+      "out": "/home/codex/src/github.com/EpiowAI/brand/logo/options-w3/C2-heavier-dark.recraft.svg",
+      "status": "ok",
+      "bytes": 3968,
+      "n": 1,
+      "hash": "2b78a4db5f8e"
+    },
+    {
+      "src": "/home/codex/src/github.com/EpiowAI/brand/logo/options-w3/C2-heavier-light.png",
+      "out": "/home/codex/src/github.com/EpiowAI/brand/logo/options-w3/C2-heavier-light.recraft.svg",
+      "status": "ok",
+      "bytes": 4148,
+      "n": 1,
+      "hash": "afab1f922c41"
+    },
+    {
+      "src": "/home/codex/src/github.com/EpiowAI/brand/logo/options-w3/C3-wide-heavy-dark.png",
+      "out": "/home/codex/src/github.com/EpiowAI/brand/logo/options-w3/C3-wide-heavy-dark.recraft.svg",
+      "status": "ok",
+      "bytes": 4025,
+      "n": 1,
+      "hash": "dbdbb41af0ef"
+    },
+    {
+      "src": "/home/codex/src/github.com/EpiowAI/brand/logo/options-w3/C3-wide-heavy-light.png",
+      "out": "/home/codex/src/github.com/EpiowAI/brand/logo/options-w3/C3-wide-heavy-light.recraft.svg",
+      "status": "ok",
+      "bytes": 3815,
+      "n": 1,
+      "hash": "a866d3855318"
+    },
+    {
+      "src": "/home/codex/src/github.com/EpiowAI/brand/logo/options-w3/L1-dejavu-lockup-light.png",
+      "out": "/home/codex/src/github.com/EpiowAI/brand/logo/options-w3/L1-dejavu-lockup-light.recraft.svg",
+      "status": "ok",
+      "bytes": 5036,
+      "n": 1,
+      "hash": "071b2e3d94e2"
+    },
+    {
+      "src": "/home/codex/src/github.com/EpiowAI/brand/logo/options-w3/L2-liberation-lockup-light.png",
+      "out": "/home/codex/src/github.com/EpiowAI/brand/logo/options-w3/L2-liberation-lockup-light.recraft.svg",
+      "status": "ok",
+      "bytes": 5217,
+      "n": 1,
+      "hash": "10cb4ca91430"
+    },
+    {
+      "src": "/home/codex/src/github.com/EpiowAI/brand/logo/options-w3/T1-dejavu-bold-dark.png",
+      "out": "/home/codex/src/github.com/EpiowAI/brand/logo/options-w3/T1-dejavu-bold-dark.recraft.svg",
+      "status": "ok",
+      "bytes": 3755,
+      "n": 1,
+      "hash": "1f351c3327fd"
+    },
+    {
+      "src": "/home/codex/src/github.com/EpiowAI/brand/logo/options-w3/T1-dejavu-bold-light.png",
+      "out": "/home/codex/src/github.com/EpiowAI/brand/logo/options-w3/T1-dejavu-bold-light.recraft.svg",
+      "status": "ok",
+      "bytes": 3731,
+      "n": 1,
+      "hash": "a7b146dc9415"
+    },
+    {
+      "src": "/home/codex/src/github.com/EpiowAI/brand/logo/options-w3/T2-dejavu-tracked-dark.png",
+      "out": "/home/codex/src/github.com/EpiowAI/brand/logo/options-w3/T2-dejavu-tracked-dark.recraft.svg",
+      "status": "ok",
+      "bytes": 3968,
+      "n": 1,
+      "hash": "6568ccb89666"
+    },
+    {
+      "src": "/home/codex/src/github.com/EpiowAI/brand/logo/options-w3/T3-liberation-bold-dark.png",
+      "out": "/home/codex/src/github.com/EpiowAI/brand/logo/options-w3/T3-liberation-bold-dark.recraft.svg",
+      "status": "ok",
+      "bytes": 3951,
+      "n": 1,
+      "hash": "af6575796d3b"
+    },
+    {
+      "src": "/home/codex/src/github.com/EpiowAI/brand/logo/options-w3/T3-liberation-bold-light.png",
+      "out": "/home/codex/src/github.com/EpiowAI/brand/logo/options-w3/T3-liberation-bold-light.recraft.svg",
+      "status": "ok",
+      "bytes": 3939,
+      "n": 1,
+      "hash": "966405cbd724"
+    },
+    {
+      "src": "/home/codex/src/github.com/EpiowAI/brand/logo/options-w3/T4-liberation-tracked-dark.png",
+      "out": "/home/codex/src/github.com/EpiowAI/brand/logo/options-w3/T4-liberation-tracked-dark.recraft.svg",
+      "status": "ok",
+      "bytes": 4107,
+      "n": 1,
+      "hash": "9a77add2b726"
+    },
+    {
+      "src": "/home/codex/src/github.com/EpiowAI/brand/logo/options-w3/T4-liberation-tracked-light.png",
+      "out": "/home/codex/src/github.com/EpiowAI/brand/logo/options-w3/T4-liberation-tracked-light.recraft.svg",
+      "status": "ok",
+      "bytes": 4217,
+      "n": 1,
+      "hash": "609a2078af90"
+    },
+    {
+      "src": "/home/codex/src/github.com/EpiowAI/brand/logo/options-w3/T5-freesans-bold-dark.png",
+      "out": "/home/codex/src/github.com/EpiowAI/brand/logo/options-w3/T5-freesans-bold-dark.recraft.svg",
+      "status": "ok",
+      "bytes": 3826,
+      "n": 1,
+      "hash": "b80080f077a3"
+    },
+    {
+      "src": "/home/codex/src/github.com/EpiowAI/brand/logo/options-w3/T5-freesans-bold-light.png",
+      "out": "/home/codex/src/github.com/EpiowAI/brand/logo/options-w3/T5-freesans-bold-light.recraft.svg",
+      "status": "ok",
+      "bytes": 4087,
+      "n": 1,
+      "hash": "9b5baed81771"
+    },
+    {
+      "src": "/home/codex/src/github.com/EpiowAI/brand/logo/options-w3/T6-dejavu-lower-dark.png",
+      "out": "/home/codex/src/github.com/EpiowAI/brand/logo/options-w3/T6-dejavu-lower-dark.recraft.svg",
+      "status": "ok",
+      "bytes": 3802,
+      "n": 1,
+      "hash": "c1630c56ae41"
+    },
+    {
+      "src": "/home/codex/src/github.com/EpiowAI/brand/logo/options-w3/T6-dejavu-lower-light.png",
+      "out": "/home/codex/src/github.com/EpiowAI/brand/logo/options-w3/T6-dejavu-lower-light.recraft.svg",
+      "status": "ok",
+      "bytes": 3905,
+      "n": 1,
+      "hash": "16ac56dcb600"
+    },
+    {
+      "src": "/home/codex/src/github.com/EpiowAI/brand/logo/options-w3/_sheet-icons.png",
+      "out": "/home/codex/src/github.com/EpiowAI/brand/logo/options-w3/_sheet-icons.recraft.svg",
+      "status": "ok",
+      "bytes": 107557,
+      "n": 1,
+      "hash": "f716678633ff"
+    },
+    {
+      "src": "/home/codex/src/github.com/EpiowAI/brand/logo/options-w3/_sheet-navbar.png",
+      "out": "/home/codex/src/github.com/EpiowAI/brand/logo/options-w3/_sheet-navbar.recraft.svg",
+      "status": "ok",
+      "bytes": 164826,
+      "n": 1,
+      "hash": "e0402f32a171"
+    },
+    {
+      "src": "/home/codex/src/github.com/EpiowAI/brand/logo/options-w3/T2-dejavu-tracked-light.png",
+      "out": "/home/codex/src/github.com/EpiowAI/brand/logo/options-w3/T2-dejavu-tracked-light.recraft.svg",
+      "status": "ok",
+      "bytes": 3930,
+      "n": 1,
+      "hash": "0357e8431a0b"
+    },
+    {
+      "src": "/home/codex/src/github.com/EpiowAI/brand/logo/options-w3/_sheet-wordmarks.png",
+      "out": "/home/codex/src/github.com/EpiowAI/brand/logo/options-w3/_sheet-wordmarks.recraft.svg",
+      "status": "ok",
+      "bytes": 161727,
+      "n": 1,
+      "hash": "0bcee8cf3151"
+    },
+    {
+      "src": "/home/codex/src/github.com/EpiowAI/brand/logo/options-w3/app/T1-dejavu-bold-icon-brand.png",
+      "out": "/home/codex/src/github.com/EpiowAI/brand/logo/options-w3/app/T1-dejavu-bold-icon-brand.recraft.svg",
+      "status": "ok",
+      "bytes": 1692,
+      "n": 3,
+      "hash": "75077ffbfffe"
+    },
+    {
+      "src": "/home/codex/src/github.com/EpiowAI/brand/logo/options-w3/app/T1-dejavu-bold-icon-ink.png",
+      "out": "/home/codex/src/github.com/EpiowAI/brand/logo/options-w3/app/T1-dejavu-bold-icon-ink.recraft.svg",
+      "status": "ok",
+      "bytes": 1620,
+      "n": 3,
+      "hash": "40bcbc852ad3"
+    },
+    {
+      "src": "/home/codex/src/github.com/EpiowAI/brand/logo/options-w3/app/T3-liberation-bold-icon-brand.png",
+      "out": "/home/codex/src/github.com/EpiowAI/brand/logo/options-w3/app/T3-liberation-bold-icon-brand.recraft.svg",
+      "status": "ok",
+      "bytes": 1643,
+      "n": 2,
+      "hash": "fff196947150"
+    },
+    {
+      "src": "/home/codex/src/github.com/EpiowAI/brand/logo/options-w3/app/T3-liberation-bold-icon-ink.png",
+      "out": "/home/codex/src/github.com/EpiowAI/brand/logo/options-w3/app/T3-liberation-bold-icon-ink.recraft.svg",
+      "status": "ok",
+      "bytes": 1578,
+      "n": 2,
+      "hash": "529aa3a42743"
+    },
+    {
+      "src": "/home/codex/src/github.com/EpiowAI/brand/logo/options-w3/app/T5-freesans-bold-icon-brand.png",
+      "out": "/home/codex/src/github.com/EpiowAI/brand/logo/options-w3/app/T5-freesans-bold-icon-brand.recraft.svg",
+      "status": "ok",
+      "bytes": 1827,
+      "n": 1,
+      "hash": "e6c2b751bb38"
+    },
+    {
+      "src": "/home/codex/src/github.com/EpiowAI/brand/logo/options-w3/app/T5-freesans-bold-icon-ink.png",
+      "out": "/home/codex/src/github.com/EpiowAI/brand/logo/options-w3/app/T5-freesans-bold-icon-ink.recraft.svg",
+      "status": "ok",
+      "bytes": 1658,
+      "n": 1,
+      "hash": "0f7dc8373991"
+    },
+    {
+      "src": "/home/codex/src/github.com/EpiowAI/brand/logo/options-w3/mock/C1-heavy-navbar-dark.png",
+      "out": "/home/codex/src/github.com/EpiowAI/brand/logo/options-w3/mock/C1-heavy-navbar-dark.recraft.svg",
+      "status": "ok",
+      "bytes": 32581,
+      "n": 1,
+      "hash": "582e36ce4670"
+    },
+    {
+      "src": "/home/codex/src/github.com/EpiowAI/brand/logo/options-w3/mock/C1-heavy-navbar-light.png",
+      "out": "/home/codex/src/github.com/EpiowAI/brand/logo/options-w3/mock/C1-heavy-navbar-light.recraft.svg",
+      "status": "ok",
+      "bytes": 25589,
+      "n": 1,
+      "hash": "0a6c431a614d"
+    },
+    {
+      "src": "/home/codex/src/github.com/EpiowAI/brand/logo/options-w3/mock/C2-heavier-navbar-dark.png",
+      "out": "/home/codex/src/github.com/EpiowAI/brand/logo/options-w3/mock/C2-heavier-navbar-dark.recraft.svg",
+      "status": "ok",
+      "bytes": 31665,
+      "n": 1,
+      "hash": "2c6557711a20"
+    },
+    {
+      "src": "/home/codex/src/github.com/EpiowAI/brand/logo/options-w3/mock/C2-heavier-navbar-light.png",
+      "out": "/home/codex/src/github.com/EpiowAI/brand/logo/options-w3/mock/C2-heavier-navbar-light.recraft.svg",
+      "status": "ok",
+      "bytes": 25703,
+      "n": 1,
+      "hash": "5fa833d01bff"
+    },
+    {
+      "src": "/home/codex/src/github.com/EpiowAI/brand/logo/options-w3/mock/C3-wide-heavy-navbar-dark.png",
+      "out": "/home/codex/src/github.com/EpiowAI/brand/logo/options-w3/mock/C3-wide-heavy-navbar-dark.recraft.svg",
+      "status": "ok",
+      "bytes": 31394,
+      "n": 1,
+      "hash": "2c1e7b4c4676"
+    },
+    {
+      "src": "/home/codex/src/github.com/EpiowAI/brand/logo/options-w3/mock/C3-wide-heavy-navbar-light.png",
+      "out": "/home/codex/src/github.com/EpiowAI/brand/logo/options-w3/mock/C3-wide-heavy-navbar-light.recraft.svg",
+      "status": "ok",
+      "bytes": 24167,
+      "n": 1,
+      "hash": "ec3146b7db3a"
+    },
+    {
+      "src": "/home/codex/src/github.com/EpiowAI/brand/logo/options-w3/mock/L1-dejavu-navbar-light.png",
+      "out": "/home/codex/src/github.com/EpiowAI/brand/logo/options-w3/mock/L1-dejavu-navbar-light.recraft.svg",
+      "status": "ok",
+      "bytes": 25686,
+      "n": 1,
+      "hash": "02240b7ac123"
+    },
+    {
+      "src": "/home/codex/src/github.com/EpiowAI/brand/logo/options-w3/mock/L2-liberation-navbar-light.png",
+      "out": "/home/codex/src/github.com/EpiowAI/brand/logo/options-w3/mock/L2-liberation-navbar-light.recraft.svg",
+      "status": "ok",
+      "bytes": 26300,
+      "n": 1,
+      "hash": "6dbf2f92bca0"
+    },
+    {
+      "src": "/home/codex/src/github.com/EpiowAI/brand/logo/options-w3/mock/T1-dejavu-bold-navbar-dark.png",
+      "out": "/home/codex/src/github.com/EpiowAI/brand/logo/options-w3/mock/T1-dejavu-bold-navbar-dark.recraft.svg",
+      "status": "ok",
+      "bytes": 33643,
+      "n": 1,
+      "hash": "dc4900de8866"
+    },
+    {
+      "src": "/home/codex/src/github.com/EpiowAI/brand/logo/options-w3/mock/T1-dejavu-bold-navbar-light.png",
+      "out": "/home/codex/src/github.com/EpiowAI/brand/logo/options-w3/mock/T1-dejavu-bold-navbar-light.recraft.svg",
+      "status": "ok",
+      "bytes": 23230,
+      "n": 1,
+      "hash": "cbe7a15eb52e"
+    },
+    {
+      "src": "/home/codex/src/github.com/EpiowAI/brand/logo/options-w3/mock/T3-liberation-bold-navbar-dark.png",
+      "out": "/home/codex/src/github.com/EpiowAI/brand/logo/options-w3/mock/T3-liberation-bold-navbar-dark.recraft.svg",
+      "status": "ok",
+      "bytes": 32152,
+      "n": 1,
+      "hash": "02b87898328c"
+    },
+    {
+      "src": "/home/codex/src/github.com/EpiowAI/brand/logo/options-w3/mock/T3-liberation-bold-navbar-light.png",
+      "out": "/home/codex/src/github.com/EpiowAI/brand/logo/options-w3/mock/T3-liberation-bold-navbar-light.recraft.svg",
+      "status": "ok",
+      "bytes": 23615,
+      "n": 1,
+      "hash": "9f0087a24e64"
+    },
+    {
+      "src": "/home/codex/src/github.com/EpiowAI/brand/logo/options-w3/mock/T4-liberation-tracked-navbar-dark.png",
+      "out": "/home/codex/src/github.com/EpiowAI/brand/logo/options-w3/mock/T4-liberation-tracked-navbar-dark.recraft.svg",
+      "status": "ok",
+      "bytes": 33528,
+      "n": 1,
+      "hash": "73048983db37"
+    },
+    {
+      "src": "/home/codex/src/github.com/EpiowAI/brand/logo/options-w3/mock/T4-liberation-tracked-navbar-light.png",
+      "out": "/home/codex/src/github.com/EpiowAI/brand/logo/options-w3/mock/T4-liberation-tracked-navbar-light.recraft.svg",
+      "status": "ok",
+      "bytes": 23849,
+      "n": 1,
+      "hash": "3552d9a2132c"
+    },
+    {
+      "src": "/home/codex/src/github.com/EpiowAI/brand/logo/reverse/icon-vision-v1.png",
+      "out": "/home/codex/src/github.com/EpiowAI/brand/logo/reverse/icon-vision-v1.recraft.svg",
+      "status": "ok",
+      "bytes": 4230,
+      "n": 1,
+      "hash": "40b772c444e7"
+    }
+  ],
+  "note": "Full batch used content-hash dedupe across all brand repos."
+}
