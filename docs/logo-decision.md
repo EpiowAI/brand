@@ -2,49 +2,36 @@
 
 ## Status
 
-**Direction locked: W (wordmark-led).**  
-Pending pick among **W1–W6** in `logo/options-w/` (not icon-only v3).
-
-Prior monogram sets (v1–v3) are archive / reference only.
-
-## Decision (fill when chosen)
+**Parked — keep current shipping mark.**  
+Date: 2026-07-16  
+Decision: Continue using **current E-Orbit** assets in `logo/current/` until a future selection.  
+Direction W / W3 wordmark exploration remains in `logo/options-w*` as archive for later — **not** adopted today.
 
 | Field | Value |
 |-------|--------|
-| **Chosen ID** | _TBD_ |
-| **Date** | |
-| **Rationale** | |
-| **Shipping surfaces** | epiow.com · PWA icons · OG · portfolio · GitHub org |
+| **Chosen ID** | **0 / current (E-Orbit)** — temporary official continues |
+| **Date** | 2026-07-16 |
+| **Rationale** | No candidate shortlist felt ready; defer selection rather than force a weak pick |
+| **Shipping surfaces** | epiow.com · PWA · portfolio — unchanged |
 
-## Critical recommendation (Direction W)
+## Critical recommendation (when un-parking)
 
-| Rank | ID | Why |
-|------|-----|-----|
-| 1 | **W5** or **W2** wordmark | Clearest “Epiow”; optical E; navbar-safe |
-| 2 | **W6** lockup | Same DNA + app chip for system completeness |
-| 3 | **W1** | More modular OS character (square i-dot) |
-
-v3 monograms (G*) demoted: use only as app-mark inspiration after wordmark pick.
+| Rank | Set | Notes |
+|------|-----|--------|
+| 1 | `logo/options-w3/` T3/T4/L2 | Heavier type-based wordmarks (best of later rounds) |
+| — | `logo/options-w/` | Superseded (thin / segmented) |
+| — | `logo/options-v3/` G* | Icon monograms only — not brand system |
 
 ## History
 
 | Date | Event |
 |------|--------|
 | 2026-07-16 | Seeded options 0–E; 0 (E-Orbit) temporary live mark |
-| 2026-07-16 | v2 shortlist F1–F6 (vector-first); A–E demoted to archive |
-| 2026-07-16 | v3: enterprise-referenced G1–G15 + OpenRouter AI refs (Gemini 3 Pro Image, GPT-5.4 Image). FAL key not present on host. |
-| 2026-07-16 | Brand brief accepted; Direction W wordmarks W1–W6 in `logo/options-w/` |
-| 2026-07-16 | W3: type-based heavy wordmarks after critique (thin/segmented) |
+| 2026-07-16 | v2 shortlist F1–F6; A–E demoted |
+| 2026-07-16 | v3 G1–G15 + OpenRouter AI refs |
+| 2026-07-16 | Brand brief accepted; Direction W then W3 |
+| 2026-07-16 | **Parked:** keep current; no new official adoption |
 
-## Research notes (enterprise logos)
+## Research notes
 
-Big modern companies that “look right” share a system, not a pretty illustration:
-
-- **Linear** — abstract logomark + wordmark hierarchy; monochrome preferred; icon chip for tight UI
-- **Stripe / Notion** — letter as architecture; optical weight, not default font E
-- **Slack** — modular geometry = platform system
-- **Vercel** — maximum reduction (one silhouette)
-- **Rippling** — HR/ops motion in geometry (relevant CareOps category)
-- **Feishu/Lark class** — workplace OS friendliness without clipart
-
-Rules applied in v3: one idea · flat solid field · 16px test · ship SVG · AI = mood only.
+See `docs/brand-brief.md`. Logo work resumes only after explicit un-park.
