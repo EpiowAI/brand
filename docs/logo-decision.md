@@ -34,6 +34,7 @@ v3 monograms (G*) demoted: use only as app-mark inspiration after wordmark pick.
 | 2026-07-16 | v2 shortlist F1–F6 (vector-first); A–E demoted to archive |
 | 2026-07-16 | v3: enterprise-referenced G1–G15 + OpenRouter AI refs (Gemini 3 Pro Image, GPT-5.4 Image). FAL key not present on host. |
 | 2026-07-16 | Brand brief accepted; Direction W wordmarks W1–W6 in `logo/options-w/` |
+| 2026-07-16 | W3: type-based heavy wordmarks after critique (thin/segmented) |
 
 ## Research notes (enterprise logos)
 

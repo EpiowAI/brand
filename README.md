@@ -13,15 +13,17 @@
 | **Decision log** | [docs/logo-decision.md](./docs/logo-decision.md) |
 | **Where it ships** | [docs/surfaces.md](./docs/surfaces.md) |
 
-## Logo options — Direction W (preferred)
+## Logo options — Direction W3 (preferred)
 
-Brand brief accepted → **wordmark-led**. See **[logo/options-w/](./logo/options-w/)**.
+Brand brief accepted → **wordmark-led**. Critique fixed: heavier, continuous, real type.
 
-- Wordmark sheet: [`logo/options-w/_sheet-wordmarks-light.png`](./logo/options-w/_sheet-wordmarks-light.png)
-- Navbar mocks: [`logo/options-w/_sheet-navbar-light.png`](./logo/options-w/_sheet-navbar-light.png)
+See **[logo/options-w3/](./logo/options-w3/)**.
+
+- Sheet: [`logo/options-w3/_sheet-wordmarks.png`](./logo/options-w3/_sheet-wordmarks.png)
+- Navbar: [`logo/options-w3/_sheet-navbar.png`](./logo/options-w3/_sheet-navbar.png)
 - Brief: [`docs/brand-brief.md`](./docs/brand-brief.md)
 
-Archive: v3 monograms (`options-v3/`), v2 (`options-v2/`), v1 (`options/`).
+Superseded: `options-w/` (bar-kit). Archive: `options-v3/`, `options-v2/`, `options/`.
 
 ## Logo options at a glance (v1 archive)
 
