@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" fill="none">
+  <rect width="128" height="128" rx="28" fill="#1E1B4B"/>
+  <!-- Stroke-style EO: E as open frame, O as double ring interlocking -->
+  <path d="M36 36 H72 V50 H52 V58 H68 V70 H52 V78 H72 V92 H36 Z"
+        stroke="#fff" stroke-width="8" stroke-linejoin="round" stroke-linecap="round" fill="none"/>
+  <circle cx="88" cy="64" r="26" stroke="#fff" stroke-width="8" fill="none"/>
+  <circle cx="88" cy="64" r="12" stroke="#fff" stroke-width="8" fill="none"/>
+</svg>

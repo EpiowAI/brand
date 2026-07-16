@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" fill="none">
+  <rect width="128" height="128" rx="28" fill="#3730A3"/>
+  <!-- Three rounded modules stacked left-aligned with different widths = E silhouette -->
+  <rect x="32" y="32" width="64" height="18" rx="9" fill="#fff"/>
+  <rect x="32" y="55" width="44" height="18" rx="9" fill="#fff"/>
+  <rect x="32" y="78" width="64" height="18" rx="9" fill="#fff"/>
+  <!-- Accent node: OS "core" on middle rail end -->
+  <circle cx="88" cy="64" r="9" fill="#A5B4FC"/>
+</svg>

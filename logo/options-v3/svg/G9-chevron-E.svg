@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" fill="none">
+  <rect width="128" height="128" rx="28" fill="#1E1B4B"/>
+  <!-- Three horizontal bars ending in chevron tips — progressive lengths -->
+  <path fill="#fff" d="M30 34 H78 L94 46 L78 58 H30 V34 Z"/>
+  <path fill="#A5B4FC" d="M30 55 H62 L78 67 L62 79 H30 V55 Z"/>
+  <path fill="#fff" d="M30 76 H78 L94 88 L78 100 H30 V76 Z"/>
+</svg>

@@ -1,31 +1,28 @@
 # Epiow logo
 
-## How to pick
+## How to pick (current)
 
-1. Open the images in `options/`
-2. Reply in an issue or update `docs/logo-decision.md` with **0 / A / B / C / D / E**
-3. We promote the winner into `current/` and ship to `epiow.com` + portfolio
+1. Open **[`options-v3/`](./options-v3/)** — preferred shortlist  
+2. Start with contact sheet: [`options-v3/_sheet-vector.png`](./options-v3/_sheet-vector.png)  
+3. Record choice in [`docs/logo-decision.md`](../docs/logo-decision.md)
 
-## Options
+## Generations
 
-| ID | File | Concept |
-|----|------|---------|
-| **0** | `options/0-current-e-orbit.png` | **Current live** — geometric E + dual open arcs (E-Orbit) |
-| **A** | `options/A-portal-E.png` | E + O fused monogram — organization OS |
-| **B** | `options/B-gateway-e.png` | Linework “e” + doorway — workspace gateway |
-| **C** | `options/C-bars-node.png` | Three bars + core node — platform modules |
-| **D** | `options/D-hex-E.png` | Hex frame + E — modular system |
-| **E** | `options/E-orbit-dot.png` | Orbit rings + core + E accent — org gravity |
+| Gen | Path | Notes |
+|-----|------|--------|
+| **v3 (preferred)** | [`options-v3/`](./options-v3/) | Enterprise-referenced G1–G15 + AI mood refs |
+| v2 | [`options-v2/`](./options-v2/) | F1–F6 vector; demoted after critique |
+| v1 archive | [`options/`](./options/) | 0 + A–E exploratory |
 
 ## Current (shipping)
 
-Until a decision is recorded, `current/` holds the **0 — E-Orbit** assets used on:
+Until a decision is recorded, `current/` holds **0 — E-Orbit** assets used on:
 
 - https://epiow.com (navbar / favicon / PWA)
-- Personal portfolio company mark
+- Portfolio company mark
 
 ## Rules
 
-- Prefer **vector** (`svg`) for final shipping marks
-- Raster options are for selection only
-- No four-square “app grid” placeholder ever returns as official
+- Prefer **vector SVG** for final shipping marks  
+- AI raster is for selection mood only  
+- No four-square “app grid” placeholder ever returns as official  

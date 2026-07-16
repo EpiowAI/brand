@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" fill="none">
+  <rect width="128" height="128" rx="28" fill="#0F172A"/>
+  <!-- Abstract orbit-E: three concentric arcs open on right, thick Linear-style -->
+  <path d="M40 36
+    A36 36 0 1 0 40 92"
+    stroke="#fff" stroke-width="12" stroke-linecap="round" fill="none"/>
+  <path d="M48 48
+    A22 22 0 1 0 48 80"
+    stroke="#818CF8" stroke-width="12" stroke-linecap="round" fill="none"/>
+  <path d="M56 58
+    A10 10 0 1 0 56 70"
+    stroke="#fff" stroke-width="10" stroke-linecap="round" fill="none"/>
+</svg>

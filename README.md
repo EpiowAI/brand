@@ -13,11 +13,14 @@
 | **Decision log** | [docs/logo-decision.md](./docs/logo-decision.md) |
 | **Where it ships** | [docs/surfaces.md](./docs/surfaces.md) |
 
-## Logo options v2 (preferred)
+## Logo options v3 (preferred)
 
-See **[logo/options-v2/](./logo/options-v2/)** — vector-first shortlist **F1–F6** after critical redesign.
+See **[logo/options-v3/](./logo/options-v3/)** — enterprise-referenced **G1–G15** + OpenRouter AI mood refs.
 
-Older exploratory set (A–E) remains in `logo/options/` for history.
+- Vector sheet: [`logo/options-v3/_sheet-vector.png`](./logo/options-v3/_sheet-vector.png)
+- AI sheet: [`logo/options-v3/_sheet-ai.png`](./logo/options-v3/_sheet-ai.png)
+
+v2 (F1–F6) and v1 (A–E) remain as history.
 
 ## Logo options at a glance (v1 archive)
 

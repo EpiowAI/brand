@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" fill="none">
+  <rect width="128" height="128" rx="28" fill="#312E81"/>
+  <!-- Arch portal: outer solid with inner cutout door -->
+  <path fill="#fff" fill-rule="evenodd" d="
+    M36 96
+    V56
+    a28 28 0 0 1 56 0
+    V96
+    H78
+    V58
+    a14 14 0 0 0 -28 0
+    V96
+    H36
+    Z"/>
+</svg>
