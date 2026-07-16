@@ -13,14 +13,15 @@
 | **Decision log** | [docs/logo-decision.md](./docs/logo-decision.md) |
 | **Where it ships** | [docs/surfaces.md](./docs/surfaces.md) |
 
-## Logo options v3 (preferred)
+## Logo options — Direction W (preferred)
 
-See **[logo/options-v3/](./logo/options-v3/)** — enterprise-referenced **G1–G15** + OpenRouter AI mood refs.
+Brand brief accepted → **wordmark-led**. See **[logo/options-w/](./logo/options-w/)**.
 
-- Vector sheet: [`logo/options-v3/_sheet-vector.png`](./logo/options-v3/_sheet-vector.png)
-- AI sheet: [`logo/options-v3/_sheet-ai.png`](./logo/options-v3/_sheet-ai.png)
+- Wordmark sheet: [`logo/options-w/_sheet-wordmarks-light.png`](./logo/options-w/_sheet-wordmarks-light.png)
+- Navbar mocks: [`logo/options-w/_sheet-navbar-light.png`](./logo/options-w/_sheet-navbar-light.png)
+- Brief: [`docs/brand-brief.md`](./docs/brand-brief.md)
 
-v2 (F1–F6) and v1 (A–E) remain as history.
+Archive: v3 monograms (`options-v3/`), v2 (`options-v2/`), v1 (`options/`).
 
 ## Logo options at a glance (v1 archive)
 

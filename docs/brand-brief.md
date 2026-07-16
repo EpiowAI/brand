@@ -1,8 +1,9 @@
 # Epiow brand brief (working SSOT)
 
-> Status: **Proposed default** — fill gaps only if wrong; do not restart from blank.  
+> Status: **Accepted** (user OK, 2026-07-16) — Direction **W** in progress.  
 > Purpose: stop random logo generation; bind all visual work to one strategy.  
-> Source facts: `COMPANY.md`, `EpiowAI/epiow` README, portfolio org copy.
+> Source facts: `COMPANY.md`, `EpiowAI/epiow` README, portfolio org copy.  
+> Wordmark candidates: `logo/options-w/`.
 
 ---
 

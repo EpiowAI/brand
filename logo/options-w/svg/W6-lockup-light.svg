@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 561 160">
+  <rect width="100%" height="100%" fill="#FFFFFF"/>
+  <g transform="translate(28, 30)">
+    <rect width="100" height="100" rx="22" fill="#312E81"/>
+    <g transform="translate(18, 0)"><g fill="#FFFFFF">
+          <rect x="0" y="0" width="16" height="100" rx="3"/>
+          <rect x="0" y="0" width="60" height="16" rx="3"/>
+          <rect x="0" y="42" width="46" height="16" rx="3"/>
+          <rect x="0" y="84" width="60" height="16" rx="3"/>
+        </g></g>
+  </g>
+  <g transform="translate(152, 30)"><g fill="#0B1020">
+          <rect x="0" y="0" width="16" height="100" rx="3"/>
+          <rect x="0" y="0" width="60" height="16" rx="3"/>
+          <rect x="0" y="42" width="46" height="16" rx="3"/>
+          <rect x="0" y="84" width="60" height="16" rx="3"/>
+        </g>
+<g fill="#0B1020">
+      <rect x="77" y="30" width="15" height="100" rx="2"/>
+      <path fill-rule="evenodd" d="
+        M111 30
+        A28 28 0 1 1 110.99 30
+        Z
+        M111 45
+        A13 13 0 1 0 111.01 45
+        Z
+      "/>
+    </g>
+<g fill="#0B1020">
+      <circle cx="157.5" cy="7.5" r="7.5"/>
+      <rect x="150" y="30" width="15" height="70" rx="3"/>
+    </g>
+<path fill="#0B1020" fill-rule="evenodd" d="
+      M214 30
+      A35 35 0 1 1 213.99 30
+      Z
+      M214 46
+      A19 19 0 1 0 214.01 46
+      Z
+    "/>
+<path fill="#0B1020" d="
+      M260 30
+      H277
+      L292 78
+      L306 30
+      H323
+      L337 78
+      L351 30
+      H368
+      L346 100
+      H329
+      L314.5 50
+      L300 100
+      H283
+      Z
+    "/></g>
+</svg>

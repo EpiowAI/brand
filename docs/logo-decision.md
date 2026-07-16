@@ -2,7 +2,10 @@
 
 ## Status
 
-**Pending selection.** Prefer **v3** (`logo/options-v3/`) over v2/v1.
+**Direction locked: W (wordmark-led).**  
+Pending pick among **W1–W6** in `logo/options-w/` (not icon-only v3).
+
+Prior monogram sets (v1–v3) are archive / reference only.
 
 ## Decision (fill when chosen)
 

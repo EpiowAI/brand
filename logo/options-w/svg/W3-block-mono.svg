@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 402 160">
+  
+  <g transform="translate(0 22)">
+    <path fill="#0B1020" d="M28 0 H92 V18 H46 V41 H82 V59 H46 V82 H92 V100 H28 Z"/>
+<g fill="#0B1020">
+      <rect x="101" y="30" width="15" height="100" rx="2"/>
+      <path fill-rule="evenodd" d="
+        M135 30
+        A28 28 0 1 1 134.99 30
+        Z
+        M135 45
+        A13 13 0 1 0 135.01 45
+        Z
+      "/>
+    </g>
+<g fill="#0B1020">
+          <rect x="170" y="0" width="15" height="15" rx="2"/>
+          <rect x="170" y="30" width="15" height="70" rx="3"/>
+        </g>
+<path fill="#0B1020" fill-rule="evenodd" d="
+          M201 30 H249 Q255 30 255 36 V94 Q255 100 249 100 H201 Q195 100 195 94 V36 Q195 30 201 30 Z
+          M213 46 H237 Q241 46 241 50 V80 Q241 84 237 84 H213 Q209 84 209 80 V50 Q209 46 213 46 Z
+        "/>
+<path fill="#0B1020" d="
+      M262 30
+      H279
+      L294 78
+      L308 30
+      H325
+      L339 78
+      L353 30
+      H370
+      L348 100
+      H331
+      L316.5 50
+      L302 100
+      H285
+      Z
+    "/>
+  </g>
+</svg>
