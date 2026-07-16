@@ -42,3 +42,13 @@ Working brief (attributes, logo architecture, creative routes):
 - [ ] Wordmark + icon lockup (system, not icon alone)
 - [ ] Light / dark variants
 - [ ] Social OG image template
+
+## Sister brands (portfolio)
+
+| Brand | Brand repo |
+|-------|------------|
+| Sylphx | https://github.com/SylphxAI/brand |
+| Cubeage | https://github.com/Cubeage/brand |
+| Nakuz | https://github.com/shtse8/nakuz-brand |
+| MiniMax (archive) | https://github.com/shtse8/minimax-brand |
+| Epiow (this) | https://github.com/EpiowAI/brand |
