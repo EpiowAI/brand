@@ -52,3 +52,5 @@ Working brief (attributes, logo architecture, creative routes):
 | Nakuz | https://github.com/shtse8/nakuz-brand |
 | MiniMax (archive) | https://github.com/shtse8/minimax-brand |
 | Epiow (this) | https://github.com/EpiowAI/brand |
+
+| Ozyrix | https://github.com/OzyrixLtd/brand |
