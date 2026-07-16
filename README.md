@@ -74,3 +74,10 @@ brand/
 
 [Brand Manual](./docs/brand-manual/BRAND-MANUAL.md) · [Branding elements map](./docs/branding-elements.md) · [Construction](./logo/construction/)
 
+
+## Copy kit (verbal SSOT)
+
+Brand story, About us, website blocks, and voice samples:
+
+- [`docs/copy/`](./docs/copy/)
+- Architecture: [`docs/REPO-ARCHITECTURE.md`](./docs/REPO-ARCHITECTURE.md) (what belongs in this repo)
