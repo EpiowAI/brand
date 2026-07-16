@@ -37,7 +37,7 @@ Contact sheet: [`_sheet-vector.png`](./_sheet-vector.png)
 | **G10** | Block E | Brutalist SaaS |
 | **G11** | Constructed rounded E | Equal-weight letter |
 | **G12** | E + single arc | Epiow story (one accent) |
-| **G13** | Nested outline E | Vectorized from AI1 |
+| **G13** | Outline ring E (AI1 spirit) | Vectorized from AI1 |
 | **G14** | Custom tapered E | Vectorized from AI7 |
 | **G15** | EO stroke monogram | Vectorized from AI2 |
 

@@ -1,9 +1,34 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" fill="none">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
   <rect width="128" height="128" rx="28" fill="#312E81"/>
+  <!-- E-shaped ring via evenodd: outer E minus inner E -->
   <path fill="#fff" fill-rule="evenodd" d="
-    M32 30
-    H96 V52 H54 V56 H84 V72 H54 V76 H96 V98 H32 V30 Z
-    M44 42
-    H84 V46 H56 V56 H76 V60 H56 V70 H84 V74 H44 V42 Z
+    M 34 30
+    H 94
+    V 50
+    H 54
+    V 56
+    H 82
+    V 72
+    H 54
+    V 78
+    H 94
+    V 98
+    H 34
+    V 30
+    Z
+    M 48 44
+    H 80
+    V 48
+    H 56
+    V 56
+    H 70
+    V 60
+    H 56
+    V 68
+    H 80
+    V 72
+    H 48
+    V 44
+    Z
   "/>
 </svg>
