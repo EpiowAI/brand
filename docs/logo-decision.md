@@ -18,3 +18,5 @@
 | Date | Event |
 |------|--------|
 | 2026-07-16 | Seeded options 0–E; 0 (E-Orbit) is temporary live mark replacing four-square placeholder |
+
+| 2026-07-16 | v2 shortlist F1–F6 added (vector-first); A–E demoted to archive after critique |

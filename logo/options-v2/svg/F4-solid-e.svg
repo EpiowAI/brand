@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" fill="none">
+  <rect width="128" height="128" rx="28" fill="#1E1B4B"/>
+  <!-- geometric e from path -->
+  <path fill="#fff" d="
+    M84 70
+    H44
+    a22 22 0 0 1 0 -44
+    h28
+    a6 6 0 0 1 0 12
+    H46
+    a10 10 0 0 0 0 20
+    H84
+    a6 6 0 0 1 0 12
+    z
+    M44 82
+    a22 22 0 0 0 28 10
+    h12
+    a6 6 0 0 0 0 -12
+    H70
+    a10 10 0 0 1 -10 -10
+    H44
+    z
+  "/>
+</svg>

@@ -13,7 +13,13 @@
 | **Decision log** | [docs/logo-decision.md](./docs/logo-decision.md) |
 | **Where it ships** | [docs/surfaces.md](./docs/surfaces.md) |
 
-## Logo options at a glance
+## Logo options v2 (preferred)
+
+See **[logo/options-v2/](./logo/options-v2/)** — vector-first shortlist **F1–F6** after critical redesign.
+
+Older exploratory set (A–E) remains in `logo/options/` for history.
+
+## Logo options at a glance (v1 archive)
 
 Open these files in the repo (or download the ZIP):
 
