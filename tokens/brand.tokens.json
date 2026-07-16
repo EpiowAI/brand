@@ -1,0 +1,71 @@
+{
+  "name": "Epiow",
+  "colors": {
+    "primary_start": {
+      "hex": "#4338CA",
+      "rgb": [
+        67,
+        56,
+        202
+      ],
+      "role": "gradient start / indigo"
+    },
+    "primary_mid": {
+      "hex": "#5B5BD6",
+      "rgb": [
+        91,
+        91,
+        214
+      ],
+      "role": "gradient mid"
+    },
+    "primary_end": {
+      "hex": "#7C3AED",
+      "rgb": [
+        124,
+        58,
+        237
+      ],
+      "role": "gradient end / violet"
+    },
+    "on_primary": {
+      "hex": "#FFFFFF",
+      "rgb": [
+        255,
+        255,
+        255
+      ],
+      "role": "mark on gradient"
+    },
+    "ink": {
+      "hex": "#0B1020",
+      "rgb": [
+        11,
+        16,
+        32
+      ],
+      "role": "text on light"
+    },
+    "surface": {
+      "hex": "#F8FAFC",
+      "rgb": [
+        248,
+        250,
+        252
+      ],
+      "role": "light surface"
+    }
+  },
+  "logo": {
+    "viewBox": [
+      0,
+      0,
+      128,
+      128
+    ],
+    "corner_radius": 30,
+    "clear_space_units": 16,
+    "min_size_css_px": 24,
+    "favicon_px": 16
+  }
+}

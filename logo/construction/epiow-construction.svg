@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 520" font-family="ui-sans-serif,system-ui,sans-serif">
+  <rect width="400" height="520" fill="#0B1020"/>
+  <text x="24" y="32" fill="#E2E8F0" font-size="16" font-weight="700">Epiow — Logo construction (master viewBox 128×128)</text>
+  <text x="24" y="52" fill="#94A3B8" font-size="11">Units: userSpaceOnUse px in master artboard. Scale proportionally; never rebuild by eye.</text>
+
+  <!-- Artboard replica at 2x for annotation -->
+  <g transform="translate(40,80) scale(2)">
+    <defs>
+      <linearGradient id="g" x1="12" y1="10" x2="116" y2="118" gradientUnits="userSpaceOnUse">
+        <stop offset="0%" stop-color="#4338CA"/>
+        <stop offset="45%" stop-color="#5B5BD6"/>
+        <stop offset="100%" stop-color="#7C3AED"/>
+      </linearGradient>
+      <pattern id="grid" width="8" height="8" patternUnits="userSpaceOnUse">
+        <path d="M8 0H0V8" fill="none" stroke="#334155" stroke-width="0.3"/>
+      </pattern>
+    </defs>
+    <rect width="128" height="128" fill="url(#grid)"/>
+    <rect width="128" height="128" rx="30" fill="url(#g)" fill-opacity="0.95"/>
+    <rect x="30" y="34" width="10" height="60" rx="3" fill="#fff"/>
+    <rect x="30" y="34" width="36" height="10" rx="3" fill="#fff"/>
+    <rect x="30" y="59" width="26" height="10" rx="3" fill="#fff"/>
+    <rect x="30" y="84" width="36" height="10" rx="3" fill="#fff"/>
+    <path d="M76 36c18 0 32 14 32 28s-14 28-32 28" stroke="#fff" stroke-width="9" stroke-linecap="round" fill="none"/>
+    <path d="M76 46c12 0 22 9 22 18s-10 18-22 18" stroke="#fff" stroke-width="7" stroke-linecap="round" fill="none"/>
+    <!-- dimension lines -->
+    <g stroke="#FBBF24" stroke-width="0.6" fill="#FBBF24" font-size="5">
+      <line x1="0" y1="-6" x2="128" y2="-6"/><text x="50" y="-8">128</text>
+      <line x1="-6" y1="0" x2="-6" y2="128"/><text x="-18" y="66">128</text>
+      <line x1="30" y1="130" x2="40" y2="130"/><text x="28" y="136">10</text>
+      <line x1="30" y1="140" x2="66" y2="140"/><text x="40" y="146">36</text>
+      <line x1="30" y1="34" x2="30" y2="94" stroke="#34D399"/><text x="18" y="70" fill="#34D399">60</text>
+    </g>
+    <!-- clear space = 1/8 artboard = 16 -->
+    <rect x="-16" y="-16" width="160" height="160" fill="none" stroke="#38BDF8" stroke-width="0.8" stroke-dasharray="3 2"/>
+    <text x="-16" y="-20" fill="#38BDF8" font-size="5">clear space x=16 (1/8 viewBox)</text>
+  </g>
+
+  <!-- Spec table -->
+  <g fill="#CBD5E1" font-size="11" transform="translate(24,380)">
+    <text x="0" y="0" fill="#F8FAFC" font-weight="700" font-size="13">Geometry table (master 128×128)</text>
+    <text x="0" y="20">Corner radius rx = 30 (23.4375% of side)</text>
+    <text x="0" y="36">E stem: x=30 y=34 w=10 h=60 rx=3</text>
+    <text x="0" y="52">E bars: y=34/59/84 · h=10 · top/bottom w=36 · middle w=26 · rx=3</text>
+    <text x="0" y="68">Outer arc: M76,36 r≈28 stroke=9 · Inner arc: M76,46 r≈18 stroke=7</text>
+    <text x="0" y="84">Gradient: #4338CA → #5B5BD6@45% → #7C3AED (12,10)→(116,118)</text>
+    <text x="0" y="100">Min digital size: 24×24 CSS px · Favicon: 16×16 (use icon.svg)</text>
+    <text x="0" y="116">Clear space: 16 master units (scale with logo) on all sides</text>
+  </g>
+</svg>

@@ -69,3 +69,8 @@ brand/
 
 - App / platform: https://github.com/EpiowAI/epiow  
 - Live: https://epiow.com  
+
+## Brand manual
+
+[Brand Manual](./docs/brand-manual/BRAND-MANUAL.md) · [Branding elements map](./docs/branding-elements.md) · [Construction](./logo/construction/)
+
