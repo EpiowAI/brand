@@ -30,9 +30,15 @@
 - Logo options, current mark, company narrative
 - Decision log: `docs/logo-decision.md`
 
+## Brand strategy
+
+Working brief (attributes, logo architecture, creative routes):  
+→ **[`docs/brand-brief.md`](./docs/brand-brief.md)**
+
 ## Open questions
 
-- [ ] Official logo selection (see `logo/options/`)
-- [ ] Wordmark + icon lockup
+- [ ] Accept / amend brand brief defaults
+- [ ] Official logo selection (prefer after brief; see `logo/options-v3/`)
+- [ ] Wordmark + icon lockup (system, not icon alone)
 - [ ] Light / dark variants
 - [ ] Social OG image template
