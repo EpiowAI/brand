@@ -16,18 +16,15 @@ Prior monogram sets (v1–v3) are archive / reference only.
 | **Rationale** | |
 | **Shipping surfaces** | epiow.com · PWA icons · OG · portfolio · GitHub org |
 
-## Critical recommendation (not final authority)
+## Critical recommendation (Direction W)
 
 | Rank | ID | Why |
 |------|-----|-----|
-| 1 | **G2** EO ligature | Brandable, unique to Epiow, one silhouette |
-| 2 | **G14** custom E | Premium B2B monogram (AI7 direction, vectorized) |
-| 3 | **G11** letter E | Cleanest 16px-safe constructed E |
-| 4 | **G13** nested E | Distinctive outline system (AI1 direction) |
-| 5 | **G8** / **AI6** geo e | Friendly modern e (Stripe school) |
-| 6 | **G9** chevron E | Motion / OS progress metaphor |
+| 1 | **W5** or **W2** wordmark | Clearest “Epiow”; optical E; navbar-safe |
+| 2 | **W6** lockup | Same DNA + app chip for system completeness |
+| 3 | **W1** | More modular OS character (square i-dot) |
 
-Avoid as final without redraw: raw AI PNGs; G5 (hamburger risk); G7 alone (reads as “C”s if misbalanced).
+v3 monograms (G*) demoted: use only as app-mark inspiration after wordmark pick.
 
 ## History
 
@@ -36,6 +33,7 @@ Avoid as final without redraw: raw AI PNGs; G5 (hamburger risk); G7 alone (reads
 | 2026-07-16 | Seeded options 0–E; 0 (E-Orbit) temporary live mark |
 | 2026-07-16 | v2 shortlist F1–F6 (vector-first); A–E demoted to archive |
 | 2026-07-16 | v3: enterprise-referenced G1–G15 + OpenRouter AI refs (Gemini 3 Pro Image, GPT-5.4 Image). FAL key not present on host. |
+| 2026-07-16 | Brand brief accepted; Direction W wordmarks W1–W6 in `logo/options-w/` |
 
 ## Research notes (enterprise logos)
 
