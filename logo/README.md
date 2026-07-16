@@ -26,3 +26,12 @@ Until a decision is recorded, `current/` holds **0 — E-Orbit** assets used on:
 - Prefer **vector SVG** for final shipping marks  
 - AI raster is for selection mood only  
 - No four-square “app grid” placeholder ever returns as official  
+
+## Reverse-engineered vectors (v0)
+
+**Added:** complete SVG pack derived from existing rasters / masters.
+
+logo.svg (canonical) + wordmark.svg lockup
+
+See `reverse/README.md` for method and accuracy disclaimer.
+Primary shipping vectors live in `current/*.svg` with PNG previews `*-from-svg.png` / `*-512.png`.
