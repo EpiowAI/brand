@@ -17,7 +17,7 @@
 ## What we build
 
 - **Platform OS** — single login workspace, modular app catalog
-- **HR / CareOps suite** — leave, attendance, payroll, MPF/ORSO paths
+- **Workforce operations** — leave, attendance, payroll, MPF/ORSO paths
 - **CRM / ops apps** — role-based apps for the whole organization
 - **Cross-app intelligence** — AI that understands data across apps
 

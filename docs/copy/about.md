@@ -40,7 +40,7 @@ Epiow exists to reverse that pattern: **one OS for the organization**, with modu
 
 ### How we work
 
-We ship a platform OS with a modular application catalog — HR and CareOps, CRM and ops, productivity surfaces — under a single workspace. Cross-app intelligence is a layer on top of structured access, not a chatbot stapled to chaos.
+We ship a platform OS with a modular application catalog — workforce operations, CRM and ops, productivity surfaces — under a single workspace. Cross-app intelligence is a layer on top of structured access, not a chatbot stapled to chaos.
 
 ### Who we’re for
 
