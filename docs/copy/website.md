@@ -54,7 +54,7 @@
 | Frame EN | Frame 繁中 |
 |----------|------------|
 | Platform OS — catalog, identity, isolation | 平台 OS — 目錄、身份、隔離 |
-| CareOps / HR — leave, attendance, payroll, MPF paths | CareOps／HR — 假期、考勤、出糧、強積金路徑 |
+| Workforce operations — leave, attendance, payroll, MPF paths | 人員營運 — 假期、考勤、出糧、強積金路徑 |
 | CRM & ops — role-based apps for the whole org | CRM 與營運 — 全組織角色化應用 |
 | Cross-app intelligence — when the system is coherent | 跨應用智能 — 在系統連貫時才有意義 |
 
