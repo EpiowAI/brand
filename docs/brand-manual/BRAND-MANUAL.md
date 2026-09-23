@@ -1,11 +1,12 @@
 # Epiow Brand Manual
 
-**Version:** 1.0 · **Status:** Working SSOT (logo selection parked — current E-Orbit ships)  
+**Version:** 2.0 · **Status:** Working SSOT (logo decided 2026-09-23 — "Bracket and signal")  
 **Legal entity:** Epiow Limited · **Product:** epiow.com · **GitHub:** EpiowAI  
 
 Machine tokens: [`tokens/brand.tokens.json`](../../tokens/brand.tokens.json)  
-Construction drawing: [`logo/construction/epiow-construction.svg`](../../logo/construction/epiow-construction.svg)  
-Master SVG: [`logo/current/logo.svg`](../../logo/current/logo.svg)
+Construction drawing: [`logo/construction/epiow-mark-construction.svg`](../../logo/construction/epiow-mark-construction.svg)  
+Master SVGs: [`logo/current/mark.svg`](../../logo/current/mark.svg) · [`logo/current/lockup-light.svg`](../../logo/current/lockup-light.svg) · [`logo/current/lockup-dark.svg`](../../logo/current/lockup-dark.svg)  
+Product source of truth: `EpiowAI/epiow` → `apps/web/src/brand/` (every product asset is generated from it)
 
 ---
 
@@ -82,8 +83,8 @@ The default workplace operating system for organizations that need **local law +
 | **Legal name** | Epiow Limited |
 | **Brand name** | Epiow |
 | **Pronunciation aid** | *EP-ee-oh* (internal aid; do not force phonetic spelling in UI) |
-| **Never** | EPIOW as default display; “Epiow AI” as product name |
-| **Tagline** | Your Organization's Operating System |
+| **Never** | EPIOW or lowercase “epiow” as display text (domain and handles excepted); “Epiow AI” as product name |
+| **Tagline** | Your organization's AI-native workspace |
 | **ZH product line** | 香港首個專為本地勞工法例設計的模組化商業應用平台 |
 
 ### Voice
@@ -100,112 +101,88 @@ The default workplace operating system for organizations that need **local law +
 
 ---
 
-## 4. Logo system
+## 4. Logo system — "Bracket and signal"
 
-### 4.1 Master artboard
+### 4.1 The mark
+
+An open bracket in paper on an indigo ink tile holds one ember dot. The bracket
+is the capital E of Epiow and the frame of the organization's workspace; the dot
+is the signal — the person or agent doing granted work. The dot is the only
+ember in the mark. No gradients.
 
 | Property | Value |
 |----------|--------|
-| **File** | `logo/current/logo.svg` |
-| **viewBox** | `0 0 128 128` |
-| **Units** | SVG user units (px at 1×) |
-| **Background** | Rounded rect full bleed |
-| **Corner radius** | `rx = 30` (= **23.4375%** of side) |
-| **Mark color** | `#FFFFFF` on gradient field |
+| **Grid** | 64 × 64 units, 4-unit steps (16px favicon = whole-pixel 2px strokes) |
+| **Tile** | Superellipse \|x\|⁵ + \|y\|⁵ = 1 spanning the full box — the same tile every Epiow app icon uses |
+| **Bracket** | 8-unit stroke expanded to a filled outline; outer radius 14, inner radius 6; arms at y 16–24 and 40–48; round terminals centred at x = 44 |
+| **Bracket path** | `M44 16H30A14 14 0 0 0 16 30V34A14 14 0 0 0 30 48H44A4 4 0 0 0 44 40H30A6 6 0 0 1 24 34V30A6 6 0 0 1 30 24H44A4 4 0 0 0 44 16Z` |
+| **Signal dot** | Circle, centre (36, 32), r = 6 |
+| **Glyph box** | 16–48 × 16–48 (50%) — inside the 80% maskable safe circle |
+| **Colours** | Tile `#25205B` ink · bracket `#FCFBFA` paper · dot `#F98C10` signal |
 
-### 4.2 Field gradient (exact)
+### 4.2 The wordmark
 
-| Stop | Offset | Hex |
-|------|--------|-----|
-| Start | 0% | `#4338CA` |
-| Mid | 45% | `#5B5BD6` |
-| End | 100% | `#7C3AED` |
+"Epiow" set in **Sora SemiBold (600)** (SIL Open Font License 1.1 — the
+product's display face), tracking −12/1000, converted to outlines. The i's
+tittle is redrawn as a true circle in signal ember. Letters are ink on light
+grounds and paper on dark grounds. Always capital E.
 
-**Gradient vector:** `(x1,y1)=(12,10)` → `(x2,y2)=(116,118)` · `gradientUnits="userSpaceOnUse"`
+### 4.3 Lockup
 
-### 4.3 Letter E geometry (exact)
+Mark + wordmark on one baseline system: wordmark cap height = 0.5 × tile size;
+gap = 0.3 × tile size; the cap-height band is centred on the tile.
 
-| Element | x | y | w | h | rx |
-|---------|---|---|---|---|-----|
-| Stem | 30 | 34 | 10 | 60 | 3 |
-| Top bar | 30 | 34 | 36 | 10 | 3 |
-| Middle bar | 30 | 59 | **26** | 10 | 3 |
-| Bottom bar | 30 | 84 | 36 | 10 | 3 |
-
-**Notes**
-
-- Middle bar is **shorter** (optical E) — do not equalize to 36.  
-- All bar thickness **10**; stem width **10**.  
-- Corner round on E pieces: **rx=3**.
-
-### 4.4 Orbit arcs (exact paths)
-
-**Outer**
-
-- Path: `M76 36c18 0 32 14 32 28s-14 28-32 28`  
-- `stroke="#FFFFFF"` · `stroke-width="9"` · `stroke-linecap="round"` · fill none  
-
-**Inner**
-
-- Path: `M76 46c12 0 22 9 22 18s-10 18-22 18`  
-- `stroke-width="7"` · same cap/color  
-
-Arcs open toward the E (organization continuity / OS aperture).
-
-### 4.5 Clear space
-
-| Rule | Value |
-|------|--------|
-| **Minimum clear space** | **16** master units on every side (= 1/8 of 128) |
-| **Scaled** | Always `0.125 × rendered side length` |
-
-No type, photos, or UI chrome inside the clear-space box.
-
-### 4.6 Minimum sizes
-
-| Context | Minimum |
-|---------|---------|
-| Digital UI | **24×24** CSS px |
-| Favicon / PWA | **16×16** (use `favicon.svg` / generated icons) |
-| Print | **8 mm** side |
-
-### 4.7 Approved variants
+### 4.4 Variants
 
 | Variant | Use |
 |---------|-----|
-| Full color app icon (gradient) | Default product, marketing |
-| Mono white mark on dark | Dark UI chrome when gradient field omitted |
-| Mono ink on light | Documents; only if full icon unsuitable |
+| **Tile** (default) | Favicon, app icon, header, lock screen, social cards |
+| **Maskable** (full-bleed ink square) | PWA `purpose: maskable`, apple-touch icon (the OS applies its own mask) |
+| **Glyph** (bracket in current text colour + ember dot, no tile) | Monochrome contexts, dense UI |
+| **Lockup light / dark** | Marketing header and footer, documents, OS console header |
 
-### 4.8 Misuse (do not)
+### 4.5 Clear space and minimum size
 
-1. Change gradient stops or invent new purple.  
-2. Stretch non-uniformly.  
-3. Recreate E with four equal bars.  
-4. Drop arcs or add third rings.  
-5. Place on busy photography without scrim.  
-6. Rotate, bevel, or add drop shadows to the master.  
-7. Replace with four-square app-grid placeholder.  
+| Rule | Value |
+|------|--------|
+| Clear space | 0.25 × tile size on every side |
+| Minimum (digital) | 16 × 16 CSS px (mark); lockup with 24px tile |
+| Print | 6 mm tile |
+
+### 4.6 Misuse (do not)
+
+1. Add gradients, glows, bevels or drop shadows to the mark.
+2. Recolour the dot (it is always signal ember) or add a second ember element.
+3. Put white text on ember anywhere in the brand system (2.4:1 — fails).
+4. Close the bracket, add a middle bar, or swap the dot for a square.
+5. Stretch, rotate, or set the wordmark in live text or another typeface.
+6. Write the name as "epiow" or "EPIOW" in display.
+7. Re-draw the tile as a rounded rectangle — it is the superellipse.
 
 ---
 
-## 5. Color system
+## 5. Colour system
 
-| Token | Hex | RGB | Role |
-|-------|-----|-----|------|
-| `primary.start` | `#4338CA` | 67, 56, 202 | Gradient start |
-| `primary.mid` | `#5B5BD6` | 91, 91, 214 | Gradient mid |
-| `primary.end` | `#7C3AED` | 124, 58, 237 | Gradient end |
-| `on.primary` | `#FFFFFF` | 255, 255, 255 | Logo mark |
-| `ink` | `#0B1020` | 11, 16, 32 | Text on light |
-| `surface` | `#F8FAFC` | 248, 250, 252 | Light bg |
+Three roles, one rule: **ink carries the brand, ember is the signal.**
 
-**Print (approximate CMYK — always proof):**
+| Role | Token (product) | Hex | Use |
+|------|-----------------|-----|-----|
+| **Primary / ink** | `--primary` = `--indigo-700` (245 48% 24%) | `#25205B` | Logo tile, primary buttons, headings, links |
+| **Signal** | `--signal` = `--ember-500` (32 95% 52%) | `#F98C10` | Agent activity, the single key CTA per surface, the logo dot |
+| **Signal ink** | `--signal-foreground` (32 100% 8%) | `#291600` | Text on signal (7.3:1). Never white on ember |
+| **Signal text** | `--signal-text` = `--ember-700` (22 90% 34%) | `#A54209` | Ember-coloured text on paper / ember-100 (≥ 5.7:1) |
+| **Accent (hover tint)** | `--accent` (245 60% 95%) | `#ECEBFA` | Outline/ghost hover, menu and select highlight, toggles — a quiet indigo tint, never ember |
+| **Paper** | `--paper` / `--background` | `#FCFBFA` | Light ground |
+| **Night** | dark `--background` (245 20% 7%) | `#0F0E15` | Dark ground |
 
-| Hex | CMYK (approx) |
-|-----|----------------|
-| `#4338CA` | C75 M80 Y0 K0 |
-| `#7C3AED` | C60 M75 Y0 K0 |
+Scales: indigo 100/300/500/600/700/900, ember 100/500/600/700 — see
+[`tokens/brand.tokens.json`](../../tokens/brand.tokens.json). Every text pair
+the product renders is asserted ≥ 4.5:1 by `app/styles/__tests__/contrast.test.ts`
+in the product repo.
+
+**App icons** use one family hue per product family (12 hues, each ≥ 4.5:1
+under a white glyph) on the same superellipse tile, with the app's own Lucide
+glyph — generated from one source for the launcher, dock, App Center and PWA.
 
 ---
 
@@ -213,14 +190,18 @@ No type, photos, or UI chrome inside the clear-space box.
 
 | Role | Spec |
 |------|------|
-| Product UI | System / product stack (match epiow.com) |
-| Marketing EN | Clean grotesque (Inter or product equivalent) |
-| Marketing ZH | System CJK — match site |
-| Code | JetBrains Mono / ui-monospace |
+| Display / logo | **Sora** (OFL) — wordmark outlined from Sora SemiBold |
+| Product UI + marketing text | Plus Jakarta Sans; CJK falls back to the platform's Hong Kong faces |
+| Numerals / code | JetBrains Mono |
 
-**Logo type:** the mark is **graphic**, not live text. Do not typeset “Epiow” inside the icon.
+---
 
-Wordmark exploration (parked) lives under `logo/options-w3/` — **not** shipping.
+### 6.1 Shape and motion
+
+| Token | Value |
+|-------|-------|
+| Radius | control 8px · card 12px · panel 16px · window 12px · app icon = superellipse |
+| Motion | micro 90ms · control 160ms · entrance 240ms · hero ≤ 400ms · ease-out `cubic-bezier(0.22, 1, 0.36, 1)`; reduced-motion honoured at every runtime root |
 
 ---
 
@@ -239,13 +220,13 @@ Wordmark exploration (parked) lives under `logo/options-w3/` — **not** shippin
 | Story / mission / vision | ✅ this manual |
 | Strategy / audience | ✅ |
 | Verbal identity | ✅ |
-| Logo construction | ✅ measured SVG |
+| Logo construction | ✅ 64-unit grid drawing |
 | Clear space / min size | ✅ |
 | Color tokens JSON | ✅ |
 | Typography | ✅ provisional |
 | Voice & pillars | ✅ |
 | Photography style | ✅ directional |
-| Motion | ⬜ define when motion system ships |
+| Motion | ✅ §6.1 |
 | Illustration system | ⬜ not primary |
 | Iconography set | ⬜ product icons separate |
 | Templates (deck, social) | ⬜ |

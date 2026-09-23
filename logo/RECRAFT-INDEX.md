@@ -8,9 +8,9 @@ Source rasters → sidecar `*.recraft.svg` next to each file.
 ## Files
 
 - `logo/construction/epiow-construction.recraft.svg`
-- `logo/current/icon-512.recraft.svg`
-- `logo/current/icon-recraft.svg`
-- `logo/current/wordmark.recraft.svg`
+- `logo/archive/e-orbit-2026-07/icon-512.recraft.svg`
+- `logo/archive/e-orbit-2026-07/icon-recraft.svg`
+- `logo/archive/e-orbit-2026-07/wordmark.recraft.svg`
 - `logo/options/0-current-e-orbit.recraft.svg`
 - `logo/options/A-portal-E.recraft.svg`
 - `logo/options/B-gateway-e.recraft.svg`
