@@ -1,71 +1,148 @@
 {
   "name": "Epiow",
+  "version": "2.0.0",
+  "decided": "2026-09-23",
+  "source_of_truth": "EpiowAI/epiow apps/web/src/brand/epiow-brand.ts (geometry) + apps/web/src/app/styles/variables.css (tokens)",
   "colors": {
-    "primary_start": {
-      "hex": "#4338CA",
-      "rgb": [
-        67,
-        56,
-        202
-      ],
-      "role": "gradient start / indigo"
-    },
-    "primary_mid": {
-      "hex": "#5B5BD6",
-      "rgb": [
-        91,
-        91,
-        214
-      ],
-      "role": "gradient mid"
-    },
-    "primary_end": {
-      "hex": "#7C3AED",
-      "rgb": [
-        124,
-        58,
-        237
-      ],
-      "role": "gradient end / violet"
-    },
-    "on_primary": {
-      "hex": "#FFFFFF",
-      "rgb": [
-        255,
-        255,
-        255
-      ],
-      "role": "mark on gradient"
-    },
     "ink": {
-      "hex": "#0B1020",
+      "hex": "#25205B",
       "rgb": [
-        11,
-        16,
-        32
+        37,
+        32,
+        91
       ],
-      "role": "text on light"
+      "role": "Primary. Brand ink: logo tile, primary buttons, headings on paper.",
+      "hsl": "245 48% 24%",
+      "token": "--primary / --indigo-700"
     },
-    "surface": {
-      "hex": "#F8FAFC",
+    "signal": {
+      "hex": "#F98C10",
       "rgb": [
-        248,
-        250,
-        252
+        249,
+        140,
+        16
       ],
-      "role": "light surface"
+      "role": "Signal. Ember — reserved for agent activity, the single key CTA per surface, and the logo's signal dot. Always dark ink on it.",
+      "hsl": "32 95% 52%",
+      "token": "--signal / --ember-500"
+    },
+    "signal_ink": {
+      "hex": "#291600",
+      "rgb": [
+        41,
+        22,
+        0
+      ],
+      "role": "Text on signal (7.3:1). Never white on ember (2.4:1).",
+      "hsl": "32 100% 8%",
+      "token": "--signal-foreground"
+    },
+    "signal_text": {
+      "hex": "#A54209",
+      "rgb": [
+        165,
+        66,
+        9
+      ],
+      "role": "Ember as text on paper or ember-100 (>= 5.7:1).",
+      "hsl": "22 90% 34%",
+      "token": "--signal-text / --ember-700"
+    },
+    "paper": {
+      "hex": "#FCFBFA",
+      "rgb": [
+        252,
+        251,
+        250
+      ],
+      "role": "Light ground; the bracket in the mark.",
+      "hsl": "40 20% 98.5%",
+      "token": "--paper / --background"
+    },
+    "night": {
+      "hex": "#0F0E15",
+      "rgb": [
+        15,
+        14,
+        21
+      ],
+      "role": "Dark ground (night field).",
+      "hsl": "245 20% 7%",
+      "token": ".dark --background"
+    },
+    "accent_tint": {
+      "hex": "#ECEBFA",
+      "rgb": [
+        236,
+        235,
+        250
+      ],
+      "role": "Quiet indigo tint for hover/highlight (shadcn --accent). Never ember.",
+      "hsl": "245 60% 95%",
+      "token": "--accent"
+    }
+  },
+  "scales": {
+    "indigo": {
+      "100": "245 60% 96%",
+      "300": "245 55% 78%",
+      "500": "245 48% 42%",
+      "600": "245 48% 30%",
+      "700": "245 48% 24%",
+      "900": "245 40% 14%"
+    },
+    "ember": {
+      "100": "32 100% 95%",
+      "500": "32 95% 52%",
+      "600": "24 92% 46%",
+      "700": "22 90% 34%"
     }
   },
   "logo": {
-    "viewBox": [
-      0,
-      0,
-      128,
-      128
+    "name": "Bracket and signal",
+    "grid_units": 64,
+    "tile": "superellipse |x|^5 + |y|^5 = 1 spanning the full 64 x 64 box (same shape as every Epiow app icon)",
+    "bracket_path": "M44 16H30A14 14 0 0 0 16 30V34A14 14 0 0 0 30 48H44A4 4 0 0 0 44 40H30A6 6 0 0 1 24 34V30A6 6 0 0 1 30 24H44A4 4 0 0 0 44 16Z",
+    "signal_dot": {
+      "cx": 36,
+      "cy": 32,
+      "r": 6
+    },
+    "glyph_box": [
+      16,
+      16,
+      48,
+      48
     ],
-    "corner_radius": 30,
-    "clear_space_units": 16,
-    "min_size_css_px": 24,
-    "favicon_px": 16
+    "clear_space": "0.25 x tile size on every side",
+    "min_size_css_px": 16,
+    "favicon_px": 16,
+    "gradients": false
+  },
+  "wordmark": {
+    "text": "Epiow",
+    "typeface": "Sora SemiBold (600), SIL Open Font License 1.1",
+    "tracking_per_mille": -12,
+    "outlined": true,
+    "tittle": "true circle in signal ember",
+    "lockup": {
+      "cap_height_ratio_to_tile": 0.5,
+      "gap_ratio_to_tile": 0.3
+    }
+  },
+  "radius": {
+    "control": "8px",
+    "card": "12px",
+    "panel": "16px",
+    "window": "12px",
+    "app_icon": "superellipse n=5"
+  },
+  "motion": {
+    "micro": "90ms",
+    "control": "160ms",
+    "entrance": "240ms",
+    "hero_max": "400ms",
+    "ease_out": "cubic-bezier(0.22, 1, 0.36, 1)",
+    "reduced_motion": "MotionConfig reducedMotion=user at every runtime root"
   }
 }

@@ -1,10 +1,8 @@
 # Epiow logo
 
-## How to pick (current)
+## Status
 
-1. Open **[`options-v3/`](./options-v3/)** — preferred shortlist  
-2. Start with contact sheet: [`options-v3/_sheet-vector.png`](./options-v3/_sheet-vector.png)  
-3. Record choice in [`docs/logo-decision.md`](../docs/logo-decision.md)
+Decided — see **Current (shipping)** below. Option folders are archive.
 
 ## Generations
 
@@ -16,10 +14,14 @@
 
 ## Current (shipping)
 
-Until a decision is recorded, `current/` holds **0 — E-Orbit** assets used on:
+`current/` holds **Bracket and signal** (decided 2026-09-23 — see
+[`docs/logo-decision.md`](../docs/logo-decision.md)): `mark.svg`, `favicon.svg`,
+`lockup-light.svg`, `lockup-dark.svg`, `logo.svg`, `icon-512.png`,
+`icon-1024.png`, `icon-maskable-512.png`. These are copies of the files the
+product generates from `EpiowAI/epiow` `apps/web/src/brand/`; change the
+geometry there, then re-copy.
 
-- https://epiow.com (navbar / favicon / PWA)
-- Portfolio company mark
+The retired E-Orbit set lives in `archive/e-orbit-2026-07/`.
 
 ## Rules
 

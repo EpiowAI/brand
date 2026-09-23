@@ -9,21 +9,20 @@
 | | |
 |--|--|
 | **Company facts** | [COMPANY.md](./COMPANY.md) |
-| **Logo options (pick one)** | [logo/options/](./logo/options/) · [logo/README.md](./logo/README.md) |
+| **Logo (decided)** | [logo/current/](./logo/current/) · [logo/README.md](./logo/README.md) |
 | **Decision log** | [docs/logo-decision.md](./docs/logo-decision.md) |
 | **Where it ships** | [docs/surfaces.md](./docs/surfaces.md) |
 
-## Logo options — Direction W3 (preferred)
+## Logo — decided 2026-09-23: "Bracket and signal"
 
-Brand brief accepted → **wordmark-led**. Critique fixed: heavier, continuous, real type.
+![Epiow lockup](./logo/current/lockup-light.svg)
 
-See **[logo/options-w3/](./logo/options-w3/)**.
+- Shipping assets: [`logo/current/`](./logo/current/) (mark, favicon, light/dark lockups, 512/1024 icons, maskable icon)
+- Construction: [`logo/construction/epiow-mark-construction.svg`](./logo/construction/epiow-mark-construction.svg)
+- Decision and rationale: [`docs/logo-decision.md`](./docs/logo-decision.md)
+- Product source of truth: `EpiowAI/epiow` → `apps/web/src/brand/` — every product surface (favicon, PWA, OG, header, lock screen) is generated from it
 
-- Sheet: [`logo/options-w3/_sheet-wordmarks.png`](./logo/options-w3/_sheet-wordmarks.png)
-- Navbar: [`logo/options-w3/_sheet-navbar.png`](./logo/options-w3/_sheet-navbar.png)
-- Brief: [`docs/brand-brief.md`](./docs/brand-brief.md)
-
-Superseded: `options-w/` (bar-kit). Archive: `options-v3/`, `options-v2/`, `options/`.
+The explorations below are archive.
 
 ## Logo options at a glance (v1 archive)
 
@@ -58,7 +57,8 @@ brand/
   COMPANY.md           # company narrative SSOT
   logo/
     options/           # candidates for selection
-    current/           # shipping assets (until decision: option 0)
+    current/           # shipping assets (Bracket and signal, 2026-09-23)
+    archive/           # retired marks (E-Orbit)
     README.md
   docs/
     logo-decision.md
