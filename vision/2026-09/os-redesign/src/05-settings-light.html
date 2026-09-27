@@ -1,0 +1,115 @@
+<!doctype html><html lang="zh-HK"><head><meta charset="utf-8"><title>05 Settings light</title>
+<link rel="stylesheet" href="tokens.css"><link rel="stylesheet" href="os.css">
+<style>
+.side{width:232px;flex:none;background:var(--surface-2);border-inline-end:1px solid var(--border);padding:14px 10px;display:flex;flex-direction:column;gap:2px}
+.me{display:flex;align-items:center;gap:10px;padding:8px 10px 14px}
+.nav{height:34px;display:flex;align-items:center;gap:10px;padding:0 10px;border-radius:var(--r-sm);color:var(--text-2);font-weight:500}
+.nav.on{background:var(--surface);color:var(--text);font-weight:600;box-shadow:var(--e1),0 0 0 1px var(--border)}
+.navh{font-size:12px;font-weight:600;color:var(--text-3);padding:14px 10px 6px}
+.body{flex:1;padding:24px 40px;overflow:hidden}
+.body h2{font-size:24px;font-weight:600}
+.grp{border:1px solid var(--border);border-radius:var(--r-md);margin-top:16px;background:var(--surface)}
+.row{display:flex;align-items:center;gap:16px;padding:11px 20px;border-top:1px solid var(--border)}
+.row:first-child{border-top:0}
+.row .t{font-weight:600;font-size:14px}.row .s{font-size:13px;color:var(--text-3);margin-top:2px}
+.row .ctl{margin-inline-start:auto;display:flex;gap:10px;align-items:center}
+.theme{width:128px;display:flex;flex-direction:column;gap:8px;font-size:13px;font-weight:500;align-items:center;color:var(--text-2)}
+.theme .pv{width:128px;height:84px;border-radius:var(--r-md);overflow:hidden;position:relative;box-shadow:0 0 0 1px var(--border)}
+.theme.on{color:var(--text);font-weight:600}
+.theme.on .pv{box-shadow:0 0 0 2px var(--primary),0 0 0 5px var(--primary-tint)}
+.pv .w{position:absolute;left:16px;top:16px;right:16px;bottom:-4px;border-radius:6px}
+.pv .w i{display:block;height:6px;border-radius:3px;margin:8px 8px 0}
+.wp{width:112px;display:flex;flex-direction:column;gap:8px;align-items:center;font-size:13px;color:var(--text-2)}
+.wp .sw{width:112px;height:70px;border-radius:var(--r-sm);box-shadow:0 0 0 1px var(--border)}
+.wp.on{color:var(--text);font-weight:600}
+.wp.on .sw{box-shadow:0 0 0 2px var(--primary),0 0 0 5px var(--primary-tint)}
+.seg{display:inline-flex;padding:3px;border-radius:var(--r-sm);background:var(--surface-3)}
+.seg span{height:30px;display:inline-flex;align-items:center;padding:0 14px;border-radius:6px;font-size:13px;font-weight:500;color:var(--text-2)}
+.seg span.on{background:var(--surface);color:var(--text);font-weight:600;box-shadow:var(--e1)}
+.tog{width:40px;height:24px;border-radius:12px;background:var(--border-strong);position:relative;flex:none}
+.tog::after{content:"";position:absolute;top:3px;left:3px;width:18px;height:18px;border-radius:50%;background:#fff;box-shadow:0 1px 2px rgba(0,0,0,.2)}
+.tog.on{background:var(--primary)}.tog.on::after{left:19px}
+.acc{width:24px;height:24px;border-radius:50%}
+.acc.on{box-shadow:0 0 0 2px var(--surface),0 0 0 4px currentColor}
+.lock{display:inline-flex;align-items:center;gap:6px;height:24px;padding:0 8px;border-radius:var(--r-xs);background:var(--surface-3);color:var(--text-2);font-size:12px;font-weight:600}
+.slider{width:200px;height:4px;border-radius:2px;background:var(--surface-3);position:relative}
+.slider b{position:absolute;left:0;top:0;bottom:0;width:50%;background:var(--primary);border-radius:2px}
+.slider i{position:absolute;left:50%;top:50%;width:18px;height:18px;margin:-9px;border-radius:50%;background:#fff;box-shadow:0 0 0 1px var(--border-strong),var(--e1)}
+</style></head>
+<body class="theme-light chrome-light">
+<div class="screen wp-dawn">
+ <div data-sb='{"app":"設定","time":"9月27日 週六 09:41"}'></div>
+
+ <div class="glass" style="position:absolute;right:48px;top:72px;width:300px;border-radius:var(--r-lg);padding:16px 18px">
+  <div class="w-head" style="margin-bottom:10px"><i data-i="calendar-days" data-s="15"></i>今日議程</div>
+  <div style="display:flex;gap:12px;padding:6px 0"><span class="num" style="width:42px;font-size:13px;font-weight:600;color:var(--chrome-text-2)">10:30</span><span style="width:3px;border-radius:2px;background:#F98C10"></span><div><div class="w-t">董事會</div><div class="w-s">10 分鐘後</div></div></div>
+  <div style="display:flex;gap:12px;padding:6px 0;border-top:1px solid var(--glass-divider)"><span class="num" style="width:42px;font-size:13px;font-weight:600;color:var(--chrome-text-2)">14:00</span><span style="width:3px;border-radius:2px;background:#0D9488"></span><div><div class="w-t">設計師面試</div><div class="w-s">梁凱琳 · 二面</div></div></div>
+ </div>
+
+ <div class="glass" style="position:absolute;right:48px;top:296px;width:300px;border-radius:var(--r-lg);padding:16px 18px">
+  <div class="w-head" style="margin-bottom:12px"><i data-i="badge-check" data-s="15"></i>待你批核<span class="badge-n num" style="margin-left:2px">7</span></div>
+  <div style="display:flex;align-items:center;gap:10px"><i data-av="黃" data-s="30" data-c="2"></i><div style="flex:1"><div class="w-t">黃嘉欣 · 年假 3 天</div><div class="w-s num">10月8日 – 10日</div></div></div>
+  <div style="display:flex;gap:8px;margin-top:12px"><span class="btn secondary sm" style="flex:1;justify-content:center">拒絕</span><span class="btn primary sm" style="flex:1;justify-content:center">批准</span></div>
+ </div>
+ <div class="win" style="left:64px;top:64px;width:1120px;height:832px">
+  <div class="titlebar"><span class="lights"><i></i><i></i><i></i></span><span class="ttl"><i data-tile="settings" data-s="22"></i>設定<span class="crumb">/ 外觀</span></span>
+   <span class="tools"><span class="input" style="width:240px;height:32px"><i data-i="search" data-s="16"></i>搜尋設定</span></span></div>
+  <div style="display:flex;flex:1;min-height:0">
+   <div class="side">
+    <div class="me"><i data-av="陳" data-s="36" data-c="0"></i><div><div style="font-weight:600">陳嘉慧</div><div class="faint" style="font-size:12px">人力資源經理</div></div></div>
+    <div class="navh" style="padding-top:4px">我的帳戶</div>
+    <div class="nav"><i data-i="user" data-s="17"></i>個人資料</div>
+    <div class="nav on"><i data-i="palette" data-s="17"></i>外觀</div>
+    <div class="nav"><i data-i="bell" data-s="17"></i>通知</div>
+    <div class="nav"><i data-i="languages" data-s="17"></i>語言與地區</div>
+    <div class="nav"><i data-i="accessibility" data-s="17"></i>無障礙</div>
+    <div class="nav"><i data-i="lock" data-s="17"></i>私隱與保安</div>
+    <div class="navh">工作空間</div>
+    <div class="nav"><i data-i="building-2" data-s="17"></i>一般</div>
+    <div class="nav"><i data-i="users" data-s="17"></i>成員與角色</div>
+    <div class="nav"><i data-i="layout-grid" data-s="17"></i>App 與權限</div>
+    <div class="nav"><i data-i="monitor" data-s="17"></i>裝置與鎖定</div>
+   </div>
+   <div class="body">
+    <h2>外觀</h2>
+    <div class="faint" style="margin-top:4px">只套用在你的帳戶，並在每部裝置同步。</div>
+    <div class="grp">
+     <div class="row" style="align-items:flex-start">
+      <div><div class="t">主題</div><div class="s">視窗內容用淺色或深色</div></div>
+      <div class="ctl" style="gap:16px">
+       <div class="theme on"><div class="pv"><div class="wp-dawn" style="position:absolute;left:0;top:0;width:1600px;height:1000px;transform:scale(.08);transform-origin:0 0"></div><div class="w" style="background:#fff;box-shadow:0 2px 8px rgba(20,16,60,.12)"><i style="background:#D3D1E4;width:50%"></i><i style="background:#E7E6F0"></i><i style="background:#E7E6F0;width:70%"></i></div></div>淺色</div>
+       <div class="theme"><div class="pv"><div class="wp-aurora" style="position:absolute;left:0;top:0;width:1600px;height:1000px;transform:scale(.08);transform-origin:0 0"></div><div class="w" style="background:#17162C"><i style="background:#3A3960;width:50%"></i><i style="background:#2A2946"></i><i style="background:#2A2946;width:70%"></i></div></div>深色</div>
+       <div class="theme"><div class="pv" style="background:linear-gradient(90deg,#EEEDFB 50%,#12103A 50%)"><div class="w" style="background:linear-gradient(90deg,#fff 50%,#17162C 50%)"><i style="background:linear-gradient(90deg,#D3D1E4 50%,#3A3960 50%)"></i></div></div>自動</div>
+      </div>
+     </div>
+     <div class="row" style="align-items:flex-start">
+      <div><div class="t">桌布</div><div class="s">Dock 跟隨桌布深淺</div></div>
+      <div class="ctl" style="gap:12px">
+       <div class="wp"><div class="sw" style="position:relative;overflow:hidden"><div class="wp-aurora" style="position:absolute;left:0;top:0;width:1600px;height:1000px;transform:scale(.07);transform-origin:0 0"></div></div>極光</div>
+       <div class="wp on"><div class="sw" style="position:relative;overflow:hidden"><div class="wp-dawn" style="position:absolute;left:0;top:0;width:1600px;height:1000px;transform:scale(.07);transform-origin:0 0"></div></div>晨光</div>
+       <div class="wp"><div class="sw" style="position:relative;overflow:hidden"><div class="wp-dusk" style="position:absolute;left:0;top:0;width:1600px;height:1000px;transform:scale(.07);transform-origin:0 0"></div></div>暮色</div>
+       <div class="wp"><div class="sw" style="position:relative;overflow:hidden"><div class="wp-deep" style="position:absolute;left:0;top:0;width:1600px;height:1000px;transform:scale(.07);transform-origin:0 0"></div></div>深藍</div>
+       <div class="wp"><div class="sw" style="position:relative;overflow:hidden"><div class="wp-paper" style="position:absolute;left:0;top:0;width:1600px;height:1000px;transform:scale(.07);transform-origin:0 0"></div></div>紙白</div>
+      </div>
+     </div>
+     <div class="row">
+      <div><div class="t">強調色</div><div class="s">按鈕、選取和連結</div></div>
+      <div class="ctl" style="gap:14px">
+       <span class="acc on" style="background:#4338CA;color:#4338CA"></span><span class="acc" style="background:#6D28D9"></span><span class="acc" style="background:#0F766E"></span><span class="acc" style="background:#1D4ED8"></span><span class="acc" style="background:#BE185D"></span><span class="acc" style="background:#3F3F46"></span>
+      </div>
+     </div>
+    </div>
+    <div class="grp">
+     <div class="row"><div><div class="t">密度</div><div class="s">表格和清單的行高</div></div><div class="ctl"><span class="seg"><span class="on">舒適</span><span>緊湊</span></span></div></div>
+     <div class="row"><div><div class="t">文字大小</div><div class="s">預設 14 px</div></div><div class="ctl"><span class="faint" style="font-size:12px">A</span><span class="slider"><b></b><i></i></span><span class="faint" style="font-size:17px">A</span></div></div>
+     <div class="row"><div><div class="t">減少透明度</div><div class="s">狀態列、Dock 和小工具改用實色</div></div><div class="ctl"><span class="tog"></span></div></div>
+     <div class="row"><div><div class="t">減少動態效果</div><div class="s">只保留淡入淡出</div></div><div class="ctl"><span class="tog on"></span></div></div>
+     <div class="row"><div><div class="t">Dock 位置</div><div class="s">底部</div></div><div class="ctl"><span class="lock"><i data-i="lock" data-s="13"></i>由管理員設定</span></div></div>
+    </div>
+   </div>
+  </div>
+ </div>
+ <div data-dock='{"apps":["launch","|","people","leave","calendar","docs","chat","payroll","files","browser","|","settings","ai"],"run":["settings","calendar"],"badges":{"leave":2,"chat":3}}'></div>
+</div>
+<script src="icons.js"></script><script src="os.js"></script>
+</body></html>
