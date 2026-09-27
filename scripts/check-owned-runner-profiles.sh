@@ -1,6 +1,9 @@
 #!/usr/bin/env bash
-# Enforce the fleet-owned runner contract for this repository's direct jobs.
-# Reusable workflows are governed by the repository that owns their source.
+# Enforce the runner contract for this repository's direct jobs (owner#750,
+# zero metered GitHub spend). This repository is public, so GitHub's free
+# standard hosted runners (ubuntu-latest, ubuntu-NN.NN) are allowed; larger
+# and GPU hosted runners are not. Reusable workflows are governed by the
+# repository that owns their source.
 set -euo pipefail
 
 ROOT="${1:-$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)}"
@@ -15,7 +18,8 @@ workflow_dir = root / ".github" / "workflows"
 selection = re.compile(r"^\s*runs-on\s*:\s*(?P<value>.*?)(?:\s+#.*)?$")
 linux = re.compile(r"^sylphx-linux-(?:standard|large|xlarge|2xlarge)$")
 macos = re.compile(r"^\[\s*self-hosted\s*,\s*sylphx\s*,\s*macos\s*,\s*(?:nano|small|standard|large|xlarge|2xlarge)\s*\]$")
-hosted = re.compile(r"\b(?:ubuntu|macos|windows)-(?:latest|\d+(?:\.\d+)?)\b", re.I)
+hosted = re.compile(r"\b(?:ubuntu|macos|windows)-[\w.-]+", re.I)
+standard_hosted = re.compile(r"^ubuntu-(?:latest|\d+\.\d+)$")
 
 violations = []
 checked = 0
@@ -28,8 +32,10 @@ for workflow in sorted((*workflow_dir.glob("*.yml"), *workflow_dir.glob("*.yaml"
         value = match.group("value").strip().strip("\"'")
         if "${{" in value:
             violations.append((workflow, line_no, "dynamic runner selection", value))
+        elif standard_hosted.fullmatch(value):
+            continue
         elif hosted.search(value):
-            violations.append((workflow, line_no, "GitHub-hosted runner", value))
+            violations.append((workflow, line_no, "larger or non-Linux GitHub-hosted runner", value))
         elif not (linux.fullmatch(value) or macos.fullmatch(value)):
             violations.append((workflow, line_no, "not a published static Sylphx profile", value))
 
@@ -40,5 +46,5 @@ if violations:
         print(f"{workflow.relative_to(root)}:{line_no}: {reason}: {value}", file=sys.stderr)
     raise SystemExit("owned-runner profile contract failed")
 
-print(f"OK: {checked} direct workflow job(s) use static Sylphx-owned runner profiles")
+print(f"OK: {checked} direct workflow job(s) use Sylphx runners or free standard hosted runners")
 PY
