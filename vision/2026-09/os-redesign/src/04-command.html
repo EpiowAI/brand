@@ -1,0 +1,66 @@
+<!doctype html><html lang="zh-HK"><head><meta charset="utf-8"><title>04 Command palette</title>
+<link rel="stylesheet" href="tokens.css"><link rel="stylesheet" href="os.css">
+<style>
+.doc h1{font-size:28px;font-weight:600;line-height:1.4}
+.doc h3{font-size:17px;font-weight:600;margin:22px 0 8px}
+.doc p{font-size:16px;line-height:1.75;color:var(--text-2)}
+.scrim{position:absolute;inset:0;background:rgba(6,5,24,.42);z-index:60}
+.pal{position:absolute;left:50%;transform:translateX(-50%);top:132px;width:720px;background:var(--surface);color:var(--text);border-radius:var(--r-lg);box-shadow:var(--window-edge),var(--e4);overflow:hidden;z-index:70}
+.q{height:60px;display:flex;align-items:center;gap:12px;padding:0 20px;border-bottom:1px solid var(--border);font-size:18px}
+.q .caret{width:2px;height:22px;background:var(--primary);margin-inline-start:-10px}
+.scope{height:24px;display:inline-flex;align-items:center;gap:6px;padding:0 8px;border-radius:var(--r-xs);background:var(--surface-3);font-size:12px;font-weight:600;color:var(--text-2)}
+.grp{padding:8px 8px 4px}
+.gh{font-size:12px;font-weight:600;color:var(--text-3);padding:6px 12px}
+.it{height:44px;display:flex;align-items:center;gap:12px;padding:0 12px;border-radius:var(--r-sm);font-size:14px}
+.it.on{background:var(--primary-tint)}
+.it .m{color:var(--text-3);font-size:13px}
+.it .r{margin-inline-start:auto;display:flex;align-items:center;gap:8px;color:var(--text-3);font-size:12px}
+.k{font-size:11px;font-weight:600;padding:1px 6px;border-radius:5px;border:1px solid var(--border-strong);color:var(--text-2);background:var(--surface-2)}
+.ico{width:28px;height:28px;border-radius:var(--r-sm);display:grid;place-items:center;background:var(--surface-3);color:var(--text-2);flex:none}
+.foot{height:44px;display:flex;align-items:center;gap:18px;padding:0 20px;border-top:1px solid var(--border);font-size:12px;color:var(--text-3);background:var(--surface-2)}
+.foot span{display:inline-flex;align-items:center;gap:6px}
+mark{background:none;color:var(--primary-text);font-weight:600}
+</style></head>
+<body class="theme-dark chrome-dark">
+<div class="screen wp-aurora">
+ <div data-sb='{"demo":true,"app":"文件"}'></div>
+ <div class="win" style="left:210px;top:70px;width:1180px;height:820px">
+  <div class="titlebar"><span class="lights"><i></i><i></i><i></i></span><span class="ttl"><i data-tile="docs" data-s="22"></i>文件<span class="crumb">/ 第三季董事會報告</span></span>
+   <span class="tools"><span style="display:flex;margin-inline-end:6px"><i data-av="陳" data-s="26" data-c="0"></i><i data-av="梁" data-s="26" data-c="2"></i></span><span class="btn secondary sm">分享</span></span></div>
+  <div class="doc" style="padding:48px 160px">
+   <div class="faint" style="font-size:13px">更新於今天 09:12 · 陳嘉慧</div>
+   <h1 style="margin-top:6px">第三季董事會報告</h1>
+   <h3>一、營運摘要</h3>
+   <p>本季收入按年增長 18%，新客戶 42 家，客戶續約率維持 96%。零售業務在九月回升，批發訂單穩定。</p>
+   <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:18px">
+    <div class="stat"><div class="l">收入增長</div><div class="v">+18%</div></div>
+    <div class="stat"><div class="l">新客戶</div><div class="v">42</div></div>
+    <div class="stat"><div class="l">續約率</div><div class="v">96%</div></div>
+   </div>
+   <h3>二、人力資源</h3>
+   <p>在職員工 47 人，本季入職 5 人、離職 2 人。出勤統計待人事部補上。</p>
+  </div>
+ </div>
+ <div data-dock='{"apps":["launch","|","people","leave","calendar","docs","chat","payroll","files","browser","|","settings","ai"],"run":["docs","calendar"],"badges":{"leave":2,"chat":3}}'></div>
+ <div class="scrim"></div>
+
+ <div class="pal">
+  <div class="q"><i data-i="search" data-s="20" style="color:var(--text-3)"></i><span>黃嘉欣</span><span class="caret"></span><span style="margin-inline-start:auto" class="scope">全部</span></div>
+  <div class="grp"><div class="gh">動作</div>
+   <div class="it on"><span class="ico" style="background:var(--primary);color:#fff"><i data-i="check" data-s="16"></i></span><span>批准 <mark>黃嘉欣</mark> 的年假申請</span><span class="m num">10月8日 – 10日 · 3 日</span><span class="r"><span class="k">↵</span></span></div>
+   <div class="it"><span class="ico"><i data-i="message-square" data-s="16"></i></span><span>發訊息給 <mark>黃嘉欣</mark></span></div>
+   <div class="it"><span class="ico"><i data-i="calendar-days" data-s="16"></i></span><span>約 <mark>黃嘉欣</mark> 開會</span></div>
+  </div>
+  <div class="grp"><div class="gh">紀錄</div>
+   <div class="it"><i data-av="黃" data-s="28" data-c="2"></i><span><mark>黃嘉欣</mark></span><span class="m">人事主任 · 人力資源部</span><span class="r">人事</span></div>
+   <div class="it"><i data-tile="leave" data-s="28"></i><span><mark>黃嘉欣</mark> · 年假申請</span><span class="status st-warn" style="height:20px">待批</span><span class="r">請假</span></div>
+   <div class="it"><i data-tile="docs" data-s="28"></i><span><mark>黃嘉欣</mark> 試用期評核</span><span class="m num">8月30日</span><span class="r">文件</span></div>
+  </div>
+  <div class="grp" style="padding-bottom:8px"><div class="gh">問 AI</div>
+   <div class="it"><span class="ico" style="background:var(--signal-tint);color:var(--signal-text)"><i data-i="sparkles" data-s="16"></i></span><span><mark>黃嘉欣</mark> 今年仲有幾多日年假？</span><span class="r"><span class="k">?</span></span></div>
+  </div>
+  <div class="foot"><span><span class="k">↑</span><span class="k">↓</span>選擇</span><span><span class="k">↵</span>執行</span><span><span class="k">⌘↵</span>在新視窗打開</span><span style="margin-inline-start:auto"><span class="k">esc</span>關閉</span></div>
+ </div>
+</div>
+<script src="icons.js"></script><script src="os.js"></script>
+</body></html>

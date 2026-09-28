@@ -1,0 +1,103 @@
+<!doctype html><html lang="zh-HK"><head><meta charset="utf-8"><title>01 Desktop</title>
+<link rel="stylesheet" href="tokens.css"><link rel="stylesheet" href="os.css">
+<style>
+.greet{position:absolute;left:64px;top:84px;color:var(--chrome-text)}
+.greet .d{font-size:14px;font-weight:500;color:var(--chrome-text-2)}
+.greet h1{font-size:32px;font-weight:600;margin-top:4px;letter-spacing:0}
+.greet .sub{font-size:14px;color:var(--chrome-text-2);margin-top:6px}
+.brief p{font-size:15px;line-height:1.75;color:var(--chrome-text)}
+.brief b{font-weight:600;color:#fff}
+.brief .sig{color:#FDBA74;font-weight:600}
+.acts{display:flex;gap:8px;margin-top:14px}
+.gbtn{height:30px;display:inline-flex;align-items:center;gap:6px;padding:0 12px;border-radius:var(--r-sm);font-size:13px;font-weight:600;background:rgba(255,255,255,.10);color:var(--chrome-text)}
+.gbtn.pri{background:#fff;color:#25205B}
+.ag{display:flex;gap:12px;padding:10px 0;border-top:1px solid var(--glass-divider)}
+.ag:first-of-type{border-top:0}
+.ag .t{width:44px;font-size:13px;font-weight:600;color:var(--chrome-text-2)}
+.ag .bar{width:3px;border-radius:2px}
+.ag .now{font-size:11px;font-weight:600;color:var(--signal-ink);background:var(--signal);border-radius:var(--r-xs);padding:1px 6px;margin-left:6px}
+.appr .w-row{padding:11px 0}
+.mini{height:28px;display:inline-flex;align-items:center;padding:0 10px;border-radius:var(--r-sm);font-size:12.5px;font-weight:600;background:rgba(255,255,255,.10);color:var(--chrome-text)}
+.mini.ok{background:#fff;color:#25205B}
+.out{display:flex;gap:22px;flex-wrap:wrap}
+.out .p{display:flex;flex-direction:column;align-items:center;gap:6px;width:64px;text-align:center}
+.out .p span.n{font-size:12.5px;font-weight:600;color:var(--chrome-text)}
+.out .p span.s{font-size:11.5px;color:var(--chrome-text-3);margin-top:-4px}
+.kpi{display:flex;gap:28px}
+.kpi .v{font-size:28px;font-weight:600;color:var(--chrome-text);font-variant-numeric:tabular-nums;letter-spacing:-.01em}
+.kpi .l{font-size:12px;color:var(--chrome-text-3);font-weight:500}
+.spark{margin-top:14px}
+.pin{display:flex;align-items:center;gap:12px;padding:10px 0;border-top:1px solid var(--glass-divider)}
+.pin:first-of-type{border-top:0}
+.col{position:absolute;top:214px;display:flex;flex-direction:column;gap:20px}
+.col .widget{position:relative}
+</style></head>
+<body class="theme-light chrome-dark">
+<div class="screen wp-aurora">
+ <div data-sb='{"demo":true}'></div>
+
+ <div class="greet">
+  <div class="d num">9月27日 星期六</div>
+  <h1>早晨，嘉慧</h1>
+  <div class="sub">今天有 3 個會議，2 份請假申請等你批核。</div>
+ </div>
+
+ <div class="col" style="left:64px;width:520px">
+ <div class="widget glass brief">
+  <div class="w-head"><i data-i="sparkles" data-s="15" style="color:#F98C10"></i>AI 早晨簡報<span class="more">09:30 更新</span></div>
+  <p>季度董事會報告仍欠<b>出勤數據</b>；<span class="sig">2 份請假申請</span>明天到期。李志明下週一至三放年假，前端工作已由黃詠詩代理。</p>
+  <div class="acts"><span class="gbtn pri"><i data-i="badge-check" data-s="15"></i>處理請假</span><span class="gbtn"><i data-i="file-text" data-s="15"></i>打開報告</span></div>
+ </div>
+
+ <div class="widget glass">
+  <div class="w-head"><i data-i="pin" data-s="15"></i>已釘選</div>
+  <div class="pin"><i data-tile="docs" data-s="32"></i><div style="flex:1"><div class="w-t">第三季董事會報告</div><div class="w-s">文件 · 今天 09:12 更新</div></div><i data-i="chevron-right" data-s="16" style="color:var(--chrome-text-3)"></i></div>
+  <div class="pin"><i data-tile="talent" data-s="32"></i><div style="flex:1"><div class="w-t">聖誕兼職招聘清單</div><div class="w-s">招聘 · 6 位候選人</div></div><i data-i="chevron-right" data-s="16" style="color:var(--chrome-text-3)"></i></div>
+ </div>
+
+ </div>
+ <div class="col" style="left:632px;width:404px">
+ <div class="widget glass">
+  <div class="w-head"><i data-i="calendar-days" data-s="15"></i>今日議程<span class="more">3 個會議</span></div>
+  <div class="ag"><span class="t num">09:30</span><span class="bar" style="background:#8B89E8"></span><div><div class="w-t">部門晨會</div><div class="w-s">會議室 A · 12 人</div></div></div>
+  <div class="ag"><span class="t num">10:30</span><span class="bar" style="background:#F98C10"></span><div><div class="w-t">董事會<span class="now">10 分鐘後</span></div><div class="w-s">第三季報告 · 視像會議</div></div></div>
+  <div class="ag"><span class="t num">14:00</span><span class="bar" style="background:#2DD4BF"></span><div><div class="w-t">設計師面試</div><div class="w-s">梁凱琳 · 二面</div></div></div>
+  <div class="ag"><span class="t num">16:30</span><span class="bar" style="background:rgba(255,255,255,.25)"></span><div><div class="w-t" style="color:var(--chrome-text-2);font-weight:500">專注時間</div><div class="w-s">已封鎖通知</div></div></div>
+ </div>
+
+ <div class="widget glass">
+  <div class="w-head"><i data-i="sun" data-s="15"></i>今日休假<span class="more num">47 人中 4 人</span></div>
+  <div class="out">
+   <div class="p"><i data-av="李志明" data-s="40" data-c="1"></i><span class="n">李志明</span><span class="s">年假</span></div>
+   <div class="p"><i data-av="何子軒" data-s="40" data-c="3"></i><span class="n">何子軒</span><span class="s">病假</span></div>
+   <div class="p"><i data-av="林慧雯" data-s="40" data-c="4"></i><span class="n">林慧雯</span><span class="s">年假</span></div>
+   <div class="p"><i data-av="蘇怡婷" data-s="40" data-c="6"></i><span class="n">蘇怡婷</span><span class="s">產假</span></div>
+  </div>
+ </div>
+
+ </div>
+ <div class="col" style="left:1060px;width:476px">
+ <div class="widget glass appr">
+  <div class="w-head"><i data-i="badge-check" data-s="15"></i>待你批核<span class="badge-n num" style="margin-left:2px">7</span><span class="more">全部</span></div>
+  <div class="w-row"><i data-av="黃嘉欣" data-s="32" data-c="2"></i><div style="flex:1"><div class="w-t">黃嘉欣 · 年假 3 天</div><div class="w-s num">10月8日 – 10日 · 代理：何子軒</div></div><span class="mini">拒絕</span><span class="mini ok">批准</span></div>
+  <div class="w-row"><i data-av="張詠詩" data-s="32" data-c="3"></i><div style="flex:1"><div class="w-t">張詠詩 · 病假 1 天</div><div class="w-s num">9月26日 · 已附醫生紙</div></div><span class="mini">拒絕</span><span class="mini ok">批准</span></div>
+  <div class="w-row"><i data-av="梁偉強" data-s="32" data-c="0"></i><div style="flex:1"><div class="w-t">梁偉強 · 報銷 HK$1,280</div><div class="w-s">客戶午餐 · 2 張收據</div></div><span class="mini">查看</span></div>
+ </div>
+
+ <div class="widget glass">
+  <div class="w-head"><i data-i="users" data-s="15"></i>本月人手</div>
+  <div class="kpi">
+   <div><div class="v">47</div><div class="l">在職員工</div></div>
+   <div><div class="v">96<span style="font-size:16px;color:var(--chrome-text-2)">%</span></div><div class="l">今日出勤</div></div>
+   <div><div class="v">3</div><div class="l">本月入職</div></div>
+  </div>
+  <svg class="spark" width="434" height="54" viewBox="0 0 352 54" preserveAspectRatio="none"><defs><linearGradient id="sg" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#B7B5F0" stop-opacity=".35"/><stop offset="1" stop-color="#B7B5F0" stop-opacity="0"/></linearGradient></defs>
+   <path d="M0 40 L32 38 L64 41 L96 30 L128 33 L160 26 L192 29 L224 20 L256 23 L288 14 L320 17 L352 10 L352 54 L0 54Z" fill="url(#sg)"/>
+   <path d="M0 40 L32 38 L64 41 L96 30 L128 33 L160 26 L192 29 L224 20 L256 23 L288 14 L320 17 L352 10" fill="none" stroke="#B7B5F0" stroke-width="2" stroke-linejoin="round"/></svg>
+ </div>
+
+ </div>
+ <div data-dock='{"apps":["launch","|","people","leave","calendar","docs","chat","payroll","files","browser","|","settings","ai"],"run":["docs","calendar"],"badges":{"leave":2,"chat":3}}'></div>
+</div>
+<script src="icons.js"></script><script src="os.js"></script>
+</body></html>

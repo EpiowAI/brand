@@ -1,0 +1,143 @@
+<!doctype html><html lang="zh-HK"><head><meta charset="utf-8"><title>02 Leave window</title>
+<link rel="stylesheet" href="tokens.css"><link rel="stylesheet" href="os.css">
+<style>
+.side{width:196px;flex:none;background:var(--surface-2);border-inline-end:1px solid var(--border);padding:14px 10px;display:flex;flex-direction:column;gap:2px}
+.nav{height:34px;display:flex;align-items:center;gap:10px;padding:0 10px;border-radius:var(--r-sm);color:var(--text-2);font-weight:500}
+.nav.on{background:var(--surface);color:var(--text);font-weight:600;box-shadow:var(--e1),0 0 0 1px var(--border)}
+.nav .c{margin-inline-start:auto;font-size:12px;color:var(--text-3);font-weight:600}
+.nav.on .c{color:var(--primary-text)}
+.navh{font-size:12px;font-weight:600;color:var(--text-3);padding:14px 10px 6px}
+.main{flex:1;min-width:0;display:flex;flex-direction:column}
+.head{padding:20px 24px 0}
+.head h2{font-size:20px;font-weight:600}
+.pane{width:336px;flex:none;border-inline-start:1px solid var(--border);display:flex;flex-direction:column}
+.kv{display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid var(--border);font-size:14px}
+.kv .k{color:var(--text-2)}
+.kv .v{font-weight:500}
+.bal{height:6px;border-radius:3px;background:var(--surface-3);overflow:hidden;display:flex}
+.bal i{display:block;height:100%}
+.note{background:var(--surface-2);border-radius:var(--r-md);padding:12px 14px;font-size:14px;line-height:1.75;color:var(--text)}
+.file{display:flex;align-items:center;gap:10px;border:1px solid var(--border);border-radius:var(--r-md);padding:10px 12px}
+.aihint{display:flex;gap:10px;align-items:flex-start;border:1px solid var(--border);border-radius:var(--r-md);padding:12px 14px;font-size:13px;line-height:1.6;color:var(--text-2)}
+.aihint b{color:var(--text);font-weight:600}
+.ag{display:flex;gap:12px;padding:9px 0;border-top:1px solid var(--glass-divider)}
+.ag:first-of-type{border-top:0}
+.ag .t{width:42px;font-size:13px;font-weight:600;color:var(--chrome-text-2)}
+.ag .bar{width:3px;border-radius:2px}
+.flow{display:flex;flex-direction:column;gap:0}
+.fs{display:flex;gap:10px;position:relative;padding-bottom:12px}
+.fs .d{width:18px;height:18px;border-radius:50%;display:grid;place-items:center;flex:none;margin-top:1px}
+.fs:not(:last-child)::after{content:"";position:absolute;left:8.5px;top:21px;bottom:2px;width:1px;background:var(--border-strong)}
+.fs .t{font-size:13.5px;font-weight:500}.fs .s{font-size:12px;color:var(--text-3)}
+</style></head>
+<body class="theme-light chrome-dark">
+<div class="screen wp-aurora">
+ <div data-sb='{"demo":true,"app":"請假"}'></div>
+
+ <!-- desktop widgets beside the window -->
+ <div class="glass" style="position:absolute;left:1284px;top:64px;width:256px;border-radius:var(--r-lg);padding:16px 18px">
+  <div class="w-head" style="margin-bottom:10px"><i data-i="calendar-days" data-s="15"></i>今日議程</div>
+  <div class="ag"><span class="t num">10:30</span><span class="bar" style="background:#F98C10"></span><div><div class="w-t">董事會</div><div class="w-s">10 分鐘後</div></div></div>
+  <div class="ag"><span class="t num">14:00</span><span class="bar" style="background:#2DD4BF"></span><div><div class="w-t">設計師面試</div><div class="w-s">梁凱琳 · 二面</div></div></div>
+ </div>
+ <div class="glass" style="position:absolute;left:1284px;top:268px;width:256px;border-radius:var(--r-lg);padding:16px 18px">
+  <div class="w-head" style="margin-bottom:12px"><i data-i="sun" data-s="15"></i>今日休假<span class="more num">4 人</span></div>
+  <div style="display:flex;gap:8px"><i data-av="李" data-s="32" data-c="1"></i><i data-av="何" data-s="32" data-c="3"></i><i data-av="林" data-s="32" data-c="4"></i><i data-av="蘇" data-s="32" data-c="6"></i></div>
+ </div>
+ <!-- Leave window -->
+ <div class="win" style="left:56px;top:64px;width:1204px;height:836px">
+  <div class="titlebar">
+   <span class="lights"><i></i><i></i><i></i></span>
+   <span class="ttl"><i data-tile="leave" data-s="22"></i>請假<span class="crumb">/ 申請</span></span>
+   <span class="tools">
+    <span class="input" style="width:260px;height:32px"><i data-i="search" data-s="16"></i>搜尋員工或假期類型</span>
+    <span class="btn secondary sm"><i data-i="download" data-s="15"></i>匯出</span>
+    <span class="btn primary sm"><i data-i="plus" data-s="15"></i>新申請</span>
+   </span>
+  </div>
+  <div style="display:flex;flex:1;min-height:0">
+   <div class="side">
+    <div class="nav on"><i data-i="inbox" data-s="17"></i>申請<span class="c num">7</span></div>
+    <div class="nav"><i data-i="calendar-days" data-s="17"></i>休假日曆</div>
+    <div class="nav"><i data-i="users" data-s="17"></i>假期結餘</div>
+    <div class="nav"><i data-i="history" data-s="17"></i>紀錄</div>
+    <div class="navh">設定</div>
+    <div class="nav"><i data-i="clipboard-list" data-s="17"></i>假期類型</div>
+    <div class="nav"><i data-i="calendar-check" data-s="17"></i>公眾假期</div>
+    <div class="nav"><i data-i="shield-check" data-s="17"></i>批核流程</div>
+   </div>
+   <div class="main">
+    <div class="head">
+     <h2>請假申請</h2>
+     <div class="tabs" style="margin-top:12px">
+      <span class="tab on">待批 <span class="n num">7</span></span><span class="tab">已批准 <span class="n num">18</span></span><span class="tab">已拒絕 <span class="n num">2</span></span><span class="tab">全部</span>
+     </div>
+    </div>
+    <div style="padding:16px 24px;display:grid;grid-template-columns:repeat(4,1fr);gap:12px">
+     <div class="stat"><div class="l">待批</div><div class="v">7<small>份</small></div></div>
+     <div class="stat"><div class="l">今日休假</div><div class="v">4<small>/ 47 人</small></div></div>
+     <div class="stat"><div class="l">本月已批</div><div class="v">18<small>份</small></div></div>
+     <div class="stat"><div class="l">平均批核時間</div><div class="v">1.2<small>日</small></div></div>
+    </div>
+    <div style="padding:0 24px 12px;display:flex;gap:8px">
+     <span class="chip on">全部類型</span><span class="chip">年假</span><span class="chip">病假</span><span class="chip">產假</span><span class="chip">無薪假</span>
+     <span class="select" style="margin-inline-start:auto;height:28px;font-size:13px">部門：全部<i data-i="chevron-down" data-s="14"></i></span>
+    </div>
+    <div style="padding:0 12px">
+    <table class="table">
+     <tr><th>員工</th><th>類型</th><th>日期</th><th style="text-align:end">日數</th><th>狀態</th></tr>
+     <tr class="sel"><td><div class="cellp"><i data-av="黃嘉欣" data-s="30" data-c="2"></i><div><div style="font-weight:600">黃嘉欣</div><div class="sub">人力資源部</div></div></div></td><td>年假</td><td class="num">10月8日 – 10日</td><td class="num" style="text-align:end">3</td><td><span class="status st-warn">待批</span></td></tr>
+     <tr><td><div class="cellp"><i data-av="張詠詩" data-s="30" data-c="3"></i><div><div style="font-weight:600">張詠詩</div><div class="sub">人力資源部</div></div></div></td><td>病假</td><td class="num">9月26日</td><td class="num" style="text-align:end">1</td><td><span class="status st-warn">待批</span></td></tr>
+     <tr><td><div class="cellp"><i data-av="蕭綺婷" data-s="30" data-c="4"></i><div><div style="font-weight:600">蕭綺婷</div><div class="sub">市場部</div></div></div></td><td>產假</td><td class="num">10月19日 – 11月22日</td><td class="num" style="text-align:end">70</td><td><span class="status st-warn">待批</span></td></tr>
+     <tr><td><div class="cellp"><i data-av="彭詠欣" data-s="30" data-c="5"></i><div><div style="font-weight:600">彭詠欣</div><div class="sub">技術部</div></div></div></td><td>年假</td><td class="num">10月14日 – 15日</td><td class="num" style="text-align:end">2</td><td><span class="status st-warn">待批</span></td></tr>
+     <tr><td><div class="cellp"><i data-av="江子晴" data-s="30" data-c="6"></i><div><div style="font-weight:600">江子晴</div><div class="sub">財務部</div></div></div></td><td>年假</td><td class="num">10月11日 – 13日</td><td class="num" style="text-align:end">3</td><td><span class="status st-warn">待批</span></td></tr>
+     <tr><td><div class="cellp"><i data-av="謝家樂" data-s="30" data-c="7"></i><div><div style="font-weight:600">謝家樂</div><div class="sub">營運部</div></div></div></td><td>無薪假</td><td class="num">10月6日 – 9日</td><td class="num" style="text-align:end">4</td><td><span class="status st-warn">待批</span></td></tr>
+     <tr><td><div class="cellp"><i data-av="何子軒" data-s="30" data-c="1"></i><div><div style="font-weight:600">何子軒</div><div class="sub">技術部</div></div></div></td><td>年假</td><td class="num">10月3日</td><td class="num" style="text-align:end">1</td><td><span class="status st-warn">待批</span></td></tr>
+    </table>
+    <div style="display:flex;justify-content:space-between;align-items:center;padding:14px 12px;font-size:13px" class="faint"><span class="num">顯示 7 份中的 7 份</span><span style="display:flex;gap:6px;align-items:center"><i data-i="keyboard" data-s="15"></i>J / K 上下 · A 批准 · R 拒絕</span></div>
+    </div>
+   </div>
+   <!-- record side panel -->
+   <div class="pane">
+    <div style="padding:20px 20px 16px;display:flex;align-items:center;gap:12px;border-bottom:1px solid var(--border)">
+     <i data-av="黃嘉欣" data-s="44" data-c="2"></i>
+     <div style="flex:1"><div style="font-size:16px;font-weight:600">黃嘉欣</div><div class="faint" style="font-size:13px">人事主任 · HL0003</div></div>
+     <span class="iconbtn"><i data-i="arrow-up-right" data-s="17"></i></span><span class="iconbtn"><i data-i="x" data-s="17"></i></span>
+    </div>
+    <div style="padding:16px 20px;flex:1;display:flex;flex-direction:column;gap:16px;overflow:hidden">
+     <div>
+      <div class="kv"><span class="k">類型</span><span class="v">年假</span></div>
+      <div class="kv"><span class="k">日期</span><span class="v num">10月8日（三）– 10日（五）</span></div>
+      <div class="kv"><span class="k">日數</span><span class="v num">3 日</span></div>
+      <div class="kv"><span class="k">代理人</span><span class="v" style="display:flex;align-items:center;gap:6px"><i data-av="何子軒" data-s="20" data-c="1"></i>何子軒</span></div>
+     </div>
+     <div>
+      <div style="display:flex;justify-content:space-between;font-size:13px;margin-bottom:8px"><span class="muted">年假結餘</span><span class="num"><b style="font-weight:600">9</b> <span class="faint">/ 14 日（批准後 6 日）</span></span></div>
+      <div class="bal"><i style="width:35.7%;background:var(--text-3)"></i><i style="width:21.4%;background:var(--primary)"></i></div>
+     </div>
+     <div>
+      <div class="label" style="margin-bottom:8px">備註</div>
+      <div class="note">家庭旅行。十月薪酬核對已交給何子軒。</div>
+     </div>
+     <div>
+      <div class="label" style="margin-bottom:10px">批核流程</div>
+      <div class="flow">
+       <div class="fs"><span class="d" style="background:var(--success-tint);color:var(--success)"><i data-i="check" data-s="12" data-w="2.5"></i></span><div><div class="t">黃嘉欣 提交</div><div class="s num">9月25日 16:02</div></div></div>
+       <div class="fs"><span class="d" style="background:var(--primary);color:#fff"><span style="width:6px;height:6px;border-radius:50%;background:#fff"></span></span><div><div class="t">你（部門主管）</div><div class="s">等待批核 · 明天到期</div></div></div>
+       <div class="fs"><span class="d" style="border:1.5px solid var(--border-strong)"></span><div><div class="t faint">人力資源部備案</div><div class="s">自動</div></div></div>
+      </div>
+     </div>
+     <div class="aihint"><i data-i="sparkles" data-s="16" style="color:var(--signal);margin-top:2px"></i><div><b>沒有衝突。</b>同期人力資源部只有 1 人休假；10月9日無會議需要嘉欣出席。</div></div>
+    </div>
+    <div style="padding:14px 20px;border-top:1px solid var(--border);display:flex;gap:8px">
+     <span class="btn secondary" style="flex:1;justify-content:center">拒絕</span>
+     <span class="btn primary" style="flex:2;justify-content:center"><i data-i="check" data-s="16"></i>批准</span>
+    </div>
+   </div>
+  </div>
+ </div>
+
+ <div data-dock='{"apps":["launch","|","people","leave","calendar","docs","chat","payroll","files","browser","|","settings","ai"],"run":["leave","calendar"],"badges":{"leave":7,"chat":3}}'></div>
+</div>
+<script src="icons.js"></script><script src="os.js"></script>
+</body></html>

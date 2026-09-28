@@ -1,0 +1,116 @@
+/* Epiow design tokens v4 (proposal, 2026-09-27).
+   The mockups are built from these values only. Theme = content theme;
+   the wallpaper is chosen separately and decides the chrome tone. */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@600&display=block");
+
+:root {
+  /* ---- brand scales ---- */
+  --indigo-50:#F4F4FE; --indigo-100:#ECEBFA; --indigo-200:#D9D8F6; --indigo-300:#B7B5F0;
+  --indigo-400:#8B89E8; --indigo-500:#5B5BD6; --indigo-600:#4338CA; --indigo-700:#3730A3;
+  --indigo-800:#25205B; --indigo-900:#17143D; --violet-500:#7C3AED;
+  --ember-100:#FFF1E0; --ember-500:#F98C10; --ember-700:#A54209; --ember-ink:#291600;
+
+  /* ---- type ---- */
+  --font-ui: "Inter", "Noto Sans HK", "Noto Sans CJK HK", "Noto Sans TC", "Noto Sans CJK TC", system-ui, sans-serif;
+  --font-display: "Sora", "Inter", "Noto Sans CJK HK", sans-serif;
+  --fs-caption:12px; --fs-small:13px; --fs-ui:14px; --fs-body:16px;
+  --fs-title:20px; --fs-h2:24px; --fs-h1:32px; --fs-display:56px;
+  --lh-ui:1.5; --lh-body:1.75;
+
+  /* ---- radius (one per layer; inner = outer - padding) ---- */
+  --r-xs:6px;   /* badges, checkboxes, kbd, status chips */
+  --r-sm:8px;   /* buttons, inputs, selects, menu items */
+  --r-md:12px;  /* cards, list groups, stat tiles, menus */
+  --r-lg:16px;  /* windows, widgets, dock, popovers, palette */
+  --r-xl:24px;  /* sheets, launcher, phone cards */
+  --r-full:999px;
+
+  /* ---- spacing (4px base) ---- */
+  --s1:4px; --s2:8px; --s3:12px; --s4:16px; --s5:20px; --s6:24px; --s8:32px; --s10:40px; --s12:48px;
+
+  /* ---- motion ---- */
+  --dur-micro:90ms; --dur-control:160ms; --dur-enter:240ms; --dur-max:400ms;
+  --ease-out:cubic-bezier(.22,1,.36,1);
+
+  /* ---- density ---- */
+  --row:44px; --row-compact:32px; --control-h:36px; --statusbar-h:36px;
+
+  /* ---- signal + status (same in both themes, text variants per theme) ---- */
+  --signal:var(--ember-500); --signal-ink:var(--ember-ink);
+}
+
+/* ===== Content theme: light (default) ===== */
+.theme-light {
+  --bg:#FCFBFA; --surface:#FFFFFF; --surface-2:#F7F7FB; --surface-3:#EFEFF6;
+  --text:#17153A; --text-2:#55536F; --text-3:#6F6D8A;
+  --border:#E7E6F0; --border-strong:#D3D1E4;
+  --primary:#4338CA; --primary-hover:#3730A3; --on-primary:#FFFFFF;
+  --primary-tint:#EEEDFC; --primary-text:#4338CA;
+  --success:#12703A; --success-tint:#E8F6EC;
+  --warning:#92580A; --warning-tint:#FDF4DC;
+  --danger:#C22A3A; --danger-tint:#FCEBED;
+  --info:#1D5FBF; --info-tint:#E8F0FC;
+  --signal-text:#A54209; --signal-tint:#FFF1E0;
+  --e1:0 1px 2px rgba(20,16,60,.05), 0 1px 1px rgba(20,16,60,.03);
+  --e2:0 2px 6px rgba(20,16,60,.06), 0 12px 28px -8px rgba(20,16,60,.16);
+  --e3:0 4px 12px rgba(12,10,44,.10), 0 28px 60px -14px rgba(12,10,44,.34);
+  --e4:0 8px 24px rgba(12,10,44,.14), 0 44px 90px -20px rgba(12,10,44,.46);
+  --window-edge:0 0 0 1px rgba(20,16,60,.07);
+}
+
+/* ===== Content theme: dark ===== */
+.theme-dark {
+  --bg:#0C0B1D; --surface:#17162C; --surface-2:#1D1C35; --surface-3:#262541;
+  --text:#EEEEF8; --text-2:#AAA9C4; --text-3:#8C8BA6;
+  --border:#2A2946; --border-strong:#3A3960;
+  --primary:#5B5BD6; --primary-hover:#6E6CE6; --on-primary:#FFFFFF;
+  --primary-tint:#27264F; --primary-text:#ADABF7;
+  --success:#4ADE80; --success-tint:#15321F;
+  --warning:#FACC15; --warning-tint:#352C0C;
+  --danger:#F87171; --danger-tint:#3A1A22;
+  --info:#7DB2FF; --info-tint:#16284A;
+  --signal-text:#FDBA74; --signal-tint:#3A2410;
+  --e1:0 1px 2px rgba(0,0,0,.30);
+  --e2:0 2px 8px rgba(3,2,20,.35), 0 16px 32px -8px rgba(3,2,20,.50);
+  --e3:0 6px 16px rgba(3,2,20,.40), 0 32px 70px -14px rgba(3,2,20,.70);
+  --e4:0 10px 28px rgba(3,2,20,.45), 0 48px 100px -20px rgba(3,2,20,.80);
+  --window-edge:0 0 0 1px rgba(255,255,255,.07);
+}
+
+/* ===== Chrome material: the one glass recipe (only over the wallpaper) =====
+   tint + blur + hairline + shadow. No inner highlight, no sheen, no gloss. */
+.chrome-dark {
+  --glass-bg:rgba(30,26,80,.40); --glass-blur:blur(28px) saturate(140%);
+  --glass-border:rgba(255,255,255,.11); --glass-shadow:0 2px 8px rgba(3,2,20,.25), 0 20px 44px -12px rgba(3,2,20,.45);
+  --glass-hover:rgba(255,255,255,.07); --glass-divider:rgba(255,255,255,.08);
+  --chrome-text:#F4F4FC; --chrome-text-2:rgba(228,228,248,.72); --chrome-text-3:rgba(228,228,248,.62);
+  --chrome-primary:#B7B5F0;
+}
+.chrome-light {
+  --glass-bg:rgba(255,255,255,.62); --glass-blur:blur(28px) saturate(160%);
+  --glass-border:rgba(40,34,110,.09); --glass-shadow:0 2px 6px rgba(30,24,90,.06), 0 18px 40px -12px rgba(30,24,90,.20);
+  --glass-hover:rgba(40,34,110,.05); --glass-divider:rgba(40,34,110,.08);
+  --chrome-text:#17153A; --chrome-text-2:#4B4970; --chrome-text-3:#63617F;
+  --chrome-primary:#4338CA;
+}
+
+/* ===== Wallpapers (static, no noise, no grid) ===== */
+.wp-aurora { background:
+  radial-gradient(1000px 700px at 4% -6%, rgba(91,91,214,.72), transparent 62%),
+  radial-gradient(900px 760px at 98% 6%, rgba(124,58,237,.58), transparent 62%),
+  radial-gradient(1300px 700px at 52% 112%, rgba(79,70,229,.85), transparent 66%),
+  radial-gradient(520px 380px at 100% 100%, rgba(249,140,16,.16), transparent 70%),
+  radial-gradient(700px 500px at 40% 45%, rgba(67,56,202,.28), transparent 70%),
+  linear-gradient(180deg,#12103A,#0A0826); }
+.wp-dawn { background:
+  radial-gradient(1000px 700px at 0% 0%, rgba(160,156,238,.80), transparent 62%),
+  radial-gradient(900px 700px at 100% 0%, rgba(206,184,250,.85), transparent 60%),
+  radial-gradient(1000px 620px at 72% 118%, rgba(255,200,160,.75), transparent 62%),
+  radial-gradient(700px 500px at 10% 110%, rgba(186,196,250,.70), transparent 62%),
+  linear-gradient(180deg,#E9E8FA,#F6F0F3); }
+.wp-deep { background: radial-gradient(1200px 800px at 50% 0%, #2B2672, transparent 70%), linear-gradient(180deg,#17143D,#0B0A22); }
+.wp-dusk { background:
+  radial-gradient(900px 640px at 90% 0%, rgba(124,58,237,.60), transparent 62%),
+  radial-gradient(800px 600px at 0% 100%, rgba(219,39,119,.30), transparent 62%),
+  linear-gradient(180deg,#1A1238,#0D0A22); }
+.wp-paper { background: linear-gradient(180deg,#F7F6F2,#EFEEEA); }

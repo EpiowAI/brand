@@ -1,0 +1,86 @@
+<!doctype html><html lang="zh-HK"><head><meta charset="utf-8"><title>03 Launcher</title>
+<link rel="stylesheet" href="tokens.css"><link rel="stylesheet" href="os.css">
+<style>
+.scrim{position:absolute;inset:0;background:rgba(8,6,30,.30)}
+.ghost{position:absolute;border-radius:var(--r-lg);background:rgba(255,255,255,.06);filter:blur(18px)}
+.sheet{position:absolute;left:150px;top:92px;width:1300px;border-radius:var(--r-xl);padding:28px 40px}
+.sfield{height:48px;width:600px;margin:0 auto;display:flex;align-items:center;gap:12px;padding:0 16px;border-radius:var(--r-md);background:rgba(255,255,255,.08);border:1px solid var(--glass-border);font-size:16px;color:var(--chrome-text-3)}
+.sfield .kbd{margin-inline-start:auto}
+.sec{margin-top:26px}
+.sec h3{font-size:13px;font-weight:600;color:var(--chrome-text-2);margin-bottom:14px;display:flex;align-items:center;gap:8px}
+.sec h3 .c{font-weight:500;color:var(--chrome-text-3)}
+.grid{display:flex;flex-wrap:wrap;gap:6px 4px}
+.app{width:112px;display:flex;flex-direction:column;align-items:center;gap:8px;padding:10px 0;border-radius:var(--r-md);font-size:13px;font-weight:500;color:var(--chrome-text)}
+.app.hl{background:var(--glass-hover)}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:0 48px}
+.act{height:36px;display:inline-flex;align-items:center;gap:8px;padding:0 14px 0 10px;border-radius:var(--r-full);background:rgba(255,255,255,.08);border:1px solid var(--glass-border);font-size:13.5px;font-weight:500;color:var(--chrome-text)}
+.rec{display:flex;align-items:center;gap:12px;padding:8px 10px;border-radius:var(--r-sm)}
+.rec .t{font-size:14px;font-weight:600;color:var(--chrome-text)}
+.rec .s{font-size:12px;color:var(--chrome-text-3)}
+</style></head>
+<body class="theme-light chrome-dark">
+<div class="screen wp-aurora">
+ <div data-sb='{"demo":true}'></div>
+ <div class="scrim"></div>
+
+ <div class="sheet glass">
+  <div class="sfield"><i data-i="search" data-s="20"></i>搜尋 App、紀錄或動作<span class="kbd">⌘K</span></div>
+
+  <div class="cols">
+   <div class="sec"><h3>建議動作</h3>
+    <div style="display:flex;gap:8px;flex-wrap:wrap">
+     <span class="act"><i data-tile="leave" data-s="22"></i>申請請假</span>
+     <span class="act"><i data-tile="people" data-s="22"></i>新增員工</span>
+     <span class="act"><i data-tile="expense" data-s="22"></i>提交報銷</span>
+     <span class="act"><i data-tile="docs" data-s="22"></i>新文件</span>
+    </div>
+   </div>
+   <div class="sec"><h3>最近的紀錄</h3>
+    <div style="display:grid;grid-template-columns:auto auto;justify-content:start;gap:2px 24px">
+     <div class="rec"><i data-tile="docs" data-s="28"></i><div><div class="t">第三季董事會報告</div><div class="s">文件 · 09:12</div></div></div>
+     <div class="rec"><i data-tile="leave" data-s="28"></i><div><div class="t">黃嘉欣 · 年假</div><div class="s">請假 · 待批</div></div></div>
+    </div>
+   </div>
+  </div>
+
+  <div class="sec"><h3>人事 <span class="c num">10</span></h3>
+   <div class="grid">
+    <div class="app"><i data-tile="people" data-s="56"></i>人事</div>
+    <div class="app hl"><i data-tile="leave" data-s="56"></i>請假</div>
+    <div class="app"><i data-tile="shifts" data-s="56"></i>排班</div>
+    <div class="app"><i data-tile="onboard" data-s="56"></i>入職</div>
+    <div class="app"><i data-tile="offboard" data-s="56"></i>離職</div>
+    <div class="app"><i data-tile="org" data-s="56"></i>架構</div>
+    <div class="app"><i data-tile="review" data-s="56"></i>評核</div>
+    <div class="app"><i data-tile="benefits" data-s="56"></i>福利</div>
+    <div class="app"><i data-tile="skills" data-s="56"></i>技能</div>
+    <div class="app"><i data-tile="talent" data-s="56"></i>招聘</div>
+   </div>
+  </div>
+  <div class="sec"><h3>日常工作 <span class="c num">7</span></h3>
+   <div class="grid">
+    <div class="app"><i data-tile="calendar" data-s="56"></i>日曆</div>
+    <div class="app"><i data-tile="docs" data-s="56"></i>文件</div>
+    <div class="app"><i data-tile="chat" data-s="56"></i>訊息</div>
+    <div class="app"><i data-tile="files" data-s="56"></i>檔案</div>
+    <div class="app"><i data-tile="tasks" data-s="56"></i>待辦</div>
+    <div class="app"><i data-tile="approvals" data-s="56"></i>審批</div>
+    <div class="app"><i data-tile="browser" data-s="56"></i>瀏覽器</div>
+   </div>
+  </div>
+  <div class="cols" style="grid-template-columns:auto auto 1fr">
+   <div class="sec"><h3>財務 <span class="c num">3</span></h3>
+    <div class="grid"><div class="app"><i data-tile="payroll" data-s="56"></i>薪酬</div><div class="app"><i data-tile="expense" data-s="56"></i>報銷</div><div class="app"><i data-tile="po" data-s="56"></i>採購單</div></div>
+   </div>
+   <div class="sec"><h3>營運 <span class="c num">2</span></h3>
+    <div class="grid"><div class="app"><i data-tile="stock" data-s="56"></i>倉庫</div><div class="app"><i data-tile="visitors" data-s="56"></i>訪客</div></div>
+   </div>
+   <div class="sec"><h3>系統 <span class="c num">2</span></h3>
+    <div class="grid"><div class="app"><i data-tile="settings" data-s="56"></i>設定</div><div class="app"><i data-tile="store" data-s="56"></i>App Center</div></div>
+   </div>
+  </div>
+ </div>
+ <div data-dock='{"apps":["launch","|","people","leave","calendar","docs","chat","payroll","files","browser","|","settings","ai"],"run":["docs","calendar"],"badges":{"leave":2,"chat":3}}'></div>
+</div>
+<script src="icons.js"></script><script src="os.js"></script>
+</body></html>
