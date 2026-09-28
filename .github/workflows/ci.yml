@@ -29,3 +29,5 @@ jobs:
         run: bash scripts/check-owned-runner-profiles.sh
       - name: Validate JSON files
         run: python3 scripts/validate_json.py
+      - name: Logo masters match the spec and SHA256SUMS
+        run: node scripts/build-brand.mjs --check

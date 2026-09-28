@@ -1,141 +1,276 @@
 {
   "name": "Epiow",
-  "version": "2.0.0",
-  "decided": "2026-09-23",
-  "source_of_truth": "EpiowAI/epiow apps/web/src/brand/epiow-brand.ts (geometry) + apps/web/src/app/styles/variables.css (tokens)",
-  "colors": {
-    "ink": {
-      "hex": "#25205B",
-      "rgb": [
-        37,
-        32,
-        91
-      ],
-      "role": "Primary. Brand ink: logo tile, primary buttons, headings on paper.",
+  "version": "3.0.0",
+  "updated": "2026-09-28",
+  "source": "Read back from live epiow.com on 2026-09-28 (CSS bundle, favicon, manifests, header SVG). Produced by EpiowAI/epiow main 53fcab769: apps/web/src/app/styles/variables.css (colour and radius), apps/web/src/app/layout.tsx (fonts), apps/web/src/brand/epiow-brand.ts (logo colours).",
+  "pending": "Tokens v4 from the Workspace OS redesign (EpiowAI/brand#11) replace these only after Kyle approves #11.",
+  "rules": {
+    "primary": "Indigo carries the brand: indigo-700 is the logo tile and the primary action colour.",
+    "signal": "Ember is the signal only: the logo's dot, the wordmark's tittle, agent activity, and at most one key call to action per surface. It is never a hover tint, a border or a background wash.",
+    "text_on_signal": "Text on ember is always dark ink (signal-foreground). White on ember measures 2.4:1 and is not allowed.",
+    "gradients": "The logo never uses a gradient."
+  },
+  "palette": {
+    "indigo-100": {
+      "hsl": "245 60% 96%",
+      "hex": "#F0EFFB"
+    },
+    "indigo-300": {
+      "hsl": "245 55% 78%",
+      "hex": "#ADA8E6"
+    },
+    "indigo-500": {
+      "hsl": "245 48% 42%",
+      "hex": "#40389F"
+    },
+    "indigo-600": {
+      "hsl": "245 48% 30%",
+      "hex": "#2E2871"
+    },
+    "indigo-700": {
       "hsl": "245 48% 24%",
-      "token": "--primary / --indigo-700"
+      "hex": "#25205B",
+      "use": "Brand indigo. The logo tile, primary buttons, the PWA theme colour."
     },
-    "signal": {
-      "hex": "#F98C10",
-      "rgb": [
-        249,
-        140,
-        16
-      ],
-      "role": "Signal. Ember — reserved for agent activity, the single key CTA per surface, and the logo's signal dot. Always dark ink on it.",
+    "indigo-900": {
+      "hsl": "245 40% 14%",
+      "hex": "#181532"
+    },
+    "ember-100": {
+      "hsl": "32 100% 95%",
+      "hex": "#FFF3E5"
+    },
+    "ember-500": {
       "hsl": "32 95% 52%",
-      "token": "--signal / --ember-500"
+      "hex": "#F98C10",
+      "use": "Signal ember. The logo's dot and the i's tittle, agent activity, and the one key call to action per surface. Nothing else."
     },
-    "signal_ink": {
-      "hex": "#291600",
-      "rgb": [
-        41,
-        22,
-        0
-      ],
-      "role": "Text on signal (7.3:1). Never white on ember (2.4:1).",
-      "hsl": "32 100% 8%",
-      "token": "--signal-foreground"
+    "ember-600": {
+      "hsl": "24 92% 46%",
+      "hex": "#E16009"
     },
-    "signal_text": {
-      "hex": "#A54209",
-      "rgb": [
-        165,
-        66,
-        9
-      ],
-      "role": "Ember as text on paper or ember-100 (>= 5.7:1).",
+    "ember-700": {
       "hsl": "22 90% 34%",
-      "token": "--signal-text / --ember-700"
+      "hex": "#A54209",
+      "use": "Ember as text on paper or ember-100."
     },
     "paper": {
-      "hex": "#FCFBFA",
-      "rgb": [
-        252,
-        251,
-        250
-      ],
-      "role": "Light ground; the bracket in the mark.",
       "hsl": "40 20% 98.5%",
-      "token": "--paper / --background"
+      "hex": "#FCFBFA",
+      "use": "Light ground; the bracket in the mark."
+    },
+    "ink": {
+      "hsl": "245 30% 12%",
+      "hex": "#171528",
+      "use": "Body text on light grounds (CSS --ink / --foreground). Not the logo colour: the logo tile is indigo-700."
     },
     "night": {
-      "hex": "#0F0E15",
-      "rgb": [
-        15,
-        14,
-        21
-      ],
-      "role": "Dark ground (night field).",
       "hsl": "245 20% 7%",
-      "token": ".dark --background"
-    },
-    "accent_tint": {
-      "hex": "#ECEBFA",
-      "rgb": [
-        236,
-        235,
-        250
-      ],
-      "role": "Quiet indigo tint for hover/highlight (shadcn --accent). Never ember.",
-      "hsl": "245 60% 95%",
-      "token": "--accent"
+      "hex": "#0F0E15",
+      "use": "Dark ground (dark --background)."
     }
   },
-  "scales": {
-    "indigo": {
-      "100": "245 60% 96%",
-      "300": "245 55% 78%",
-      "500": "245 48% 42%",
-      "600": "245 48% 30%",
-      "700": "245 48% 24%",
-      "900": "245 40% 14%"
+  "roles": {
+    "light": {
+      "primary": {
+        "hsl": "245 48% 24%",
+        "hex": "#25205B",
+        "use": "indigo-700"
+      },
+      "primary-foreground": {
+        "hsl": "45 20% 98%",
+        "hex": "#FBFAF9"
+      },
+      "signal": {
+        "hsl": "32 95% 52%",
+        "hex": "#F98C10",
+        "use": "ember-500; signal only"
+      },
+      "signal-foreground": {
+        "hsl": "32 100% 8%",
+        "hex": "#291600",
+        "use": "dark ink on ember; never white on ember"
+      },
+      "signal-text": {
+        "hsl": "22 90% 34%",
+        "hex": "#A54209",
+        "use": "ember-700; ember-coloured text on paper"
+      },
+      "signal-soft": {
+        "hsl": "32 100% 95%",
+        "hex": "#FFF3E5",
+        "use": "ember-100"
+      },
+      "accent": {
+        "hsl": "245 60% 95%",
+        "hex": "#ECEBFA",
+        "use": "hover and highlight tint; indigo, never ember"
+      },
+      "accent-foreground": {
+        "hsl": "245 48% 24%",
+        "hex": "#25205B"
+      },
+      "background": {
+        "hsl": "40 20% 98.5%",
+        "hex": "#FCFBFA",
+        "use": "paper"
+      },
+      "foreground": {
+        "hsl": "245 30% 12%",
+        "hex": "#171528",
+        "use": "ink"
+      },
+      "card": {
+        "hsl": "0 0% 100%",
+        "hex": "#FFFFFF"
+      },
+      "muted": {
+        "hsl": "40 15% 96%",
+        "hex": "#F6F5F3"
+      },
+      "muted-foreground": {
+        "hsl": "30 8% 38%",
+        "hex": "#696159"
+      },
+      "border": {
+        "hsl": "245 15% 88%",
+        "hex": "#DDDCE5"
+      },
+      "ring": {
+        "hsl": "245 48% 30%",
+        "hex": "#2E2871"
+      },
+      "destructive": {
+        "hsl": "0 72% 51%",
+        "hex": "#DC2828"
+      },
+      "success": {
+        "hsl": "152 55% 42%",
+        "hex": "#30A66F"
+      },
+      "warning": {
+        "hsl": "38 92% 50%",
+        "hex": "#F59F0A"
+      },
+      "info": {
+        "hsl": "210 85% 55%",
+        "hex": "#2B8CEE"
+      }
     },
-    "ember": {
-      "100": "32 100% 95%",
-      "500": "32 95% 52%",
-      "600": "24 92% 46%",
-      "700": "22 90% 34%"
+    "dark": {
+      "primary": {
+        "hsl": "245 60% 74%",
+        "hex": "#9C95E4"
+      },
+      "primary-foreground": {
+        "hsl": "245 48% 12%",
+        "hex": "#12102D"
+      },
+      "signal": {
+        "hsl": "28 92% 62%",
+        "hex": "#F79845"
+      },
+      "signal-foreground": {
+        "hsl": "35 100% 8%",
+        "hex": "#291800",
+        "use": "dark ink on ember"
+      },
+      "signal-text": {
+        "hsl": "28 92% 62%",
+        "hex": "#F79845"
+      },
+      "signal-soft": {
+        "hsl": "28 40% 14%",
+        "hex": "#322315"
+      },
+      "accent": {
+        "hsl": "245 28% 18%",
+        "hex": "#23213B"
+      },
+      "accent-foreground": {
+        "hsl": "40 20% 96%",
+        "hex": "#F7F5F3"
+      },
+      "background": {
+        "hsl": "245 20% 7%",
+        "hex": "#0F0E15",
+        "use": "night"
+      },
+      "foreground": {
+        "hsl": "40 20% 96%",
+        "hex": "#F7F5F3"
+      },
+      "card": {
+        "hsl": "245 16% 10%",
+        "hex": "#16151E"
+      },
+      "muted": {
+        "hsl": "245 12% 15%",
+        "hex": "#22222B"
+      },
+      "muted-foreground": {
+        "hsl": "245 10% 62%",
+        "hex": "#9694A8"
+      },
+      "border": {
+        "hsl": "245 12% 20%",
+        "hex": "#2E2D39"
+      },
+      "ring": {
+        "hsl": "245 60% 74%",
+        "hex": "#9C95E4"
+      },
+      "destructive": {
+        "hsl": "0 65% 48%",
+        "hex": "#CA2B2B"
+      },
+      "success": {
+        "hsl": "152 50% 52%",
+        "hex": "#47C289"
+      },
+      "warning": {
+        "hsl": "40 85% 55%",
+        "hex": "#EEAD2B"
+      },
+      "info": {
+        "hsl": "210 70% 60%",
+        "hex": "#5299E0"
+      }
     }
   },
-  "logo": {
-    "name": "Bracket and signal",
-    "grid_units": 64,
-    "tile": "superellipse |x|^5 + |y|^5 = 1 spanning the full 64 x 64 box (same shape as every Epiow app icon)",
-    "bracket_path": "M44 16H30A14 14 0 0 0 16 30V34A14 14 0 0 0 30 48H44A4 4 0 0 0 44 40H30A6 6 0 0 1 24 34V30A6 6 0 0 1 30 24H44A4 4 0 0 0 44 16Z",
-    "signal_dot": {
-      "cx": 36,
-      "cy": 32,
-      "r": 6
-    },
-    "glyph_box": [
-      16,
-      16,
-      48,
-      48
-    ],
-    "clear_space": "0.25 x tile size on every side",
-    "min_size_css_px": 16,
-    "favicon_px": 16,
-    "gradients": false
+  "theme_color": {
+    "manifest": "#25205B",
+    "meta_light": "#FCFBFA",
+    "meta_dark": "#0F0E15",
+    "manifest_background": "#FCFBFA"
   },
-  "wordmark": {
-    "text": "Epiow",
-    "typeface": "Sora SemiBold (600), SIL Open Font License 1.1",
-    "tracking_per_mille": -12,
-    "outlined": true,
-    "tittle": "true circle in signal ember",
-    "lockup": {
-      "cap_height_ratio_to_tile": 0.5,
-      "gap_ratio_to_tile": 0.3
+  "type": {
+    "display": {
+      "family": "Sora",
+      "license": "SIL Open Font License 1.1",
+      "css": "--font-display",
+      "use": "Display headings on marketing; the wordmark is outlined from Sora SemiBold 600"
+    },
+    "sans": {
+      "family": "Plus Jakarta Sans",
+      "license": "SIL Open Font License 1.1",
+      "css": "--font-sans",
+      "use": "Product UI and marketing body text; CJK falls back to the platform's faces"
+    },
+    "mono": {
+      "family": "JetBrains Mono",
+      "license": "SIL Open Font License 1.1",
+      "css": "--font-mono / --font-numeric",
+      "use": "Code and tabular numerals"
     }
   },
   "radius": {
+    "base": "0.5rem",
     "control": "8px",
     "card": "12px",
     "panel": "16px",
     "window": "12px",
-    "app_icon": "superellipse n=5"
+    "app_icon": "superellipse n = 5 (SVG); CSS fallback 22.5%"
   },
   "motion": {
     "micro": "90ms",
@@ -143,6 +278,16 @@
     "entrance": "240ms",
     "hero_max": "400ms",
     "ease_out": "cubic-bezier(0.22, 1, 0.36, 1)",
-    "reduced_motion": "MotionConfig reducedMotion=user at every runtime root"
+    "reduced_motion": "honoured at every runtime root"
+  },
+  "logo": {
+    "spec": "logo/construction/epiow-logo.spec.json",
+    "colours": {
+      "tile": "indigo-700",
+      "bracket": "paper",
+      "signal": "ember-500",
+      "letters_on_light": "indigo-700",
+      "letters_on_dark": "paper"
+    }
   }
 }

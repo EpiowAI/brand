@@ -1,83 +1,77 @@
-# Epiow Brand
+# Epiow brand
 
-**Company brand SSOT** for [Epiow](https://epiow.com) — logo candidates, current mark, and company materials.
+The brand home for **Epiow** (Epiow Limited): the company, the Epiow product
+(epiow.com), Epiow Legacy and the Epiow chatbot. Every surface takes its
+logo, icons, colours and type from this repository and keeps no redrawn copy
+(SylphxAI/owner `standards/experience.md`, "Brand home"). A redesign lands
+here first; the surfaces follow.
 
-> Not the product monorepo. Product code lives in [`EpiowAI/epiow`](https://github.com/EpiowAI/epiow).
-
-## Quick links
-
-| | |
-|--|--|
-| **Company facts** | [COMPANY.md](./COMPANY.md) |
-| **Logo (decided)** | [logo/current/](./logo/current/) · [logo/README.md](./logo/README.md) |
-| **Decision log** | [docs/logo-decision.md](./docs/logo-decision.md) |
-| **Where it ships** | [docs/surfaces.md](./docs/surfaces.md) |
-
-## Logo — decided 2026-09-23: "Bracket and signal"
+Product code lives in [`EpiowAI/epiow`](https://github.com/EpiowAI/epiow).
 
 ![Epiow lockup](./logo/current/lockup-light.svg)
 
-- Shipping assets: [`logo/current/`](./logo/current/) (mark, favicon, light/dark lockups, 512/1024 icons, maskable icon)
-- Construction: [`logo/construction/epiow-mark-construction.svg`](./logo/construction/epiow-mark-construction.svg)
-- Decision and rationale: [`docs/logo-decision.md`](./docs/logo-decision.md)
-- Product source of truth: `EpiowAI/epiow` → `apps/web/src/brand/` — every product surface (favicon, PWA, OG, header, lock screen) is generated from it
+## What is here
 
-The explorations below are archive.
+| | |
+|--|--|
+| **Name rules** | [below](#name) |
+| **Logo masters, icons, usage sheet, provenance** | [`logo/README.md`](./logo/README.md) |
+| **Generator** | [`scripts/build-brand.mjs`](./scripts/build-brand.mjs) (`--check` runs in CI) |
+| **Tokens** (colour roles, type, radius, motion) | [`tokens/brand.tokens.json`](./tokens/brand.tokens.json) |
+| **Trademark status and similarity check** | [`docs/trademarks.md`](./docs/trademarks.md) |
+| **Where the brand ships, and open follow-ups** | [`docs/surfaces.md`](./docs/surfaces.md) |
+| **Logo decision log** | [`docs/logo-decision.md`](./docs/logo-decision.md) |
+| **Brand manual** (story, voice, logo, colour, type) | [`docs/brand-manual/BRAND-MANUAL.md`](./docs/brand-manual/BRAND-MANUAL.md) |
+| **Company facts** | [`COMPANY.md`](./COMPANY.md) |
+| **Copy kit** | [`docs/copy/`](./docs/copy/) |
 
-## Logo options at a glance (v1 archive)
+## Name
 
-Open these files in the repo (or download the ZIP):
+- The brand is **Epiow**: always a capital E and the rest lower case, in
+  every language and in running text ("Epiow", "Epiow Legacy").
+- Never "EPIOW", except in a card statement descriptor, where the card
+  networks print capitals.
+- Never "epiow" as display text. The domain (epiow.com), handles and code
+  identifiers stay lower case.
+- The company is **Epiow Limited** (legal name, contracts, footers, terms).
+- The product is "Epiow", not "Epiow AI" or "Epiow OS".
+- Where the logo is meant, use a logo file, not the name typed in a font.
 
-| ID | Preview file | One-liner |
-|----|--------------|-----------|
-| **0** (current) | [`logo/options/0-current-e-orbit.png`](./logo/options/0-current-e-orbit.png) | E + dual arcs — live today |
-| **A** | [`logo/options/A-portal-E.png`](./logo/options/A-portal-E.png) | E+O portal monogram |
-| **B** | [`logo/options/B-gateway-e.png`](./logo/options/B-gateway-e.png) | Gateway “e” linework |
-| **C** | [`logo/options/C-bars-node.png`](./logo/options/C-bars-node.png) | Module bars + core node |
-| **D** | [`logo/options/D-hex-E.png`](./logo/options/D-hex-E.png) | Hex system + E |
-| **E** | [`logo/options/E-orbit-dot.png`](./logo/options/E-orbit-dot.png) | Orbit / organization core |
+## Colour, in one line
 
-### How to choose
+Indigo carries the brand; ember is the signal. Indigo-700 `#25205B` is the
+logo tile and the primary colour. Ember `#F98C10` is only the logo's dot, the
+wordmark's tittle, agent activity, and at most one key call to action per
+surface. Text on ember is always dark ink (`#291600`, 7.3:1), never white
+(2.4:1). Type: Sora (display, wordmark), Plus Jakarta Sans (text),
+JetBrains Mono (code, numerals). Radius: control 8px, card 12px, panel 16px,
+window 12px; app icons are the n = 5 superellipse. Full roles for light and
+dark are in [`tokens/brand.tokens.json`](./tokens/brand.tokens.json), read
+back from live epiow.com on 2026-09-28.
 
-1. Clone or browse this repo on **your** machine  
-2. Open `logo/options/` and compare  
-3. Comment on an issue, or edit `docs/logo-decision.md` with **A/B/C/D/E/0**  
-4. We promote the winner → `logo/current/` → epiow.com + portfolio
+**Pending:** the Workspace OS redesign proposes tokens v4
+([#11](https://github.com/EpiowAI/brand/pull/11)). They replace these tokens
+only after Kyle approves #11; until then the tokens here are the live ones.
 
-```bash
-git clone https://github.com/EpiowAI/brand.git
-open brand/logo/options   # macOS
-# or: xdg-open brand/logo/options
-```
+## Trademark
+
+Unregistered; nothing is filed, per company policy for a small, self-funded
+company (SylphxAI/owner#781). Similarity check and nearest marks:
+[`docs/trademarks.md`](./docs/trademarks.md).
 
 ## Layout
 
 ```
 brand/
-  COMPANY.md           # company narrative SSOT
   logo/
-    options/           # candidates for selection
-    current/           # shipping assets (Bracket and signal, 2026-09-23)
-    archive/           # retired marks (E-Orbit)
-    README.md
-  docs/
-    logo-decision.md
-    surfaces.md
+    construction/   epiow-logo.spec.json (geometry), construction drawing
+    current/        SVG masters: mark, lockups, wordmarks, one-ink, glyph, favicon
+    icons/          favicons 16/32/48 + ICO, apple-touch 180, PWA 192/512 (+ maskable), 1024
+    sheet/          usage sheet
+    SHA256SUMS      hashes of every file above and the tokens
+    options*/ reverse/ archive/   earlier explorations (archive)
+  tokens/brand.tokens.json
+  scripts/build-brand.mjs
+  docs/             manual, decision log, surfaces, trademarks, copy
+  vision/           vision images (added by their own PRs)
 ```
-
-## Product
-
-- App / platform: https://github.com/EpiowAI/epiow  
-- Live: https://epiow.com  
-
-## Brand manual
-
-[Brand Manual](./docs/brand-manual/BRAND-MANUAL.md) · [Branding elements map](./docs/branding-elements.md) · [Construction](./logo/construction/)
-
-
-## Copy kit (verbal SSOT)
-
-Brand story, About us, website blocks, and voice samples:
-
-- [`docs/copy/`](./docs/copy/)
-- Architecture: [`docs/REPO-ARCHITECTURE.md`](./docs/REPO-ARCHITECTURE.md) (what belongs in this repo)
