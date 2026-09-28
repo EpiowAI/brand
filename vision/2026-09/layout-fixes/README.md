@@ -3,7 +3,7 @@
 These are before and after screenshots from the live-site layout audit of the Workspace OS on epiow.com. The fixes are structural. The visual restyle belongs to a separate lane.
 
 - **Before:** 2026-09-27, before the fixes.
-- **After:** 2026-09-28 01:50 UTC, after EpiowAI/epiow#1995 and #1996 went live.
+- **After:** 2026-09-28 01:50 UTC, after EpiowAI/epiow#1995 and #1996 went live. The 360 px desktop (08) is from 06:40 UTC, after #2020 and #2023.
 
 | # | Surface | Defect (before) | Fix |
 |---|---|---|---|
@@ -14,7 +14,7 @@ These are before and after screenshots from the live-site layout audit of the Wo
 | 05 | Notifications, 390 | Panel see-through over the desktop | epiow#1995 |
 | 06 | Status bar, 1280 | Org name ran under the demo badge; Exit and Search overlapped | epiow#1995: actions column keeps its content width |
 | 07 | Desktop, 768 | Widgets silently dropped (one card left) | epiow#1995: items kept until hidden widgets close up |
-| 08 | Desktop, 360 | App icons squashed and labels cut | epiow#1996 (tiles), epiow#2020 (icons after compaction), after shot follows |
+| 08 | Desktop, 360 | App icons squashed and labels cut; the approvals card was dropped | epiow#1996 (tiles), epiow#2020 and #2023 (items kept below the screen fill free cells), epiow#2020 (approvals rows) |
 | 09 | Settings filter chip, 1440 | The × wrapped onto a second line; 4 px strip between the status bar and the window | epiow#1996 (chip), epiow#1995 (44 px status bar) |
 | 10 | Status bar, 1024 | Exit and Search buttons drawn over each other | epiow#1995 |
 
