@@ -1,6 +1,6 @@
 # Epiow demo: presentation mode and guided tour (2026-09-28)
 
-Screenshots of every guided-tour step on the live demo at https://epiow.com, one set per sector, at 1440×900 (desktop) and 390×844 (phone). Captured 2026-09-28 01:00–01:15 UTC after EpiowAI/epiow#1984 (presentation mode and tour) and #1991 (post-deploy fixes).
+Screenshots of every guided-tour step on the live demo at https://epiow.com, one set per sector, at 1440×900 (desktop) and 390×844 (phone). The 390 set was captured 2026-09-28 01:00–01:15 UTC after EpiowAI/epiow#1984 (presentation mode and tour) and #1991 (post-deploy fixes). The 1440 set was retaken 04:05–04:15 UTC, after #1995 (status bar) and #2019 ("Coming up" and "Pinned" back on every demo desktop; no role label in the family greeting).
 
 Open a sector with `https://epiow.com/demo?sector=business|school|ngo|government|family`. Add `&tour=managed` for the tender and investor path. The presenter menu in the status bar restarts the tour, switches sector, or resets the demo.
 
@@ -8,23 +8,23 @@ Open a sector with `https://epiow.com/demo?sector=business|school|ngo|government
 
 | Sector | Width | Steps | Card over its target | LCP (ms) |
 | --- | --- | --- | --- | --- |
-| Business | 1440 | 8 | none | 220 |
+| Business | 1440 | 8 | none | 784 |
 | Business | 390 | 7 | none | 180 |
-| School | 1440 | 8 | none | 252 |
+| School | 1440 | 8 | none | 616 |
 | School | 390 | 7 | none | 108 |
-| NGO | 1440 | 8 | none | 304 |
+| NGO | 1440 | 8 | none | 440 |
 | NGO | 390 | 7 | none | 124 |
-| Government | 1440 | 8 | none | 324 |
+| Government | 1440 | 8 | none | 264 |
 | Government | 390 | 7 | none | 1320 |
-| Managed tour | 1440 | 9 | none | 112 |
+| Managed tour | 1440 | 9 | none | 92 |
 | Managed tour | 390 | 8 | none | 132 |
-| Family | 1440 | 6 | none | 112 |
+| Family | 1440 | 6 | none | 88 |
 | Family | 390 | 6 | none | 108 |
 
 - Every step's card sat beside its target, inside the screen, with keyboard focus in the card. There was no horizontal scroll at either width.
 - At 390 the workforce sectors skip the live-widgets step. Their widgets sit below the first screen, and a step whose target is not on screen is left out.
 - The family tour has no approvals or app step, because the product cannot show a household's data in an app yet.
-- Known at capture time: at 1440 the workspace name in the status bar runs under the demo badge. EpiowAI/epiow#2016 fixes this, and the 1440 set will be retaken after it deploys.
+- At 1440 the status bar's workspace name no longer runs under the demo controls (#1995). The 390 set shows the phone status bar, where the name gives way to the demo controls.
 - LCP is the largest contentful paint of the workspace page once the visitor pass exists (headless Chromium, no throttling).
 
 ## Business (Harbourline Group), 1440
