@@ -11,7 +11,7 @@ Shipping assets: [`logo/current/`](../logo/current/) · construction: [`logo/con
 | **Chosen** | Bracket and signal (new, hand-authored geometric mark) + "Epiow" wordmark |
 | **Date** | 2026-09-23 |
 | **Replaces** | E-Orbit (indigo→violet gradient tile, E + two orbit arcs) — archived in `logo/archive/e-orbit-2026-07/` |
-| **Product source of truth** | `EpiowAI/epiow` → `apps/web/src/brand/epiow-brand.ts` (geometry, colours) · `epiow-logo.tsx` (components) · `bun run brand:generate` writes every favicon, PWA icon, apple-touch icon and `logo.svg` from it; `brand:check` fails CI on drift |
+| **Source of truth** | This repository since 2026-09-28: `logo/construction/epiow-logo.spec.json` + `tokens/brand.tokens.json`, built by `scripts/build-brand.mjs`. First drawn in `EpiowAI/epiow` `apps/web/src/brand/` (moving to consume this home: EpiowAI/epiow#2021) |
 | **Shipping surfaces** | epiow.com header/footer · login + lock screen · OS console header · favicon (SVG + ICO) · PWA icons (any + maskable) · apple-touch icon · Open Graph / Twitter card · structured-data logo |
 
 ## Why this mark
@@ -32,8 +32,9 @@ saying anything Epiow-specific.
 - **The wordmark** is set in Sora SemiBold (SIL OFL 1.1 — the product's display
   face) and outlined. The i's tittle is redrawn as a true circle in ember, so
   the wordmark carries the same signal as the mark.
-- **Built for 16px**: 64-unit grid in 4-unit steps, so the favicon lands on whole
-  pixels (2px strokes, 3px dot). The glyph sits in the central 50%, inside the
+- **Built for 16px**: 64-unit grid in 4-unit steps, so the bracket lands on whole
+  pixels (2px strokes). The dot does not at 16 and 48 px, so those sizes have
+  pixel-snapped versions (see `logo/README.md`, Small sizes). The glyph sits in the central 50%, inside the
   80% maskable safe zone, so one geometry serves favicon, PWA "any", PWA
   "maskable" and the 1024px store icon.
 - **Same tile as the apps**: the tile is the n = 5 superellipse every Epiow app
@@ -51,5 +52,6 @@ saying anything Epiow-specific.
 | 2026-07-16 | Brand brief accepted; Direction W then W3 |
 | 2026-07-16 | **Parked:** keep current; no new official adoption |
 | 2026-09-23 | **Decided:** "Bracket and signal" replaces E-Orbit; product and brand repo updated together |
+| 2026-09-28 | Brand home rebuilt from live epiow.com: generator, one-ink and wordmark masters, pixel-snapped favicons (16 px glyph on the pixel grid, 48 px dot snapped), hashes, light and dark colour roles, type tokens, trademark check. Geometry and colours unchanged |
 
 Earlier explorations (`logo/options*`) remain as archive.

@@ -5,8 +5,8 @@
 
 Machine tokens: [`tokens/brand.tokens.json`](../../tokens/brand.tokens.json)  
 Construction drawing: [`logo/construction/epiow-mark-construction.svg`](../../logo/construction/epiow-mark-construction.svg)  
-Master SVGs: [`logo/current/mark.svg`](../../logo/current/mark.svg) · [`logo/current/lockup-light.svg`](../../logo/current/lockup-light.svg) · [`logo/current/lockup-dark.svg`](../../logo/current/lockup-dark.svg)  
-Product source of truth: `EpiowAI/epiow` → `apps/web/src/brand/` (every product asset is generated from it)
+Master files, icons, usage sheet and provenance: [`logo/README.md`](../../logo/README.md)  
+Source of truth: this repository (`logo/construction/epiow-logo.spec.json`, `tokens/brand.tokens.json`); every product surface consumes it
 
 ---
 
@@ -83,7 +83,7 @@ The default workplace operating system for organizations that need **local law +
 | **Legal name** | Epiow Limited |
 | **Brand name** | Epiow |
 | **Pronunciation aid** | *EP-ee-oh* (internal aid; do not force phonetic spelling in UI) |
-| **Never** | EPIOW or lowercase “epiow” as display text (domain and handles excepted); “Epiow AI” as product name |
+| **Never** | “EPIOW” (only exception: a card statement descriptor) or lowercase “epiow” as display text (domain, handles and code identifiers excepted); “Epiow AI” as product name |
 | **Tagline** | Your organization's AI-native workspace |
 | **ZH product line** | 香港首個專為本地勞工法例設計的模組化商業應用平台 |
 
@@ -112,7 +112,7 @@ ember in the mark. No gradients.
 
 | Property | Value |
 |----------|--------|
-| **Grid** | 64 × 64 units, 4-unit steps (16px favicon = whole-pixel 2px strokes) |
+| **Grid** | 64 × 64 units, 4-unit steps (bracket on whole pixels at 16/32/48 px; the dot needs the pixel-snapped 16 and 48 px versions in `logo/icons/`) |
 | **Tile** | Superellipse \|x\|⁵ + \|y\|⁵ = 1 spanning the full box — the same tile every Epiow app icon uses |
 | **Bracket** | 8-unit stroke expanded to a filled outline; outer radius 14, inner radius 6; arms at y 16–24 and 40–48; round terminals centred at x = 44 |
 | **Bracket path** | `M44 16H30A14 14 0 0 0 16 30V34A14 14 0 0 0 30 48H44A4 4 0 0 0 44 40H30A6 6 0 0 1 24 34V30A6 6 0 0 1 30 24H44A4 4 0 0 0 44 16Z` |
@@ -146,8 +146,8 @@ gap = 0.3 × tile size; the cap-height band is centred on the tile.
 | Rule | Value |
 |------|--------|
 | Clear space | 0.25 × tile size on every side |
-| Minimum (digital) | 16 × 16 CSS px (mark); lockup with 24px tile |
-| Print | 6 mm tile |
+| Minimum (digital) | 16 × 16 CSS px (mark; below 24 px use the pixel-snapped favicons); lockup 24 px tall |
+| Print | lockup 6 mm tall |
 
 ### 4.6 Misuse (do not)
 
@@ -175,7 +175,7 @@ Three roles, one rule: **ink carries the brand, ember is the signal.**
 | **Paper** | `--paper` / `--background` | `#FCFBFA` | Light ground |
 | **Night** | dark `--background` (245 20% 7%) | `#0F0E15` | Dark ground |
 
-Scales: indigo 100/300/500/600/700/900, ember 100/500/600/700 — see
+Dark mode has its own roles (primary 245 60% 74%, signal 28 92% 62%, background night). Scales: indigo 100/300/500/600/700/900, ember 100/500/600/700, and every light and dark role — see
 [`tokens/brand.tokens.json`](../../tokens/brand.tokens.json). Every text pair
 the product renders is asserted ≥ 4.5:1 by `app/styles/__tests__/contrast.test.ts`
 in the product repo.
@@ -223,14 +223,14 @@ glyph — generated from one source for the launcher, dock, App Center and PWA.
 | Logo construction | ✅ 64-unit grid drawing |
 | Clear space / min size | ✅ |
 | Color tokens JSON | ✅ |
-| Typography | ✅ provisional |
+| Typography | ✅ tokens (`type`) |
 | Voice & pillars | ✅ |
 | Photography style | ✅ directional |
 | Motion | ✅ §6.1 |
 | Illustration system | ⬜ not primary |
 | Iconography set | ⬜ product icons separate |
 | Templates (deck, social) | ⬜ |
-| Trademark register | ⬜ add when filed |
+| Trademark | ✅ status and similarity check: [`docs/trademarks.md`](../trademarks.md) (unregistered; nothing filed) |
 
 ---
 
