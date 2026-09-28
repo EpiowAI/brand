@@ -1,13 +1,14 @@
-# Where the logo ships
+# Where the brand ships
 
-| Surface | Repo / path | Notes |
-|---------|-------------|--------|
-| Product source of truth | `EpiowAI/epiow` `apps/web/src/brand/` | geometry + colours; `bun run brand:generate` writes favicon.svg/ico, PWA icons (any + maskable), apple-touch icon, logo.svg; `brand:check` fails CI on drift |
-| Marketing site | `EpiowAI/epiow` `apps/web` | header/footer lockup, OG/Twitter card, structured-data logo |
-| Console | `EpiowAI/epiow` `apps/web` | login + lock screen lockup, OS console header, manifest (`name: Epiow`, theme `#25205B`) |
-| Brand SSOT | **this repo** | decision log, manual, tokens, copies of shipping assets in `logo/current/` |
-| Personal portfolio | `shtse8/portfolio-website` | company card only |
-| GitHub org | github.com/EpiowAI | avatar (manual upload of `logo/current/icon-512.png`) |
+Every surface takes the logo, icons and tokens from this repository. The
+table records what each surface does today (audited 2026-09-28) and the
+issue that brings it in line. Change the brand here first, then the
+surfaces.
 
-Change the geometry in the product source first, regenerate, then copy the
-outputs here and record the change in `docs/logo-decision.md`.
+| Surface | Repository | Today | Follow-up |
+|---------|------------|-------|-----------|
+| epiow.com (marketing, sign-in, lock screen, OS console, PWA, OG card) | `EpiowAI/epiow` `apps/web` | Matches this home: `/favicon.svg`, `/brand/*.svg`, `/logo.svg` are byte-identical to `logo/current/`; CSS tokens equal `tokens/brand.tokens.json`. But it keeps its own source (`apps/web/src/brand/epiow-brand.ts`, `variables.css`), its ICO is not pixel-snapped, and emails, the new-joiner layout and some widgets use off-brand text logos or colours | [EpiowAI/epiow#2021](https://github.com/EpiowAI/epiow/issues/2021) |
+| Epiow Legacy (demo and HKSPC surface) | `EpiowAI/epiow-legacy` | Different marks: a node-graph favicon/app icon on `#0f172a`, a 4-square glyph on a `#667eea`→`#764ba2` gradient in the header, lowercase "epiow" text; manifest theme `#0f172a` | [EpiowAI/epiow-legacy#196](https://github.com/EpiowAI/epiow-legacy/issues/196) (after the 2026-09-29 10:00Z demo freeze) |
+| Epiow chatbot | `EpiowAI/chatbot-mvp` | Speech-bubble icon on violet `#7c3aed`, Tailwind indigo `#6366F1` as primary, name "Epiow AI" | [EpiowAI/chatbot-mvp#72](https://github.com/EpiowAI/chatbot-mvp/issues/72) (after the demo freeze) |
+| GitHub org avatar | github.com/EpiowAI | manual upload | upload `logo/icons/icon-512.png` |
+| Personal portfolio | `shtse8/portfolio-website` | company card only | — |
