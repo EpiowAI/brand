@@ -160,7 +160,8 @@ every pair is at least 4.5:1.
 | Backdrop | `blur(28px) saturate(140%)` | `blur(28px) saturate(160%)` |
 | Border | 1px `rgba(255,255,255,.11)` | 1px `rgba(40,34,110,.09)` |
 | Shadow | `0 2px 8px rgba(3,2,20,.25), 0 20px 44px -12px rgba(3,2,20,.45)` | `0 2px 6px rgba(30,24,90,.06), 0 18px 40px -12px rgba(30,24,90,.20)` |
-| Text / 2 / 3 | `#F4F4FC` / 84% / 74% | `#17153A` / `#4B4970` / `#5A5878` || Inner highlight, sheen, gloss | **none** | **none** |
+| Text / 2 / 3 | `#F4F4FC` / 84% / 74% | `#17153A` / `#4B4970` / `#5A5878` |
+| Inner highlight, sheen, gloss | **none** | **none** |
 | Reduce transparency (setting or low-power) | solid `--surface-2` of the matching tone | same |
 
 Chrome text is measured, not assumed: each step is at least 4.5:1 over the brightest point of every wallpaper of its tone (Aurora and Dawn are the worst cases). The first proposal (72% / 62% dark, `#63617F` light) measured 3.9:1 and 4.4:1 there.
