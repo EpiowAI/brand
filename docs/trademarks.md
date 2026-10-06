@@ -11,6 +11,20 @@ Company policy (SylphxAI/owner#781, 2026-09-27): a small, self-funded
 company files nothing and buys no trademark services before revenue or a
 real problem. Revisit when revenue starts or a conflict appears.
 
+## Docket
+
+The one list of Epiow Limited's marks on any register. It has no rows: no
+application or registration in Epiow Limited's name was found.
+
+| Search | Register | Result | Register readback |
+|--------|----------|--------|-------------------|
+| `epiow`, word search | TMview (UKIPO, EUIPO, USPTO, CNIPA, WIPO Madrid and about 70 other offices) | no mark owned by Epiow Limited; one unrelated, ended hit, DHN EPIOW N, CNIPA 40304156, class 25 | 2026-10-06 |
+| `epiow` | Hong Kong IPD, Taiwan TIPO | not read: neither is in TMview; the IPD search needs a captcha and the TIPO search is a script-only page | never |
+
+A row is added here, with office, number, class, owner entity, status,
+renewal date and the date it was read on the register, the day anything is
+filed.
+
 ## Similarity check, 2026-09-28
 
 Searched: TMview (EUIPO's public search across participating offices,
