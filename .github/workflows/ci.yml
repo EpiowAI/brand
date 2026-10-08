@@ -3,7 +3,7 @@ name: CI
 # Fast Trunk (Agent-native):
 # - Aggregate source verdict: source-ci/pass
 # - CI = source correctness only; Platform builds production once
-# - Merge Queue off by default (no merge_group trigger)
+# - Merge Queue validates the same source gates
 # - Concurrency cancels superseded PR/branch tip runs
 
 on:
@@ -21,7 +21,20 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
+  chat-senders:
+    name: Chat senders
+    if: github.event.repository.private == false
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: SylphxAI/.github/.github/actions/chat-senders@5cfd55a41435cca8e4b7caf6506faf04ca08d200
+        with:
+          mode: fail
+
   assets:
+    if: github.event.repository.private == false
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -31,3 +44,15 @@ jobs:
         run: python3 scripts/validate_json.py
       - name: Logo masters match the spec and SHA256SUMS
         run: node scripts/build-brand.mjs --check
+
+  source-ci:
+    name: source-ci/pass
+    if: always() && github.event.repository.private == false
+    needs: [assets, chat-senders]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Require all source gates
+        env:
+          ASSETS_RESULT: ${{ needs.assets.result }}
+          CHAT_SENDERS_RESULT: ${{ needs.chat-senders.result }}
+        run: test "$ASSETS_RESULT" = success && test "$CHAT_SENDERS_RESULT" = success
