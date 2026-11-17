@@ -3,7 +3,7 @@
 ## Status: unregistered
 
 Epiow Limited (UK company 16877523) has filed no trademark application
-for the name "Epiow" or for the "Bracket and signal" mark, in any
+for the name "Epiow" or for the "Overlap" mark, in any
 country. Rights today are unregistered: the company name and use in
 trade. Use ™ if a symbol is wanted; never ®.
 
@@ -53,12 +53,14 @@ so both were covered through TMview only.
 - **Web:** no business named Epiow other than ours. Two unrelated spam
   GitHub repositories use the string.
 
-**The mark.** TMview's image search needs an upload through its web
-page, which was not run. By eye and by web search, no mark found combines
-an open bracket or "C/E" shape with a single dot inside on a squircle
-tile; open "C" shapes with a dot are common in logos, so the mark's
-distinctiveness rests on the whole: tile, bracket, ember dot and the
-wordmark together.
+**The mark.** The "Overlap" mark (a circle overlapping a rounded square,
+with the shared area in a third colour) replaced "Bracket and signal" on
+2026-11-17. No similarity search has been run for it: TMview's image search
+needs an upload through its web page. Two overlapping shapes with a
+highlighted intersection is a common logo construction, so the mark's
+distinctiveness rests on the whole: the circle-and-square pairing, the
+forest, green and lime colours and the wordmark together. Run the image
+search before any filing or paid campaign.
 
 **Conclusion.** No blocking conflict for "Epiow" in software. The
 nearest risk is EPIO (WIPO 1691895, classes 35 and 41). Nothing is filed

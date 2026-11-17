@@ -2,45 +2,39 @@
 
 ## Status
 
-**Decided — "Bracket and signal".**
-Date: 2026-09-23
+**Decided — "Overlap".**
+Date: 2026-11-17
 Shipping assets: [`logo/current/`](../logo/current/) · construction: [`logo/construction/epiow-mark-construction.svg`](../logo/construction/epiow-mark-construction.svg)
 
 | Field | Value |
 |-------|--------|
-| **Chosen** | Bracket and signal (new, hand-authored geometric mark) + "Epiow" wordmark |
-| **Date** | 2026-09-23 |
-| **Replaces** | E-Orbit (indigo→violet gradient tile, E + two orbit arcs) — archived in `logo/archive/e-orbit-2026-07/` |
-| **Source of truth** | This repository since 2026-09-28: `logo/construction/epiow-logo.spec.json` + `tokens/brand.tokens.json`, built by `scripts/build-brand.mjs`. First drawn in `EpiowAI/epiow` `apps/web/src/brand/` (moving to consume this home: EpiowAI/epiow#2021) |
-| **Shipping surfaces** | epiow.com header/footer · login + lock screen · OS console header · favicon (SVG + ICO) · PWA icons (any + maskable) · apple-touch icon · Open Graph / Twitter card · structured-data logo |
+| **Chosen** | Overlap (hand-authored geometric mark: circle + rounded square + lens) + "Epiow" wordmark in Bricolage Grotesque |
+| **Date** | 2026-11-17, by Kyle, from seven candidate directions |
+| **Replaces** | Bracket and signal (indigo tile, paper bracket, ember dot) — archived in `logo/archive/bracket-and-signal-2026-09/` |
+| **Source of truth** | This repository: `logo/construction/epiow-logo.spec.json` + `tokens/brand.tokens.json`, built by `scripts/build-brand.mjs` |
+| **Shipping surfaces** | None yet. Rollout per surface: [`surfaces.md`](./surfaces.md) |
 
 ## Why this mark
 
-The product was unreleased, so the brand could change freely. The E-Orbit mark
-had four problems: the gradient did not belong to the product palette (the UI is
-indigo ink + ember signal, not violet), it collapsed to a smudge at 16px, the
-wordmark was set in an Arial clone, and the orbit arcs said "platform" without
-saying anything Epiow-specific.
+Kyle asked for a new identity, not tied to the previous one, that is
+fresh and modern.
 
-"Bracket and signal":
+"Overlap":
 
-- **The bracket** is the capital E of Epiow and the frame of the organization's
-  workspace — the lockable shell that holds the apps.
-- **The dot** is the signal: the person or agent doing granted work inside it.
-  It is the only ember in the mark, which is exactly the rule the product's
-  colour system follows (ember = agent activity, the single key CTA, the logo).
-- **The wordmark** is set in Sora SemiBold (SIL OFL 1.1 — the product's display
-  face) and outlined. The i's tittle is redrawn as a true circle in ember, so
-  the wordmark carries the same signal as the mark.
-- **Built for 16px**: 64-unit grid in 4-unit steps, so the bracket lands on whole
-  pixels (2px strokes). The dot does not at 16 and 48 px, so those sizes have
-  pixel-snapped versions (see `logo/README.md`, Small sizes). The glyph sits in the central 50%, inside the
-  80% maskable safe zone, so one geometry serves favicon, PWA "any", PWA
-  "maskable" and the 1024px store icon.
-- **Same tile as the apps**: the tile is the n = 5 superellipse every Epiow app
-  icon uses (launcher, dock, App Center, PWA), so the brand and the apps read as
-  one family.
+- **The circle** is the people of the organization; **the rounded square** is
+  the work: the window, the app, the task.
+- **The lens**, where the two overlap, is the shared workspace. It is the only
+  lime in the mark, the same rule the colour system follows (lime = signal:
+  agent activity, the single key call to action).
+- **The wordmark** is set in Bricolage Grotesque Bold (SIL OFL 1.1) and
+  outlined. Always a capital E.
+- **Small sizes**: favicons use a larger glyph whose edges land on whole
+  pixels at 16, 32 and 48 px (see `logo/README.md`, Small sizes).
+- **Same tile as the apps**: the app icon keeps the n = 5 superellipse.
 - **No gradients** anywhere in the mark.
+
+Known trade-off: at 16 px the lens is about 5 px wide, so the mark reads as
+"light circle over green square" more than as three shapes.
 
 ## History
 
@@ -53,5 +47,6 @@ saying anything Epiow-specific.
 | 2026-07-16 | **Parked:** keep current; no new official adoption |
 | 2026-09-23 | **Decided:** "Bracket and signal" replaces E-Orbit; product and brand repo updated together |
 | 2026-09-28 | Brand home rebuilt from live epiow.com: generator, one-ink and wordmark masters, pixel-snapped favicons (16 px glyph on the pixel grid, 48 px dot snapped), hashes, light and dark colour roles, type tokens, trademark check. Geometry and colours unchanged |
+| 2026-11-17 | **Decided:** "Overlap" replaces Bracket and signal; palette moves from indigo and ember to forest, green and lime (tokens 5.0.0); wordmark moves from Sora to Bricolage Grotesque. Brand home first; surfaces follow |
 
 Earlier explorations (`logo/options*`) remain as archive.

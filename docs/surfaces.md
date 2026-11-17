@@ -5,6 +5,11 @@ table records what each surface does today (audited 2026-09-28) and the
 issue that brings it in line. Change the brand here first, then the
 surfaces.
 
+**2026-11-17:** the "Overlap" identity replaced "Bracket and signal" in this
+home. Every surface below still ships its previous look until its own change
+lands; "Matches this home" in the table means the archived identity
+(`logo/archive/bracket-and-signal-2026-09/`).
+
 | Surface | Repository | Today | Follow-up |
 |---------|------------|-------|-----------|
 | epiow.com (marketing, sign-in, lock screen, OS console, PWA, OG card) | `EpiowAI/epiow` `apps/web` | Matches this home: `/favicon.svg`, `/brand/*.svg`, `/logo.svg` are byte-identical to `logo/current/`; CSS tokens equal `tokens/brand.tokens.json`. But it keeps its own source (`apps/web/src/brand/epiow-brand.ts`, `variables.css`), its ICO is not pixel-snapped, and emails, the new-joiner layout and some widgets use off-brand text logos or colours | [EpiowAI/epiow#2021](https://github.com/EpiowAI/epiow/issues/2021) |

@@ -1,6 +1,6 @@
 # Epiow Brand Manual
 
-**Version:** 2.0 · **Status:** Working SSOT (logo decided 2026-09-23 — "Bracket and signal")  
+**Version:** 3.0 · **Status:** Working SSOT (logo decided 2026-11-17 — "Overlap")  
 **Legal entity:** Epiow Limited · **Product:** epiow.com · **GitHub:** EpiowAI  
 
 Machine tokens: [`tokens/brand.tokens.json`](../../tokens/brand.tokens.json)  
@@ -101,60 +101,60 @@ The default workplace operating system for organizations that need **local law +
 
 ---
 
-## 4. Logo system — "Bracket and signal"
+## 4. Logo system — "Overlap"
 
 ### 4.1 The mark
 
-An open bracket in paper on an indigo ink tile holds one ember dot. The bracket
-is the capital E of Epiow and the frame of the organization's workspace; the dot
-is the signal — the person or agent doing granted work. The dot is the only
-ember in the mark. No gradients.
+A circle and a rounded square overlap. The circle is the people of the
+organization; the square is the work; the lens where they overlap is the
+shared workspace, and the only lime in the mark. No gradients.
 
 | Property | Value |
 |----------|--------|
-| **Grid** | 64 × 64 units, 4-unit steps (bracket on whole pixels at 16/32/48 px; the dot needs the pixel-snapped 16 and 48 px versions in `logo/icons/`) |
+| **Grid** | 64 × 64 units |
+| **Circle** | Centre (27, 27), r = 15 |
+| **Rounded square** | From (25, 25), side 27, corner radius 7.5 |
+| **Lens** | The area shared by the circle and the square |
+| **Glyph box** | 12–52 × 12–52 (62.5%) — inside the 80% maskable safe zone |
+| **Small sizes** | Favicons use the larger `small` glyph (75% of the tile), on whole pixels at 16/32/48 px |
 | **Tile** | Superellipse \|x\|⁵ + \|y\|⁵ = 1 spanning the full box — the same tile every Epiow app icon uses |
-| **Bracket** | 8-unit stroke expanded to a filled outline; outer radius 14, inner radius 6; arms at y 16–24 and 40–48; round terminals centred at x = 44 |
-| **Bracket path** | `M44 16H30A14 14 0 0 0 16 30V34A14 14 0 0 0 30 48H44A4 4 0 0 0 44 40H30A6 6 0 0 1 24 34V30A6 6 0 0 1 30 24H44A4 4 0 0 0 44 16Z` |
-| **Signal dot** | Circle, centre (36, 32), r = 6 |
-| **Glyph box** | 16–48 × 16–48 (50%) — inside the 80% maskable safe circle |
-| **Colours** | Tile `#25205B` ink · bracket `#FCFBFA` paper · dot `#F98C10` signal |
+| **Colours** | Light grounds: circle `#0C3B2E` forest · square `#1FAD6B` green · lens `#D4FF5A` lime. Dark grounds and the tile: circle `#F1F6EF` paper. Tile `#0C3B2E` |
 
 ### 4.2 The wordmark
 
-"Epiow" set in **Sora SemiBold (600)** (SIL Open Font License 1.1 — the
-product's display face), tracking −12/1000, converted to outlines. The i's
-tittle is redrawn as a true circle in signal ember. Letters are ink on light
-grounds and paper on dark grounds. Always capital E.
+"Epiow" set in **Bricolage Grotesque Bold (700, opsz 48)** (SIL Open Font
+License 1.1), tracking −30/1000, converted to outlines. Letters are forest on
+light grounds and paper on dark grounds. Always capital E.
 
 ### 4.3 Lockup
 
-Mark + wordmark on one baseline system: wordmark cap height = 0.5 × tile size;
-gap = 0.3 × tile size; the cap-height band is centred on the tile.
+Glyph + wordmark: wordmark cap height = 0.72 × the glyph; gap = 0.3 × the
+glyph; the cap-height band is centred on the glyph. The lockup carries no tile.
 
 ### 4.4 Variants
 
 | Variant | Use |
 |---------|-----|
-| **Tile** (default) | Favicon, app icon, header, lock screen, social cards |
-| **Maskable** (full-bleed ink square) | PWA `purpose: maskable`, apple-touch icon (the OS applies its own mask) |
-| **Glyph** (bracket in current text colour + ember dot, no tile) | Monochrome contexts, dense UI |
-| **Lockup light / dark** | Marketing header and footer, documents, OS console header |
+| **Lockup light / dark** (default) | Marketing header and footer, documents, OS console header |
+| **Glyph on light / on dark** (no tile) | Wherever the mark stands alone inside a layout |
+| **Tile** | Favicon, app icon, lock screen, social cards |
+| **Maskable** (full-bleed forest square) | PWA `purpose: maskable`, apple-touch icon (the OS applies its own mask) |
+| **One ink** (lens cut out) | Print, engraving, photos, colour grounds |
 
 ### 4.5 Clear space and minimum size
 
 | Rule | Value |
 |------|--------|
-| Clear space | 0.25 × tile size on every side |
-| Minimum (digital) | 16 × 16 CSS px (mark; below 24 px use the pixel-snapped favicons); lockup 24 px tall |
+| Clear space | 0.25 × the glyph on every side |
+| Minimum (digital) | 16 × 16 CSS px (tile; below 24 px use the favicon files); lockup 24 px tall |
 | Print | lockup 6 mm tall |
 
 ### 4.6 Misuse (do not)
 
 1. Add gradients, glows, bevels or drop shadows to the mark.
-2. Recolour the dot (it is always signal ember) or add a second ember element.
-3. Put white text on ember anywhere in the brand system (2.4:1 — fails).
-4. Close the bracket, add a middle bar, or swap the dot for a square.
+2. Recolour any of the three shapes or add a second lime element.
+3. Put white text on lime (1.2:1 — fails) or lime text on a light ground (1.1:1 — fails).
+4. Swap which shape is in front, separate the shapes, or outline them.
 5. Stretch, rotate, or set the wordmark in live text or another typeface.
 6. Write the name as "epiow" or "EPIOW" in display.
 7. Re-draw the tile as a rounded rectangle — it is the superellipse.
@@ -163,19 +163,22 @@ gap = 0.3 × tile size; the cap-height band is centred on the tile.
 
 ## 5. Colour system
 
-Three roles, one rule: **ink carries the brand, ember is the signal.**
+Three roles, one rule: **forest carries the brand, lime is the signal.**
 
 | Role | Token (product) | Hex | Use |
 |------|-----------------|-----|-----|
-| **Primary / ink** | `--primary` = `--indigo-700` (245 48% 24%) | `#25205B` | Logo tile, primary buttons, headings, links |
-| **Signal** | `--signal` = `--ember-500` (32 95% 52%) | `#F98C10` | Agent activity, the single key CTA per surface, the logo dot |
-| **Signal ink** | `--signal-foreground` (32 100% 8%) | `#291600` | Text on signal (7.3:1). Never white on ember |
-| **Signal text** | `--signal-text` = `--ember-700` (22 90% 34%) | `#A54209` | Ember-coloured text on paper / ember-100 (≥ 5.7:1) |
-| **Accent (hover tint)** | `--accent` (245 60% 95%) | `#ECEBFA` | Outline/ghost hover, menu and select highlight, toggles — a quiet indigo tint, never ember |
-| **Paper** | `--paper` / `--background` | `#FCFBFA` | Light ground |
-| **Night** | dark `--background` (245 20% 7%) | `#0F0E15` | Dark ground |
+| **Primary** | `--primary` = forest-900 | `#0C3B2E` | App tile, primary buttons, headings, links |
+| **Brand green** | green-500 | `#1FAD6B` | The square of the mark; illustration and large shapes (2.6:1 on paper: never body text) |
+| **Signal** | `--signal` = lime-300 | `#D4FF5A` | Agent activity, the single key CTA per surface, the lens |
+| **Signal ink** | `--signal-foreground` | `#0C3B2E` | Text on signal (10.9:1). Never white on lime |
+| **Signal text** | `--signal-text` = green-700 | `#0E7A50` | Signal-coloured text on light grounds (5.1:1). Lime is never text on a light ground |
+| **Accent (hover tint)** | `--accent` = green-100 | `#E3F4EA` | Outline/ghost hover, menu and select highlight, toggles — a quiet green tint, never lime |
+| **Paper** | paper | `#F1F6EF` | The logo's light ground; brand surfaces |
+| **Mist** | `--background` | `#F7FAF5` | Light app background |
+| **Night** | dark `--background` | `#06140F` | Dark ground |
 
-Dark mode has its own roles (primary 245 60% 74%, signal 28 92% 62%, background night). Scales: indigo 100/300/500/600/700/900, ember 100/500/600/700, and every light and dark role — see
+Dark mode has its own roles (primary green-300 `#8FE3B0`, signal lime-300,
+background night). Every palette step and every light and dark role is in
 [`tokens/brand.tokens.json`](../../tokens/brand.tokens.json). Every text pair
 the product renders is asserted ≥ 4.5:1 by `app/styles/__tests__/contrast.test.ts`
 in the product repo.
@@ -190,7 +193,7 @@ glyph — generated from one source for the launcher, dock, App Center and PWA.
 
 | Role | Spec |
 |------|------|
-| Display / logo | **Sora** (OFL) — wordmark outlined from Sora SemiBold |
+| Display / logo | **Bricolage Grotesque** (OFL) — wordmark outlined from Bricolage Grotesque Bold |
 | Product UI + marketing text | Plus Jakarta Sans; CJK falls back to the platform's Hong Kong faces |
 | Numerals / code | JetBrains Mono |
 
@@ -207,7 +210,7 @@ glyph — generated from one source for the launcher, dock, App Center and PWA.
 
 ## 7. Imagery & product UI
 
-- Prefer real product UI, calm neutrals, indigo accents.  
+- Prefer real product UI, calm neutrals, forest and green accents.  
 - Avoid stock “handshake in glass office” as brand hero.  
 - Screenshots: light & dark modes; no fake data that implies wrong jurisdiction.
 

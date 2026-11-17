@@ -1,123 +1,129 @@
 {
   "name": "Epiow",
-  "version": "3.0.0",
-  "updated": "2026-09-28",
-  "source": "Read back from live epiow.com on 2026-09-28 (CSS bundle, favicon, manifests, header SVG). Produced by EpiowAI/epiow main 53fcab769: apps/web/src/app/styles/variables.css (colour and radius), apps/web/src/app/layout.tsx (fonts), apps/web/src/brand/epiow-brand.ts (logo colours).",
-  "pending": "Tokens v4 from the Workspace OS redesign (EpiowAI/brand#11) replace these only after Kyle approves #11.",
+  "version": "5.0.0",
+  "updated": "2026-11-17",
+  "source": "Overlap identity, chosen by Kyle on 2026-11-17. Replaces tokens 3.0.0 (indigo and ember), archived in logo/archive/bracket-and-signal-2026-09/brand.tokens.v3.json.",
+  "pending": "Surfaces still ship tokens 3.0.0 until their own changes land (docs/surfaces.md). The Workspace OS tokens v4 proposal (vision/2026-09/os-redesign) was drawn on indigo and ember and needs re-basing on this palette before adoption.",
   "rules": {
-    "primary": "Indigo carries the brand: indigo-700 is the logo tile and the primary action colour.",
-    "signal": "Ember is the signal only: the logo's dot, the wordmark's tittle, agent activity, and at most one key call to action per surface. It is never a hover tint, a border or a background wash.",
-    "text_on_signal": "Text on ember is always dark ink (signal-foreground). White on ember measures 2.4:1 and is not allowed.",
+    "primary": "Forest carries the brand: forest-900 is the app tile and the primary action colour on light grounds; green-300 is the primary on dark grounds.",
+    "signal": "Lime is the signal only: the lens of the mark, agent activity, and at most one key call to action per surface. It is never a hover tint, a border or a background wash.",
+    "text_on_signal": "Text on lime is always forest ink (signal-foreground). White on lime measures 1.2:1 and is not allowed. Lime is never text on a light ground (1.1:1 on paper); use signal-text.",
     "gradients": "The logo never uses a gradient."
   },
   "palette": {
-    "indigo-100": {
-      "hsl": "245 60% 96%",
-      "hex": "#F0EFFB"
+    "forest-950": {
+      "hsl": "160.7 70% 7.8%",
+      "hex": "#062219",
+      "use": "Dark ink on green and lime."
     },
-    "indigo-300": {
-      "hsl": "245 55% 78%",
-      "hex": "#ADA8E6"
+    "forest-900": {
+      "hsl": "163.4 66.2% 13.9%",
+      "hex": "#0C3B2E",
+      "use": "Brand forest. The circle of the mark on light grounds, the app tile, primary buttons, the PWA theme colour."
     },
-    "indigo-500": {
-      "hsl": "245 48% 42%",
-      "hex": "#40389F"
+    "forest-700": {
+      "hsl": "158.5 62.6% 21%",
+      "hex": "#14573F"
     },
-    "indigo-600": {
-      "hsl": "245 48% 30%",
-      "hex": "#2E2871"
+    "green-700": {
+      "hsl": "156.7 79.4% 26.7%",
+      "hex": "#0E7A50",
+      "use": "Green as text on paper."
     },
-    "indigo-700": {
-      "hsl": "245 48% 24%",
-      "hex": "#25205B",
-      "use": "Brand indigo. The logo tile, primary buttons, the PWA theme colour."
+    "green-500": {
+      "hsl": "152.1 69.6% 40%",
+      "hex": "#1FAD6B",
+      "use": "Brand green. The rounded square of the mark."
     },
-    "indigo-900": {
-      "hsl": "245 40% 14%",
-      "hex": "#181532"
+    "green-300": {
+      "hsl": "143.6 60% 72.5%",
+      "hex": "#8FE3B0",
+      "use": "Primary on dark grounds."
     },
-    "ember-100": {
-      "hsl": "32 100% 95%",
-      "hex": "#FFF3E5"
+    "green-100": {
+      "hsl": "144.7 43.6% 92.4%",
+      "hex": "#E3F4EA",
+      "use": "Hover and highlight tint."
     },
-    "ember-500": {
-      "hsl": "32 95% 52%",
-      "hex": "#F98C10",
-      "use": "Signal ember. The logo's dot and the i's tittle, agent activity, and the one key call to action per surface. Nothing else."
+    "lime-300": {
+      "hsl": "75.6 100% 67.6%",
+      "hex": "#D4FF5A",
+      "use": "Signal lime. The lens of the mark, agent activity, and the one key call to action per surface. Nothing else."
     },
-    "ember-600": {
-      "hsl": "24 92% 46%",
-      "hex": "#E16009"
-    },
-    "ember-700": {
-      "hsl": "22 90% 34%",
-      "hex": "#A54209",
-      "use": "Ember as text on paper or ember-100."
+    "lime-100": {
+      "hsl": "76.1 100% 92%",
+      "hex": "#F4FFD6"
     },
     "paper": {
-      "hsl": "40 20% 98.5%",
-      "hex": "#FCFBFA",
-      "use": "Light ground; the bracket in the mark."
+      "hsl": "102.9 28% 95.1%",
+      "hex": "#F1F6EF",
+      "use": "Brand paper: the light ground of the logo; the circle of the mark on dark grounds."
+    },
+    "mist": {
+      "hsl": "96 33.3% 97.1%",
+      "hex": "#F7FAF5",
+      "use": "Light app background."
     },
     "ink": {
-      "hsl": "245 30% 12%",
-      "hex": "#171528",
-      "use": "Body text on light grounds (CSS --ink / --foreground). Not the logo colour: the logo tile is indigo-700."
+      "hsl": "159 47.6% 8.2%",
+      "hex": "#0B1F18",
+      "use": "Body text on light grounds."
     },
     "night": {
-      "hsl": "245 20% 7%",
-      "hex": "#0F0E15",
-      "use": "Dark ground (dark --background)."
+      "hsl": "158.6 53.8% 5.1%",
+      "hex": "#06140F",
+      "use": "Dark ground."
     }
   },
   "roles": {
     "light": {
       "primary": {
-        "hsl": "245 48% 24%",
-        "hex": "#25205B",
-        "use": "indigo-700"
+        "hsl": "163.4 66.2% 13.9%",
+        "hex": "#0C3B2E",
+        "use": "forest-900"
       },
       "primary-foreground": {
-        "hsl": "45 20% 98%",
-        "hex": "#FBFAF9"
-      },
-      "signal": {
-        "hsl": "32 95% 52%",
-        "hex": "#F98C10",
-        "use": "ember-500; signal only"
-      },
-      "signal-foreground": {
-        "hsl": "32 100% 8%",
-        "hex": "#291600",
-        "use": "dark ink on ember; never white on ember"
-      },
-      "signal-text": {
-        "hsl": "22 90% 34%",
-        "hex": "#A54209",
-        "use": "ember-700; ember-coloured text on paper"
-      },
-      "signal-soft": {
-        "hsl": "32 100% 95%",
-        "hex": "#FFF3E5",
-        "use": "ember-100"
-      },
-      "accent": {
-        "hsl": "245 60% 95%",
-        "hex": "#ECEBFA",
-        "use": "hover and highlight tint; indigo, never ember"
-      },
-      "accent-foreground": {
-        "hsl": "245 48% 24%",
-        "hex": "#25205B"
-      },
-      "background": {
-        "hsl": "40 20% 98.5%",
-        "hex": "#FCFBFA",
+        "hsl": "102.9 28% 95.1%",
+        "hex": "#F1F6EF",
         "use": "paper"
       },
+      "signal": {
+        "hsl": "75.6 100% 67.6%",
+        "hex": "#D4FF5A",
+        "use": "lime-300; signal only"
+      },
+      "signal-foreground": {
+        "hsl": "163.4 66.2% 13.9%",
+        "hex": "#0C3B2E",
+        "use": "forest ink on lime; never white on lime"
+      },
+      "signal-text": {
+        "hsl": "156.7 79.4% 26.7%",
+        "hex": "#0E7A50",
+        "use": "green-700; lime is never text on a light ground"
+      },
+      "signal-soft": {
+        "hsl": "76.1 100% 92%",
+        "hex": "#F4FFD6",
+        "use": "lime-100"
+      },
+      "accent": {
+        "hsl": "144.7 43.6% 92.4%",
+        "hex": "#E3F4EA",
+        "use": "green-100; hover and highlight tint, never lime"
+      },
+      "accent-foreground": {
+        "hsl": "163.4 66.2% 13.9%",
+        "hex": "#0C3B2E"
+      },
+      "background": {
+        "hsl": "96 33.3% 97.1%",
+        "hex": "#F7FAF5",
+        "use": "mist"
+      },
       "foreground": {
-        "hsl": "245 30% 12%",
-        "hex": "#171528",
+        "hsl": "159 47.6% 8.2%",
+        "hex": "#0B1F18",
         "use": "ink"
       },
       "card": {
@@ -125,20 +131,20 @@
         "hex": "#FFFFFF"
       },
       "muted": {
-        "hsl": "40 15% 96%",
-        "hex": "#F6F5F3"
+        "hsl": "100 27.3% 93.5%",
+        "hex": "#EDF3EA"
       },
       "muted-foreground": {
-        "hsl": "30 8% 38%",
-        "hex": "#696159"
+        "hsl": "144 8.1% 36.3%",
+        "hex": "#55645B"
       },
       "border": {
-        "hsl": "245 15% 88%",
-        "hex": "#DDDCE5"
+        "hsl": "108.7 21.6% 85.5%",
+        "hex": "#D5E2D2"
       },
       "ring": {
-        "hsl": "245 48% 30%",
-        "hex": "#2E2871"
+        "hsl": "158.5 62.6% 21%",
+        "hex": "#14573F"
       },
       "destructive": {
         "hsl": "0 72% 51%",
@@ -159,66 +165,69 @@
     },
     "dark": {
       "primary": {
-        "hsl": "245 60% 74%",
-        "hex": "#9C95E4"
+        "hsl": "143.6 60% 72.5%",
+        "hex": "#8FE3B0",
+        "use": "green-300"
       },
       "primary-foreground": {
-        "hsl": "245 48% 12%",
-        "hex": "#12102D"
+        "hsl": "160.7 70% 7.8%",
+        "hex": "#062219",
+        "use": "forest-950"
       },
       "signal": {
-        "hsl": "28 92% 62%",
-        "hex": "#F79845"
+        "hsl": "75.6 100% 67.6%",
+        "hex": "#D4FF5A",
+        "use": "lime-300; signal only"
       },
       "signal-foreground": {
-        "hsl": "35 100% 8%",
-        "hex": "#291800",
-        "use": "dark ink on ember"
+        "hsl": "163.4 66.2% 13.9%",
+        "hex": "#0C3B2E",
+        "use": "forest ink on lime"
       },
       "signal-text": {
-        "hsl": "28 92% 62%",
-        "hex": "#F79845"
+        "hsl": "75.6 100% 67.6%",
+        "hex": "#D4FF5A"
       },
       "signal-soft": {
-        "hsl": "28 40% 14%",
-        "hex": "#322315"
+        "hsl": "90 40% 11.8%",
+        "hex": "#1E2A12"
       },
       "accent": {
-        "hsl": "245 28% 18%",
-        "hex": "#23213B"
+        "hsl": "155.5 37.9% 11.4%",
+        "hex": "#12281F"
       },
       "accent-foreground": {
-        "hsl": "40 20% 96%",
-        "hex": "#F7F5F3"
+        "hsl": "106.7 31% 94.3%",
+        "hex": "#EEF5EC"
       },
       "background": {
-        "hsl": "245 20% 7%",
-        "hex": "#0F0E15",
+        "hsl": "158.6 53.8% 5.1%",
+        "hex": "#06140F",
         "use": "night"
       },
       "foreground": {
-        "hsl": "40 20% 96%",
-        "hex": "#F7F5F3"
+        "hsl": "106.7 31% 94.3%",
+        "hex": "#EEF5EC"
       },
       "card": {
-        "hsl": "245 16% 10%",
-        "hex": "#16151E"
+        "hsl": "156.7 45% 7.8%",
+        "hex": "#0B1D16"
       },
       "muted": {
-        "hsl": "245 12% 15%",
-        "hex": "#22222B"
+        "hsl": "153 35.7% 11%",
+        "hex": "#12261D"
       },
       "muted-foreground": {
-        "hsl": "245 10% 62%",
-        "hex": "#9694A8"
+        "hsl": "145.3 10.7% 65.3%",
+        "hex": "#9DB0A5"
       },
       "border": {
-        "hsl": "245 12% 20%",
-        "hex": "#2E2D39"
+        "hsl": "152.7 27.5% 15.7%",
+        "hex": "#1D3329"
       },
       "ring": {
-        "hsl": "245 60% 74%",
-        "hex": "#9C95E4"
+        "hsl": "143.6 60% 72.5%",
+        "hex": "#8FE3B0"
       },
       "destructive": {
         "hsl": "0 65% 48%",
@@ -239,17 +248,17 @@
     }
   },
   "theme_color": {
-    "manifest": "#25205B",
-    "meta_light": "#FCFBFA",
-    "meta_dark": "#0F0E15",
-    "manifest_background": "#FCFBFA"
+    "manifest": "#0C3B2E",
+    "meta_light": "#F7FAF5",
+    "meta_dark": "#06140F",
+    "manifest_background": "#F1F6EF"
   },
   "type": {
     "display": {
-      "family": "Sora",
+      "family": "Bricolage Grotesque",
       "license": "SIL Open Font License 1.1",
       "css": "--font-display",
-      "use": "Display headings on marketing; the wordmark is outlined from Sora SemiBold 600"
+      "use": "Display headings on marketing; the wordmark is outlined from Bricolage Grotesque Bold 700 (opsz 48)"
     },
     "sans": {
       "family": "Plus Jakarta Sans",
@@ -283,10 +292,12 @@
   "logo": {
     "spec": "logo/construction/epiow-logo.spec.json",
     "colours": {
-      "tile": "indigo-700",
-      "bracket": "paper",
-      "signal": "ember-500",
-      "letters_on_light": "indigo-700",
+      "tile": "forest-900",
+      "circle_on_light": "forest-900",
+      "circle_on_dark": "paper",
+      "square": "green-500",
+      "lens": "lime-300",
+      "letters_on_light": "forest-900",
       "letters_on_dark": "paper"
     }
   }
