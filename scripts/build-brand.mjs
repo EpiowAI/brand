@@ -10,10 +10,10 @@
  *
  * Inputs:  logo/construction/epiow-logo.spec.json (geometry)
  *          tokens/brand.tokens.json (colours)
- * Outputs: logo/current/*.svg, logo/icons/*, logo/sheet/usage.png, logo/SHA256SUMS
+ * Outputs: logo/current/*.svg, logo/icons/*, logo/construction/epiow-mark-construction.{svg,png},
+ *          logo/sheet/usage.png, logo/SHA256SUMS
  *
- * The 64-unit SVG masters are byte-identical to what epiow.com serves
- * (EpiowAI/epiow apps/web/src/brand), so this script and the product agree.
+ * This repository is the source: surfaces copy these files and keep no redrawn copy.
  * Set CHROMIUM to pick a browser binary (default: chromium).
  */
 
@@ -30,10 +30,13 @@ const spec = JSON.parse(readFileSync(join(root, "logo/construction/epiow-logo.sp
 const tokens = JSON.parse(readFileSync(join(root, "tokens/brand.tokens.json"), "utf8"));
 
 const hex = (name) => tokens.palette[name].hex;
+const LC = tokens.logo.colours;
 const C = {
-  tile: hex(tokens.logo.colours.tile),
-  paper: hex(tokens.logo.colours.bracket),
-  signal: hex(tokens.logo.colours.signal),
+  tile: hex(LC.tile),
+  forest: hex(LC.circle_on_light),
+  paper: hex(LC.circle_on_dark),
+  green: hex(LC.square),
+  lime: hex(LC.lens),
   night: hex("night"),
   black: "#000000",
   white: "#FFFFFF",
@@ -61,96 +64,99 @@ function tilePath(size) {
 }
 
 const TILE = tilePath(G);
-const BRACKET = spec.bracket_path;
-const DOT = spec.signal;
 const W = spec.wordmark;
-const circlePath = ({ cx, cy, r }) => `M${cx - r} ${cy}A${r} ${r} 0 1 0 ${cx + r} ${cy}A${r} ${r} 0 1 0 ${cx - r} ${cy}Z`;
 
-function lockupMetrics(markSize) {
-  const capHeight = markSize * spec.lockup.cap_height_ratio;
-  const scale = capHeight / (W.baseline - W.cap_top);
-  const gap = markSize * spec.lockup.gap_ratio;
-  const wordmarkTop = markSize / 2 - capHeight / 2 - W.cap_top * scale;
-  return { scale, gap, wordmarkTop, width: markSize + gap + W.width * scale };
+/** The three shapes of the glyph as paths: circle, rounded square, and their overlap (the lens). */
+function glyphPaths({ circle: c, square: q }) {
+  const circle = `M${fmt(c.cx - c.r)} ${fmt(c.cy)}A${c.r} ${c.r} 0 1 0 ${fmt(c.cx + c.r)} ${fmt(c.cy)}A${c.r} ${c.r} 0 1 0 ${fmt(c.cx - c.r)} ${fmt(c.cy)}Z`;
+  const x2 = q.x + q.size;
+  const y2 = q.y + q.size;
+  const r = q.r;
+  const square = `M${fmt(q.x + r)} ${fmt(q.y)}H${fmt(x2 - r)}A${r} ${r} 0 0 1 ${fmt(x2)} ${fmt(q.y + r)}V${fmt(y2 - r)}A${r} ${r} 0 0 1 ${fmt(x2 - r)} ${fmt(y2)}H${fmt(q.x + r)}A${r} ${r} 0 0 1 ${fmt(q.x)} ${fmt(y2 - r)}V${fmt(q.y + r)}A${r} ${r} 0 0 1 ${fmt(q.x + r)} ${fmt(q.y)}Z`;
+  // The square's left edge and top edge leave the circle at the same distance from its corner.
+  const reach = Math.sqrt(c.r ** 2 - (q.x - c.cx) ** 2);
+  const edgeY = c.cy + reach;
+  const edgeX = c.cx + Math.sqrt(c.r ** 2 - (q.y - c.cy) ** 2);
+  const lens = `M${fmt(q.x)} ${fmt(edgeY)}V${fmt(q.y + r)}A${r} ${r} 0 0 1 ${fmt(q.x + r)} ${fmt(q.y)}H${fmt(edgeX)}A${c.r} ${c.r} 0 0 1 ${fmt(q.x)} ${fmt(edgeY)}Z`;
+  return { circle, square, lens };
 }
 
-// ---- SVG masters (markup matches React's renderToStaticMarkup) ------------
+const STD = glyphPaths(spec.glyph);
+const SMALL = glyphPaths(spec.small);
+const BOX = spec.glyph.box;
+
+function lockupMetrics(glyphSize) {
+  const capHeight = glyphSize * spec.lockup.cap_height_ratio;
+  const scale = capHeight / (W.baseline - W.cap_top);
+  const gap = glyphSize * spec.lockup.gap_ratio;
+  const wordmarkTop = glyphSize / 2 - capHeight / 2 - W.cap_top * scale;
+  const height = Math.max(glyphSize, wordmarkTop + W.height * scale);
+  return { scale, gap, wordmarkTop, width: glyphSize + gap + W.width * scale, height };
+}
+
+// ---- SVG masters ------------------------------------------------------------
 
 const open = (w, h, vb) =>
-  `<svg width="${w}" height="${h}" viewBox="${vb}" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Epiow">`;
-const dot = (fill, d = DOT) => `<circle cx="${d.cx}" cy="${d.cy}" r="${d.r}" fill="${fill}"></circle>`;
-const markBody = `<path d="${TILE}" fill="${C.tile}"></path><path d="${BRACKET}" fill="${C.paper}"></path>${dot(C.signal)}`;
-/** One-colour mark: the tile with the bracket and the dot cut out. */
-const monoMarkBody = (fill) =>
-  `<path d="${TILE} ${BRACKET} ${circlePath(DOT)}" fill="${fill}" fill-rule="evenodd"></path>`;
-const wordBody = (letters, tittle) =>
-  `<path d="${W.ink_path}" fill="${letters}"></path><circle cx="${W.tittle.cx}" cy="${W.tittle.cy}" r="${W.tittle.r}" fill="${tittle}"></circle>`;
+  `<svg width="${fmt(w)}" height="${fmt(h)}" viewBox="${vb}" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Epiow">`;
+/** The glyph in colour. `circle` is forest on light grounds and paper on dark grounds and on the tile. */
+const glyphBody = (circle, g = STD) =>
+  `<path d="${g.circle}" fill="${circle}"></path><path d="${g.square}" fill="${C.green}"></path><path d="${g.lens}" fill="${C.lime}"></path>`;
+/** One-colour glyph: the circle and the square in one ink, the lens cut out. */
+const monoGlyphBody = (fill, g = STD) => `<path d="${g.circle} ${g.square}" fill="${fill}" fill-rule="evenodd"></path>`;
+const wordBody = (letters) => `<path d="${W.ink_path}" fill="${letters}"></path>`;
+const boxView = `${BOX.x} ${BOX.y} ${BOX.size} ${BOX.size}`;
 
-function mark(size = G) {
-  return `${open(size, size, `0 0 ${G} ${G}`)}${markBody}</svg>\n`;
+function mark(size = G, g = STD) {
+  return `${open(size, size, `0 0 ${G} ${G}`)}<path d="${TILE}" fill="${C.tile}"></path>${glyphBody(C.paper, g)}</svg>\n`;
 }
 function markMaskable() {
-  return `${open(G, G, `0 0 ${G} ${G}`)}<rect width="${G}" height="${G}" fill="${C.tile}"></rect><path d="${BRACKET}" fill="${C.paper}"></path>${dot(C.signal)}</svg>\n`;
+  return `${open(G, G, `0 0 ${G} ${G}`)}<rect width="${G}" height="${G}" fill="${C.tile}"></rect>${glyphBody(C.paper)}</svg>\n`;
 }
-function glyph(fill) {
-  return `${open(G, G, `0 0 ${G} ${G}`)}<path d="${BRACKET}" fill="${fill}"></path>${dot(C.signal)}</svg>\n`;
+function glyph(circle) {
+  return `${open(BOX.size, BOX.size, boxView)}${glyphBody(circle)}</svg>\n`;
 }
 function monoMark(fill) {
-  return `${open(G, G, `0 0 ${G} ${G}`)}${monoMarkBody(fill)}</svg>\n`;
+  return `${open(BOX.size, BOX.size, boxView)}${monoGlyphBody(fill)}</svg>\n`;
 }
-function wordmark(letters, tittle, height = G) {
+function wordmark(letters, height = G) {
   const width = (W.width / W.height) * height;
-  return `${open(width, height, `0 0 ${W.width} ${W.height}`)}${wordBody(letters, tittle)}</svg>\n`;
+  return `${open(width, height, `0 0 ${W.width} ${W.height}`)}${wordBody(letters)}</svg>\n`;
 }
-function lockup(letters, { mono = null, markSize = G } = {}) {
-  const m = lockupMetrics(markSize);
-  const markScale = markSize / G;
-  const body = mono ? monoMarkBody(mono) : markBody;
-  return `${open(m.width, markSize, `0 0 ${m.width} ${markSize}`)}<g transform="scale(${markScale})">${body}</g><g transform="translate(${markSize + m.gap} ${m.wordmarkTop}) scale(${m.scale})">${wordBody(letters, mono ?? C.signal)}</g></svg>\n`;
+function lockup(letters, circle, { mono = null, glyphSize = BOX.size } = {}) {
+  const m = lockupMetrics(glyphSize);
+  const k = glyphSize / BOX.size;
+  const body = mono ? monoGlyphBody(mono) : glyphBody(circle);
+  return `${open(m.width, m.height, `0 0 ${fmt(m.width)} ${fmt(m.height)}`)}<g transform="scale(${k}) translate(${-BOX.x} ${-BOX.y})">${body}</g><g transform="translate(${fmt(glyphSize + m.gap)} ${fmt(m.wordmarkTop)}) scale(${m.scale})">${wordBody(letters)}</g></svg>\n`;
 }
 
 const svgs = {
   "logo/current/mark.svg": mark(),
-  "logo/current/favicon.svg": mark(32),
+  "logo/current/favicon.svg": mark(32, SMALL),
   "logo/current/mark-maskable.svg": markMaskable(),
-  "logo/current/glyph-on-light.svg": glyph(C.tile),
+  "logo/current/glyph-on-light.svg": glyph(C.forest),
   "logo/current/glyph-on-dark.svg": glyph(C.paper),
-  "logo/current/wordmark-light.svg": wordmark(C.tile, C.signal),
-  "logo/current/wordmark-dark.svg": wordmark(C.paper, C.signal),
-  "logo/current/lockup-light.svg": lockup(C.tile),
-  "logo/current/lockup-dark.svg": lockup(C.paper),
+  "logo/current/wordmark-light.svg": wordmark(C.forest),
+  "logo/current/wordmark-dark.svg": wordmark(C.paper),
+  "logo/current/lockup-light.svg": lockup(C.forest, C.forest),
+  "logo/current/lockup-dark.svg": lockup(C.paper, C.paper),
   "logo/current/mark-black.svg": monoMark(C.black),
   "logo/current/mark-white.svg": monoMark(C.white),
-  "logo/current/wordmark-black.svg": wordmark(C.black, C.black),
-  "logo/current/wordmark-white.svg": wordmark(C.white, C.white),
-  "logo/current/lockup-black.svg": lockup(C.black, { mono: C.black }),
-  "logo/current/lockup-white.svg": lockup(C.white, { mono: C.white }),
+  "logo/current/wordmark-black.svg": wordmark(C.black),
+  "logo/current/wordmark-white.svg": wordmark(C.white),
+  "logo/current/lockup-black.svg": lockup(C.black, null, { mono: C.black }),
+  "logo/current/lockup-white.svg": lockup(C.white, null, { mono: C.white }),
 };
 
-// ---- small sizes ------------------------------------------------------------
-
-/** 16 px: tile as vector, glyph drawn on the pixel grid from the spec. */
-function snapped16() {
-  const rows = spec.small_sizes["16"].glyph_pixels;
-  const fills = { P: C.paper, S: C.signal };
-  const rects = [];
-  rows.forEach((row, y) => {
-    for (let x = 0; x < row.length; ) {
-      const ch = row[x];
-      let end = x;
-      while (end < row.length && row[end] === ch) end += 1;
-      if (fills[ch]) rects.push(`<rect x="${x}" y="${y}" width="${end - x}" height="1" fill="${fills[ch]}"></rect>`);
-      x = end;
-    }
-  });
-  return `${open(16, 16, "0 0 16 16")}<g transform="scale(${16 / G})"><path d="${TILE}" fill="${C.tile}"></path></g><g shape-rendering="crispEdges">${rects.join("")}</g></svg>\n`;
+/** Construction drawing: the 64-unit grid, the safe zone, the glyph box and the three shapes. */
+function construction() {
+  const lines = [];
+  for (let i = 0; i <= G; i += 4) {
+    lines.push(`<path d="M${i} 0V${G}M0 ${i}H${G}" stroke="#0C3B2E" stroke-opacity="${i % 16 === 0 ? 0.28 : 0.1}" stroke-width="0.12"></path>`);
+  }
+  const safe = G * 0.1;
+  return `<svg width="640" height="640" viewBox="0 0 ${G} ${G}" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Epiow mark construction"><rect width="${G}" height="${G}" fill="#FFFFFF"></rect>${lines.join("")}<path d="${TILE}" fill="none" stroke="#0C3B2E" stroke-width="0.25"></path><rect x="${safe}" y="${safe}" width="${G - 2 * safe}" height="${G - 2 * safe}" fill="none" stroke="#0E7A50" stroke-width="0.2" stroke-dasharray="1 1"></rect><rect x="${BOX.x}" y="${BOX.y}" width="${BOX.size}" height="${BOX.size}" fill="none" stroke="#0C3B2E" stroke-width="0.2" stroke-dasharray="0.6 0.6"></rect><g fill-opacity="0.82">${glyphBody(C.forest)}</g><circle cx="${spec.glyph.circle.cx}" cy="${spec.glyph.circle.cy}" r="0.6" fill="#FFFFFF"></circle></svg>\n`;
 }
-
-/** 48 px: the vector mark with the dot snapped to whole pixels. */
-function snapped48() {
-  const r = (spec.small_sizes["48"].signal_r_px * G) / 48;
-  return `${open(48, 48, `0 0 ${G} ${G}`)}<path d="${TILE}" fill="${C.tile}"></path><path d="${BRACKET}" fill="${C.paper}"></path>${dot(C.signal, { ...DOT, r })}</svg>\n`;
-}
+svgs["logo/construction/epiow-mark-construction.svg"] = construction();
 
 // ---- rendering --------------------------------------------------------------
 
@@ -206,20 +212,20 @@ function ico(frames) {
 }
 
 function usageSheet() {
-  const L = (letters, opts) => lockup(letters, { markSize: 48, ...opts });
-  const pad = 12; // clear space = 0.25 x tile (48 px tile)
-  const cell = (bg, content, label, fg = C.tile) =>
+  const L = (letters, circle, opts) => lockup(letters, circle, { glyphSize: 48, ...opts });
+  const pad = 12; // clear space = 0.25 x glyph (48 px glyph)
+  const cell = (bg, content, label, fg = C.forest) =>
     `<div style="background:${bg};padding:28px;border-radius:12px;display:flex;flex-direction:column;gap:16px;align-items:flex-start"><div>${content}</div><div style="font:500 12px/1.2 sans-serif;color:${fg};opacity:.8">${label}</div></div>`;
   const zoom = (file, px) =>
-    `<div style="display:flex;flex-direction:column;align-items:center;gap:8px"><img src="${join(root, file)}" width="${px * 4}" height="${px * 4}" style="image-rendering:pixelated"><img src="${join(root, file)}" width="${px}" height="${px}"><span style="font:500 12px sans-serif;color:${C.tile}">${px} px</span></div>`;
-  const clear = `<div style="position:relative;padding:${pad}px;outline:1px dashed ${C.signal};background:repeating-linear-gradient(45deg,#F9731622 0 4px,transparent 4px 8px)"><div style="background:${C.paper}">${L(C.tile)}</div></div>`;
+    `<div style="display:flex;flex-direction:column;align-items:center;gap:8px"><img src="${join(root, file)}" width="${px * 4}" height="${px * 4}" style="image-rendering:pixelated"><img src="${join(root, file)}" width="${px}" height="${px}"><span style="font:500 12px sans-serif;color:${C.forest}">${px} px</span></div>`;
+  const clear = `<div style="position:relative;padding:${pad}px;outline:1px dashed ${C.green};background:repeating-linear-gradient(45deg,#1FAD6B33 0 4px,transparent 4px 8px)"><div style="background:${C.paper}">${L(C.forest, C.forest)}</div></div>`;
   return `<div style="width:1200px;padding:40px;box-sizing:border-box;background:#FFFFFF;font-family:sans-serif;display:grid;grid-template-columns:1fr 1fr;gap:20px">
-  ${cell(C.paper, L(C.tile), "lockup-light.svg on paper #FCFBFA")}
-  ${cell(C.night, L(C.paper), "lockup-dark.svg on night #0F0E15", C.paper)}
-  ${cell("#FFFFFF", L(C.black, { mono: C.black }), "lockup-black.svg (one ink)")}
-  ${cell(C.tile, L(C.white, { mono: C.white }), "lockup-white.svg (one ink)", C.paper)}
-  ${cell(C.paper, clear, "Clear space: 0.25 x tile on every side (hatched)")}
-  ${cell(C.paper, `<div style="display:flex;gap:28px;align-items:flex-end">${zoom("logo/icons/favicon-16.png", 16)}${zoom("logo/icons/favicon-32.png", 32)}${zoom("logo/icons/favicon-48.png", 48)}</div>`, "Pixel-snapped favicons, 4x and 1x")}
+  ${cell(C.paper, L(C.forest, C.forest), `lockup-light.svg on paper ${C.paper}`)}
+  ${cell(C.night, L(C.paper, C.paper), `lockup-dark.svg on night ${C.night}`, C.paper)}
+  ${cell("#FFFFFF", L(C.black, null, { mono: C.black }), "lockup-black.svg (one ink)")}
+  ${cell(C.forest, L(C.white, null, { mono: C.white }), "lockup-white.svg (one ink)", C.paper)}
+  ${cell(C.paper, clear, "Clear space: 0.25 x the glyph on every side (hatched)")}
+  ${cell(C.paper, `<div style="display:flex;gap:28px;align-items:flex-end">${zoom("logo/icons/favicon-16.png", 16)}${zoom("logo/icons/favicon-32.png", 32)}${zoom("logo/icons/favicon-48.png", 48)}</div>`, "Favicons on the pixel grid, 4x and 1x")}
 </div>`;
 }
 
@@ -274,13 +280,13 @@ if (check) {
     for (const [file, content] of Object.entries(svgs)) writeFileSync(join(root, file), content);
 
     const tile = svgs["logo/current/mark.svg"];
+    const small = svgs["logo/current/favicon.svg"];
     const full = svgs["logo/current/mark-maskable.svg"];
-    render(snapped16(), 16, 16, "logo/icons/favicon-16.png");
-    render(sized(tile, 32, 32), 32, 32, "logo/icons/favicon-32.png");
-    render(snapped48(), 48, 48, "logo/icons/favicon-48.png");
+    for (const s of [16, 32, 48]) render(sized(small, s, s), s, s, `logo/icons/favicon-${s}.png`);
     for (const s of [192, 512, 1024]) render(sized(tile, s, s), s, s, `logo/icons/icon-${s}.png`);
     for (const s of [192, 512]) render(sized(full, s, s), s, s, `logo/icons/icon-maskable-${s}.png`);
     render(sized(full, 180, 180), 180, 180, "logo/icons/apple-touch-icon-180.png");
+    render(svgs["logo/construction/epiow-mark-construction.svg"], 640, 640, "logo/construction/epiow-mark-construction.png", { background: "#FFFFFF" });
     writeFileSync(
       join(root, "logo/icons/favicon.ico"),
       ico([16, 32, 48].map((size) => ({ size, data: readFileSync(join(root, `logo/icons/favicon-${size}.png`)) }))),

@@ -39,19 +39,22 @@ Product code lives in [`EpiowAI/epiow`](https://github.com/EpiowAI/epiow).
 
 ## Colour, in one line
 
-Indigo carries the brand; ember is the signal. Indigo-700 `#25205B` is the
-logo tile and the primary colour. Ember `#F98C10` is only the logo's dot, the
-wordmark's tittle, agent activity, and at most one key call to action per
-surface. Text on ember is always dark ink (`#291600`, 7.3:1), never white
-(2.4:1). Type: Sora (display, wordmark), Plus Jakarta Sans (text),
-JetBrains Mono (code, numerals). Radius: control 8px, card 12px, panel 16px,
-window 12px; app icons are the n = 5 superellipse. Full roles for light and
-dark are in [`tokens/brand.tokens.json`](./tokens/brand.tokens.json), read
-back from live epiow.com on 2026-09-28.
+Forest carries the brand; lime is the signal. Forest-900 `#0C3B2E` is the app
+tile and the primary colour; green-500 `#1FAD6B` is the second shape of the
+mark. Lime `#D4FF5A` is only the lens of the mark, agent activity, and at most
+one key call to action per surface. Text on lime is always forest ink
+(10.9:1), never white (1.2:1), and lime is never text on a light ground. Type:
+Bricolage Grotesque (display, wordmark), Plus Jakarta Sans (text), JetBrains
+Mono (code, numerals). Radius: control 8px, card 12px, panel 16px, window
+12px; app icons are the n = 5 superellipse. Full roles for light and dark are
+in [`tokens/brand.tokens.json`](./tokens/brand.tokens.json) (5.0.0, 2026-11-17).
 
-**Pending:** the Workspace OS redesign proposes tokens v4
-([#11](https://github.com/EpiowAI/brand/pull/11)). They replace these tokens
-only after Kyle approves #11; until then the tokens here are the live ones.
+**Rollout:** the "Overlap" identity was chosen on 2026-11-17 and replaces
+"Bracket and signal" (indigo and ember). Each surface still ships the old
+identity until its own change lands: [`docs/surfaces.md`](./docs/surfaces.md).
+The Workspace OS tokens v4 proposal
+([#11](https://github.com/EpiowAI/brand/pull/11)) was drawn on the old palette
+and needs re-basing on this one.
 
 ## Trademark
 
